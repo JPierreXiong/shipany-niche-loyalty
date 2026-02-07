@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { Mail, MessageSquare, Users } from 'lucide-react';
-import { envConfigs } from '@/config';
 
 export async function generateMetadata({
   params: { locale },
@@ -13,7 +12,6 @@ export async function generateMetadata({
   return {
     title: t('metadata.title'),
     description: t('metadata.description'),
-    keywords: t('metadata.keywords'),
   };
 }
 
@@ -24,47 +22,8 @@ export default async function ContactPage({
 }) {
   const t = await getTranslations({ locale, namespace: 'contact' });
 
-  // JSON-LD Structured Data for ContactPage
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "name": t('hero.title'),
-    "description": t('metadata.description'),
-    "url": `${envConfigs.app_url}${locale === 'en' ? '' : `/${locale}`}/contact`,
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "Glow",
-      "email": "hello@glow.app",
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "contactType": "Customer Support",
-          "email": "support@glow.app",
-          "availableLanguage": ["English", "French", "Chinese"]
-        },
-        {
-          "@type": "ContactPoint",
-          "contactType": "Sales",
-          "email": "hello@glow.app",
-          "availableLanguage": ["English", "French", "Chinese"]
-        },
-        {
-          "@type": "ContactPoint",
-          "contactType": "Partnerships",
-          "email": "partners@glow.app",
-          "availableLanguage": ["English", "French", "Chinese"]
-        }
-      ]
-    }
-  };
-
   return (
     <div className="container mx-auto px-4 py-16 max-w-4xl">
-      {/* Inject JSON-LD for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       {/* Hero Section */}
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
