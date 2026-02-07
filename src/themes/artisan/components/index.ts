@@ -9,6 +9,7 @@ export { HeroSection, HeroSectionSimple } from './HeroSection';
 export { MagicLinkForm, MagicLinkFormInline } from './MagicLinkForm';
 export { StatsCard, StatsCardGrid, StatsCardCompact, StatsCardSkeleton } from './StatsCard';
 export { BrandConfigPanel } from './BrandConfigPanel';
+export { QuickColorDemo } from './QuickColorDemo';
 
 // 类型导出
 export type { 
