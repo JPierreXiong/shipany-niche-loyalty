@@ -2,15 +2,15 @@
   "header": {
     "id": "header",
     "brand": {
-      "title": "Afterglow",
+      "title": "Glow",
       "url": "/"
     },
     "nav": {
       "items": [
         {
-          "title": "Digital Heirloom",
-          "url": "/digital-heirloom/dashboard",
-          "icon": "Shield"
+          "title": "Niche Loyalty",
+          "url": "/niche-loyalty/dashboard",
+          "icon": "Heart"
         },
         {
           "title": "Pricing",
@@ -26,9 +26,9 @@
       "show_sign_out": true,
       "items": [
         {
-          "title": "Digital Heirloom",
-          "url": "/digital-heirloom/dashboard",
-          "icon": "Shield"
+          "title": "Niche Loyalty",
+          "url": "/niche-loyalty/dashboard",
+          "icon": "Heart"
         },
         {
           "title": "Billing",
@@ -48,28 +48,28 @@
   },
   "hero": {
     "id": "hero",
-    "title": "Secure Your Digital Legacy",
+    "title": "Give Your Brand the Glow It Deserves",
     "highlight_text": "",
-    "description": "Ensure your loved ones can access your digital assets when they need them most. Passwords, crypto wallets, and personal messages — protected until the right moment.",
+    "description": "Most loyalty apps feel like a chore. Glow feels like a gift. Create beautiful, digital membership cards that your customers will actually want to keep.",
     "announcement": {
-      "badge": "Security",
-      "title": "🔒 Zero-Knowledge Encryption",
-      "url": "#zero-knowledge-security"
+      "badge": "For Artisan Brands",
+      "title": "🎨 Apple Wallet Ready",
+      "url": "/niche-loyalty/demo"
     },
-    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">No credit card required</span>",
+    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">Free forever for your first 50 members</span>",
     "buttons": [
       {
-        "title": "Start for Free",
-        "icon": "Shield",
+        "title": "Launch Your Club",
+        "icon": "Heart",
         "url": "/sign-up",
         "target": "_self",
         "variant": "default",
         "className": ""
       },
       {
-        "title": "Learn More",
-        "icon": "Info",
-        "url": "/blog",
+        "title": "Try Demo",
+        "icon": "Sparkles",
+        "url": "/niche-loyalty/demo",
         "target": "_self",
         "variant": "outline",
         "className": ""
@@ -88,7 +88,7 @@
     }
   },
   "logos": {
-    "title": "Digital Heirloom is built on the shoulders of giants",
+    "title": "Glow is built on the shoulders of giants",
     "items": [
       {
         "title": "Next.js",
@@ -435,7 +435,7 @@
     "id": "faq",
     "title": "Frequently Asked Questions",
     "description": "Have another question? Contact us by email.",
-    "tip": "Can't find what you're looking for? Contact our <a href='mailto:support@digitalheirloom.app' class='text-primary font-medium hover:underline'>customer support team</a>",
+    "tip": "Can't find what you're looking for? Contact our <a href='mailto:support@glow.app' class='text-primary font-medium hover:underline'>customer support team</a>",
     "items": [
       {
         "question": "Does the ShipAny package contain a USB drive or my actual data?",
@@ -492,15 +492,15 @@
   },
   "cta": {
     "id": "cta",
-    "title": "Start Protecting Your Digital Legacy Today",
-    "description": "Join thousands of users who trust Afterglow to secure their most important digital assets.",
-    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">No credit card required</span>",
+    "title": "Ready to Make Your Brand Glow?",
+    "description": "Join hundreds of artisan brands creating loyalty programs that feel like gifts.",
+    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">Free forever for your first 50 members</span>",
     "buttons": [
       {
-        "title": "Start for Free",
+        "title": "Launch Your Club",
         "url": "/sign-up",
         "target": "_self",
-        "icon": "Shield",
+        "icon": "Heart",
         "variant": "default",
         "className": ""
       }
@@ -509,7 +509,7 @@
   "subscribe": {
     "id": "subscribe",
     "title": "Subscribe to our newsletter",
-    "description": "Get the latest news and updates from Digital Heirloom.",
+    "description": "Get the latest news and updates from Glow.",
     "submit": {
       "input": {
         "placeholder": "Enter your email"
@@ -523,11 +523,11 @@
   "footer": {
     "id": "footer",
     "brand": {
-      "title": "Afterglow",
-      "description": "Afterglow is a high-security digital asset custody and automated distribution platform. We protect your digital legacy with zero-knowledge encryption, ensuring your loved ones can access your digital assets when they need them most.",
+      "title": "Glow",
+      "description": "Glow is an elegant loyalty platform for artisan Shopify stores. We help makers build deeper connections with their communities through beautiful, distraction-free loyalty experiences.",
       "url": "/"
     },
-    "copyright": "Afterglow - Secure Your Digital Legacy",
+    "copyright": "Glow - Elegant Loyalty for Artisans",
     "nav": {
       "items": [
         {
@@ -577,7 +577,7 @@
         {
           "title": "Email",
           "icon": "Mail",
-          "url": "mailto:support@digitalheirloom.app",
+          "url": "mailto:support@glow.app",
           "target": "_self"
         }
       ]
