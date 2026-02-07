@@ -2,7 +2,7 @@
   "header": {
     "id": "header",
     "brand": {
-      "title": "Glow",
+      "title": "Afterglow",
       "url": "/"
     },
     "nav": {
@@ -88,7 +88,7 @@
     }
   },
   "logos": {
-    "title": "Niche Loyalty 使用以下技术栈构建",
+    "title": "Digital Heirloom 使用以下技术栈构建",
     "items": [
       {
         "title": "Next.js",
@@ -129,9 +129,9 @@
   },
   "introduce": {
     "id": "introduce",
-    "title": "Niche Loyalty 是什么？",
+    "title": "Digital Heirloom 是什么？",
     "label": "产品简介",
-    "description": "Niche Loyalty 是专为 AI SaaS 创业项目打造的 NextJS 脚手架，包括丰富模板、组件及文档。",
+    "description": "Digital Heirloom 是专为 AI SaaS 创业项目打造的 NextJS 脚手架，包括丰富模板、组件及文档。",
     "image": {
       "src": "/imgs/features/landing-page.png",
       "alt": "introduce"
@@ -177,7 +177,7 @@
   },
   "benefits": {
     "id": "benefits",
-    "title": "为何选择 Niche Loyalty",
+    "title": "为何选择 Digital Heirloom",
     "label": "产品优势",
     "description": "你获得一切 AI 创业所需——从开箱即用的模板到专业技术支持。",
     "items": [
@@ -212,7 +212,7 @@
   },
   "usage": {
     "id": "usage",
-    "title": "三步使用 Niche Loyalty 极速上线",
+    "title": "三步使用 Digital Heirloom 极速上线",
     "description": "只需三步，快速开启你的 AI SaaS 创业之路：",
     "image": {
       "src": "/imgs/features/1.png",
@@ -222,8 +222,8 @@
     "text_align": "center",
     "items": [
       {
-        "title": "获取 Niche Loyalty",
-        "description": "一次性购买 Niche Loyalty，查收邮件获取代码与文档。",
+        "title": "获取 Digital Heirloom",
+        "description": "一次性购买 Digital Heirloom，查收邮件获取代码与文档。",
         "image": {
           "src": "/imgs/features/5.png",
           "alt": "usage"
@@ -231,7 +231,7 @@
       },
       {
         "title": "启动你的项目",
-        "description": "阅读说明文档，克隆 Niche Loyalty 代码，开始开发你的 AI SaaS 项目。",
+        "description": "阅读说明文档，克隆 Digital Heirloom 代码，开始开发你的 AI SaaS 项目。",
         "image": {
           "src": "/imgs/features/6.png",
           "alt": "usage"
@@ -257,7 +257,7 @@
   },
   "features": {
     "id": "features",
-    "title": "Niche Loyalty 核心功能",
+    "title": "Digital Heirloom 核心功能",
     "description": "一切你需要的工具，助力 AI SaaS 项目高效上线。",
     "items": [
       {
@@ -353,7 +353,7 @@
   },
   "stats": {
     "id": "stats",
-    "title": "用户喜爱 Niche Loyalty",
+    "title": "用户喜爱 Digital Heirloom",
     "description": "因其易用且上线飞快。",
     "items": [
       {
@@ -372,13 +372,13 @@
   },
   "testimonials": {
     "id": "testimonials",
-    "title": "用户对 Niche Loyalty 的评价",
+    "title": "用户对 Digital Heirloom 的评价",
     "description": "听听内容创作者和企业如何用 Digital Heirloom 改变他们的视频内容。",
     "items": [
       {
         "name": "David Chen",
         "role": "YouTube 内容创作者",
-        "quote": "Niche Loyalty 改变了我的 YouTube 频道！现在我可以为全球观众提供 12 种语言的准确字幕。添加多语言字幕后，我的观看量增长了 300%。",
+        "quote": "Digital Heirloom 改变了我的 YouTube 频道！现在我可以为全球观众提供 12 种语言的准确字幕。添加多语言字幕后，我的观看量增长了 300%。",
         "image": {
           "src": "/imgs/avatars/1.png",
           "alt": "david"
@@ -396,7 +396,7 @@
       {
         "name": "Marcus Thompson",
         "role": "视频制作机构负责人",
-        "quote": "作为小型机构，Niche Loyalty 以极低成本为我们提供了企业级的字幕能力。我们每月处理数百个视频，准确度完美。",
+        "quote": "作为小型机构，Digital Heirloom 以极低成本为我们提供了企业级的字幕能力。我们每月处理数百个视频，准确度完美。",
         "image": {
           "src": "/imgs/avatars/3.png",
           "alt": "marcus"
@@ -405,7 +405,7 @@
       {
         "name": "Sofia Garcia",
         "role": "在线教育平台经理",
-        "quote": "Niche Loyalty 让我们的教育内容走向全球。来自 50 多个国家的学生现在可以通过准确的翻译学习我们的课程。改变游戏规则！",
+        "quote": "Digital Heirloom 让我们的教育内容走向全球。来自 50 多个国家的学生现在可以通过准确的翻译学习我们的课程。改变游戏规则！",
         "image": {
           "src": "/imgs/avatars/4.png",
           "alt": "sofia"
@@ -423,7 +423,7 @@
       {
         "name": "Anna Zhang",
         "role": "内容策略师",
-        "quote": "Niche Loyalty 的一键解决方案将我们的 YouTube 和 TikTok 内容变成了全球力量。我们的国际观众在短短 3 个月内增长了 500%！",
+        "quote": "Digital Heirloom 的一键解决方案将我们的 YouTube 和 TikTok 内容变成了全球力量。我们的国际观众在短短 3 个月内增长了 500%！",
         "image": {
           "src": "/imgs/avatars/6.png",
           "alt": "anna"
@@ -442,7 +442,7 @@
         "answer": "不包含。为了极致安全，我们从不寄送 U 盘。包裹内仅含有一份高强度物理加密凭证（Recovery Kit）。资产始终以加密状态安全存在于云端，物理凭证是解锁它们的唯一\"钥匙\"。"
       },
       {
-        "question": "如果 Niche Loyalty 的数据库被黑客攻击了怎么办？",
+        "question": "如果 DigitalHeirloom 的数据库被黑客攻击了怎么办？",
         "answer": "这正是我们架构的精妙之处。即便黑客搬走了整个数据库，他们也无法读取任何信息。因为解密所需的关键因子并不在服务器上，而是在寄送给受益人的物理凭证中。由于采用了高级保密算法，破解难度等同于在宇宙中寻找一颗特定的原子。"
       },
       {
@@ -475,7 +475,7 @@
       },
       {
         "title": "物理-数字桥梁：由 ShipAny 驱动",
-        "description": "我们通过与 ShipAny（全球物流编排平台）的深度集成，弥合了数字数据与物理遗产之间的差距。自动化触发：通过高性能边缘函数进行实时监控。人工介入（HITL）：为防止不可逆的寄送错误，每个 Pro 级别的物理寄送都需要 Glow 管理后台的手动二次授权。隐私优先物流：受益人的寄送地址在我们的数据库中保持加密状态，仅在生成寄送标签时才解密。",
+        "description": "我们通过与 ShipAny（全球物流编排平台）的深度集成，弥合了数字数据与物理遗产之间的差距。自动化触发：通过高性能边缘函数进行实时监控。人工介入（HITL）：为防止不可逆的寄送错误，每个 Pro 级别的物理寄送都需要 Afterglow 管理后台的手动二次授权。隐私优先物流：受益人的寄送地址在我们的数据库中保持加密状态，仅在生成寄送标签时才解密。",
         "icon": "Package"
       },
       {
@@ -485,7 +485,7 @@
       },
       {
         "title": "法律免责声明与最佳实践",
-        "description": "虽然 Glow 提供最先进的技术安全性，但我们强烈建议用户打印其恢复包并将其存储在安全、防火的位置。我们的服务作为您遗产计划的技术补充，不能替代您当地司法管辖区定义的具有法律约束力的遗嘱或遗书。请咨询法律专业人士以进行全面的遗产规划。",
+        "description": "虽然 Afterglow 提供最先进的技术安全性，但我们强烈建议用户打印其恢复包并将其存储在安全、防火的位置。我们的服务作为您遗产计划的技术补充，不能替代您当地司法管辖区定义的具有法律约束力的遗嘱或遗书。请咨询法律专业人士以进行全面的遗产规划。",
         "icon": "FileText"
       }
     ]
@@ -493,10 +493,10 @@
   "cta": {
     "id": "cta",
     "title": "发布你的第一个 AI SaaS 项目",
-    "description": "从这里出发，用 Niche Loyalty 极速交付。",
+    "description": "从这里出发，用 Digital Heirloom 极速交付。",
     "buttons": [
       {
-        "title": "获取 Niche Loyalty",
+        "title": "获取 Digital Heirloom",
         "url": "https://www.subtitletk.app",
         "target": "_blank",
         "icon": "Zap"
@@ -513,7 +513,7 @@
   "subscribe": {
     "id": "subscribe",
     "title": "订阅我们的邮件通知",
-    "description": "获取 Niche Loyalty 最新资讯与产品动态。",
+    "description": "获取 Digital Heirloom 最新资讯与产品动态。",
     "submit": {
       "input": {
         "placeholder": "输入邮箱"
@@ -527,8 +527,8 @@
   "footer": {
     "id": "footer",
     "brand": {
-      "title": "Niche Loyalty",
-      "description": "Niche Loyalty is a high-performance digital toolkit designed to extract and translate subtitles from YouTube and TikTok videos. We believe in simple, transparent pricing.",
+      "title": "Digital Heirloom",
+      "description": "Digital Heirloom is a high-performance digital toolkit designed to extract and translate subtitles from YouTube and TikTok videos. We believe in simple, transparent pricing.",
       "url": "/"
     },
     "nav": {
@@ -601,7 +601,7 @@
         }
       ]
     },
-    "copyright": "Niche Loyalty 是独立产品，与 Google (YouTube) 或 ByteDance (TikTok) 无关联。",
+    "copyright": "Digital Heirloom 是独立产品，与 Google (YouTube) 或 ByteDance (TikTok) 无关联。",
     "show_theme": true,
     "show_locale": true
   }

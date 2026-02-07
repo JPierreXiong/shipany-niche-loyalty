@@ -2,15 +2,15 @@
   "header": {
     "id": "header",
     "brand": {
-      "title": "Glow",
+      "title": "Afterglow",
       "url": "/"
     },
     "nav": {
       "items": [
         {
-          "title": "Niche Loyalty",
-          "url": "/niche-loyalty/dashboard",
-          "icon": "Sparkles"
+          "title": "Digital Heirloom",
+          "url": "/digital-heirloom/dashboard",
+          "icon": "Shield"
         },
         {
           "title": "Pricing",
@@ -26,14 +26,19 @@
       "show_sign_out": true,
       "items": [
         {
-          "title": "Niche Loyalty",
-          "url": "/niche-loyalty/dashboard",
-          "icon": "Sparkles"
+          "title": "Digital Heirloom",
+          "url": "/digital-heirloom/dashboard",
+          "icon": "Shield"
         },
         {
           "title": "Billing",
           "url": "/settings/billing",
           "icon": "CreditCard"
+        },
+        {
+          "title": "Activity",
+          "url": "/activity",
+          "icon": "Activity"
         }
       ]
     },
@@ -43,28 +48,28 @@
   },
   "hero": {
     "id": "hero",
-    "title": "Give your brand the glow it deserves",
+    "title": "Secure Your Digital Legacy",
     "highlight_text": "",
-    "description": "Most loyalty apps feel like a chore. Glow feels like a gift. Create beautiful, digital membership cards that your customers will actually want to keep.",
+    "description": "Ensure your loved ones can access your digital assets when they need them most. Passwords, crypto wallets, and personal messages — protected until the right moment.",
     "announcement": {
-      "badge": "For Artisan Shopify Stores",
-      "title": "✨ Apple Wallet Ready",
-      "url": "#apple-wallet"
+      "badge": "Security",
+      "title": "🔒 Zero-Knowledge Encryption",
+      "url": "#zero-knowledge-security"
     },
-    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">Free forever for your first 50 members</span>",
+    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">No credit card required</span>",
     "buttons": [
       {
-        "title": "Launch your club for free",
-        "icon": "Sparkles",
+        "title": "Start for Free",
+        "icon": "Shield",
         "url": "/sign-up",
         "target": "_self",
         "variant": "default",
         "className": ""
       },
       {
-        "title": "See how it works",
-        "icon": "Play",
-        "url": "/niche-loyalty",
+        "title": "Learn More",
+        "icon": "Info",
+        "url": "/blog",
         "target": "_self",
         "variant": "outline",
         "className": ""
@@ -252,60 +257,60 @@
   },
   "how-it-works": {
     "id": "how-it-works",
-    "title": "The Anti-Complexity Loyalty App",
-    "description": "Them: 20-page setup manual. Glow: 5 minutes.",
+    "title": "How It Works",
+    "description": "A simple, secure system to protect what matters most",
     "items": [
       {
-        "title": "Your Brand, Your Way",
-        "description": "Customize colors, upload your logo, and create member cards that feel uniquely yours. Because your craft is personal. Your rewards should be too.",
-        "icon": "Palette"
+        "title": "Encrypted Vault",
+        "description": "Store passwords, crypto keys, and personal notes with military-grade encryption that even we can't read.",
+        "icon": "Lock"
       },
       {
-        "title": "Apple Wallet Ready",
-        "description": "Your brand, right in their pocket. Beautiful digital cards that live alongside their credit cards and boarding passes.",
-        "icon": "Smartphone"
+        "title": "Dead Man's Switch",
+        "description": "Regular check-ins confirm you're okay. Miss them, and your designated contacts are notified automatically.",
+        "icon": "Clock"
       },
       {
-        "title": "Setup in 5 Minutes",
-        "description": "No 20-page manual. No developer needed. Just beautiful loyalty cards that work from day one.",
-        "icon": "Zap"
+        "title": "Trusted Beneficiaries",
+        "description": "Designate family members, friends, or attorneys to receive specific items from your vault.",
+        "icon": "Users"
       }
     ]
   },
   "zero-knowledge-security": {
     "id": "zero-knowledge-security",
-    "title": "Why Aesthetic Loyalty Matters",
-    "description": "High-end artisans need loyalty programs that match their craft. Your customers don't want a spreadsheet—they want an experience.",
+    "title": "Zero-Knowledge Security",
+    "description": "Your data is encrypted on your device before it ever reaches our servers. We never see your passwords or secrets — and neither does anyone else until you want them to.",
     "items": [
       {
-        "title": "Aesthetic First, Software Second",
-        "description": "Your loyalty program shouldn't look like a spreadsheet. Glow blends into your brand's soul.",
-        "icon": "Palette"
+        "title": "End-to-end encryption",
+        "description": "",
+        "icon": "Shield"
       },
       {
-        "title": "Native Wallet Integration",
-        "description": "No apps for your customers to download. Just a beautiful card living natively in their Apple or Google Wallet.",
-        "icon": "Smartphone"
+        "title": "No backdoors or master keys",
+        "description": "",
+        "icon": "Key"
       },
       {
-        "title": "Frictionless Delight",
-        "description": "Points are boring. A Glow membership is an invitation to a community.",
-        "icon": "Heart"
+        "title": "Regular security audits",
+        "description": "",
+        "icon": "Search"
       },
       {
-        "title": "Dynamic Card Designer",
-        "description": "Real-time UI customization to match your brand's hex codes and typography.",
-        "icon": "Paintbrush"
+        "title": "Client-side key generation",
+        "description": "",
+        "icon": "Cpu"
       },
       {
-        "title": "Automated Reward Triggers",
-        "description": "Set it and forget it. Glow rewards customers for purchases, birthdays, and referrals automatically.",
-        "icon": "Zap"
+        "title": "Open-source cryptography",
+        "description": "",
+        "icon": "Code"
       },
       {
-        "title": "Shopify Deep-Sync",
-        "description": "Zero-latency integration with your Shopify checkout and customer segments.",
-        "icon": "RefreshCw"
+        "title": "GDPR & CCPA compliant",
+        "description": "",
+        "icon": "FileCheck"
       }
     ]
   },
@@ -430,72 +435,72 @@
     "id": "faq",
     "title": "Frequently Asked Questions",
     "description": "Have another question? Contact us by email.",
-    "tip": "Can't find what you're looking for? Contact our <a href='mailto:support@glow.app' class='text-primary font-medium hover:underline'>customer support team</a>",
+    "tip": "Can't find what you're looking for? Contact our <a href='mailto:support@digitalheirloom.app' class='text-primary font-medium hover:underline'>customer support team</a>",
     "items": [
       {
-        "question": "Will Glow slow down my Shopify store?",
-        "answer": "Not at all. Glow is built with lightweight principles, loading asynchronously. Your site stays fast, and your customers stay happy. We use a zero-drag script that won't impact your loading speed."
+        "question": "Does the ShipAny package contain a USB drive or my actual data?",
+        "answer": "No. For ultimate security, we never ship USB drives. The package contains only a high-strength physical encrypted credential (Recovery Kit). Your assets remain encrypted in the cloud; the physical credential is the sole \"key\" to unlock them."
       },
       {
-        "question": "Do my customers need to download an app?",
-        "answer": "Never. Customers add their membership card directly to their phone's native wallet (Apple Wallet or Google Pay). It's one-tap access with zero friction. No app downloads, no passwords to remember."
+        "question": "What happens if DigitalHeirloom's database is hacked?",
+        "answer": "This is the brilliance of our architecture. Even if hackers exfiltrated the entire database, they could read nothing. The critical decryption factors are not on our servers; they reside in the physical credentials sent to your beneficiaries. The algorithmic complexity makes cracking as difficult as finding a specific atom in the universe."
       },
       {
-        "question": "Can I migrate from Smile or Yotpo?",
-        "answer": "Yes. We offer a clean import tool. Bring your existing customer points over to a more beautiful home in seconds. Our migration wizard handles everything automatically."
+        "question": "Does the platform guarantee the quality or integrity of my file content?",
+        "answer": "We guarantee the physical integrity and security of your encrypted data blocks via globally distributed storage. However, as a \"Zero-Knowledge\" platform, we do not audit or guarantee the internal content quality. We are the vault manufacturers, not content auditors."
       },
       {
-        "question": "Is it customizable for my specific niche?",
-        "answer": "Whether you sell handmade ceramics, artisan jewelry, or digital brushes, Glow's UI is a canvas. You control the colors, the icons, and the vibe. Real-time preview lets you see changes instantly."
+        "question": "Will my beneficiary still need my Master Password after receiving the physical credential?",
+        "answer": "No. Pro credentials feature \"Auto-Parsing\" technology. Once the beneficiary scans the encrypted QR code, the system validates identity via the physical medium, automatically bypassing the password input for a friction-less recovery."
       },
       {
-        "question": "What happens if I exceed my member limit?",
-        "answer": "You'll receive a notification when you're approaching your plan limit. You can upgrade anytime with one click. Your existing members and their points are preserved during the upgrade."
+        "question": "Why emphasize \"Physical Credentials\" over pure digital passwords?",
+        "answer": "Digital passwords can be compromised via brute force or phishing. Our physical credentials are \"non-replicable.\" This dual-validation—binding digital legacy with physical logistics (ShipAny)—ensures that even if a hacker breaches your network, they cannot cross physical space."
       },
       {
-        "question": "How does the Apple Wallet integration work?",
-        "answer": "When a customer joins your loyalty program, they receive a beautifully designed digital card that can be added to Apple Wallet or Google Pay with one tap. The card updates automatically when they earn points."
+        "question": "Does decrypting a 2GB asset take a long time?",
+        "answer": "Decryption time depends on the beneficiary's local hardware, not bandwidth. Once the physical credential activates the channel, the system uses Vercel Edge computing for streaming decryption. A 2GB archive can typically be restored within minutes."
       }
     ]
   },
   "technical-architecture": {
     "id": "technical-architecture",
-    "title": "Feature Highlights",
-    "description": "Everything you need to create a loyalty program that feels like art",
+    "title": "Technical Architecture & Compliance",
+    "description": "Learn More: Technical Architecture & Compliance",
     "items": [
       {
-        "title": "Dynamic Card Designer",
-        "description": "Real-time UI customization to match your brand's hex codes and typography. See changes instantly as you design your perfect membership card. No coding required.",
-        "icon": "Paintbrush"
+        "title": "Core Technology: BIP39 & AES-256-GCM",
+        "description": "Afterglow's foundation is built upon the BIP39 Mnemonic standard, the same protocol used by leading cryptocurrency wallets. The system generates a 24-word \"Recovery Kit\" to protect your Master Password backup. Every piece of data is encrypted using AES-256-GCM, providing the highest level of cryptographic security available for commercial use.",
+        "icon": "Shield"
       },
       {
-        "title": "Automated Reward Triggers",
-        "description": "Set it and forget it. Glow rewards customers for purchases, birthdays, and referrals automatically. Create custom triggers for your unique business needs.",
-        "icon": "Zap"
+        "title": "Physical-Digital Bridge: Powered by ShipAny",
+        "description": "We have bridged the gap between digital data and physical heirlooms through deep integration with ShipAny, a global logistics orchestration platform. Automated Triggers: Real-time monitoring via high-performance Edge Functions. Human-in-the-Loop (HITL): To prevent irreversible shipping errors, every Pro-tier physical dispatch requires manual secondary authorization from the Afterglow administrative dashboard. Privacy-First Logistics: Beneficiary shipping addresses remain encrypted in our database and are only decrypted at the moment the shipping label is generated.",
+        "icon": "Package"
       },
       {
-        "title": "Shopify Deep-Sync",
-        "description": "Zero-latency integration with your Shopify checkout and customer segments. Points update in real-time. Works seamlessly with your existing store setup.",
-        "icon": "RefreshCw"
+        "title": "Why Upgrade to Pro Family Plan?",
+        "description": "For users managing high-value assets—such as private keys, sensitive legal documents, or priceless family archives—the Pro Plan offers \"Certainty of Delivery\": Omni-channel Alerts: Avoid single-point-of-failure risks associated with email-only notifications. Logistics Settlement Engine: Integrated Creem gateway allows beneficiaries to settle shipping fees with a single click. Unlimited Beneficiaries: Perfect for complex estate planning and family trust structures.",
+        "icon": "ArrowUpCircle"
       },
       {
-        "title": "Lightweight & Fast",
-        "description": "A zero-drag script that won't slow down your site's loading speed. Built with performance in mind. Your customers will never notice the difference—except for the beautiful loyalty cards.",
-        "icon": "Gauge"
+        "title": "Legal Disclaimer & Best Practices",
+        "description": "While Afterglow provides state-of-the-art technical security, we strongly recommend that users print their Recovery Kit and store it in a secure, fireproof location. Our service serves as a technological supplement to your estate plan and does not replace a legally binding will or testament as defined by your local jurisdiction. Please consult with a legal professional for comprehensive estate planning.",
+        "icon": "FileText"
       }
     ]
   },
   "cta": {
     "id": "cta",
-    "title": "Ready to make your brand glow?",
-    "description": "Join hundreds of artisan brands creating loyalty programs that feel like gifts.",
-    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">Free forever for your first 50 members • No credit card • Setup in 5 minutes</span>",
+    "title": "Start Protecting Your Digital Legacy Today",
+    "description": "Join thousands of users who trust Afterglow to secure their most important digital assets.",
+    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">No credit card required</span>",
     "buttons": [
       {
-        "title": "Launch your club for free",
+        "title": "Start for Free",
         "url": "/sign-up",
         "target": "_self",
-        "icon": "Sparkles",
+        "icon": "Shield",
         "variant": "default",
         "className": ""
       }
@@ -504,7 +509,7 @@
   "subscribe": {
     "id": "subscribe",
     "title": "Subscribe to our newsletter",
-    "description": "Get the latest tips and updates for growing your artisan brand.",
+    "description": "Get the latest news and updates from Digital Heirloom.",
     "submit": {
       "input": {
         "placeholder": "Enter your email"
@@ -518,11 +523,11 @@
   "footer": {
     "id": "footer",
     "brand": {
-      "title": "Glow",
-      "description": "Glow is an aesthetic loyalty program for artisan Shopify stores. Create beautiful, digital membership cards that your customers will actually want to keep.",
-      "url": "/niche-loyalty"
+      "title": "Afterglow",
+      "description": "Afterglow is a high-security digital asset custody and automated distribution platform. We protect your digital legacy with zero-knowledge encryption, ensuring your loved ones can access your digital assets when they need them most.",
+      "url": "/"
     },
-    "copyright": "Glow - Give your brand the glow it deserves",
+    "copyright": "Afterglow - Secure Your Digital Legacy",
     "nav": {
       "items": [
         {

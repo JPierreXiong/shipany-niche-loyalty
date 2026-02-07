@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+import { envConfigs } from '@/config';
 
 export async function generateMetadata({
   params: { locale },
@@ -11,6 +12,7 @@ export async function generateMetadata({
   return {
     title: t('metadata.title'),
     description: t('metadata.description'),
+    keywords: t('metadata.keywords'),
   };
 }
 
@@ -21,8 +23,33 @@ export default async function AboutPage({
 }) {
   const t = await getTranslations({ locale, namespace: 'about' });
 
+  // JSON-LD Structured Data for Organization
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Glow",
+    "url": envConfigs.app_url,
+    "logo": `${envConfigs.app_url}/logo.png`,
+    "description": t('metadata.description'),
+    "foundingDate": "2024",
+    "sameAs": [
+      // Add your social media profiles here when available
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "email": "hello@glow.app",
+      "availableLanguage": ["English", "French", "Chinese"]
+    }
+  };
+
   return (
     <div className="container mx-auto px-4 py-16 max-w-4xl">
+      {/* Inject JSON-LD for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero Section */}
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">

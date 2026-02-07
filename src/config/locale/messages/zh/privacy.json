@@ -1,90 +1,91 @@
 {
   "metadata": {
-    "title": "隐私政策 | Glow - Shopify 手工艺者的美学会员系统",
-    "description": "了解 Glow 如何保护您的数据。符合 GDPR 和 CCPA 标准的极简会员平台隐私政策。"
+    "title": "Privacy Policy | Glow - Aesthetic Loyalty for Shopify Artisans",
+    "description": "Learn how Glow protects your data. GDPR and CCPA compliant privacy policy for our minimalist loyalty platform."
   },
-  "title": "隐私政策",
-  "lastUpdated": "最后更新",
-  "date": "2026年2月6日",
+  "title": "Privacy Policy",
+  "lastUpdated": "Last Updated",
+  "date": "February 6, 2026",
   "introduction": {
-    "title": "1. 简介",
-    "content": "欢迎使用 Glow（我们、我们的）。我们为手工艺者和创作者提供轻量级的会员和忠诚度平台。我们尊重您的隐私，致力于保护商家（手工艺者）和会员（客户）的个人数据。"
+    "title": "1. Introduction",
+    "content": "Welcome to Glow (\"we,\" \"our,\" or \"us\"). We provide a lightweight membership and loyalty platform designed specifically for artisans and makers. We respect your privacy and are committed to protecting the personal data of both our Merchants (artisans) and their Members (customers)."
   },
   "collection": {
-    "title": "2. 我们收集的信息",
+    "title": "2. Information We Collect",
     "merchants": {
-      "title": "商家信息",
-      "content": "姓名、电子邮件地址、品牌资产（徽标/颜色）以及支付信息（通过 Creem 安全处理）。"
+      "title": "For Merchants",
+      "content": "Name, email address, brand assets (logos/colors), and payment information (processed securely via Creem)."
     },
     "members": {
-      "title": "会员信息",
-      "content": "电子邮件地址和/或电话号码（加入会员卡时自愿提供）以及交易/积分历史记录。"
+      "title": "For Members",
+      "content": "Email address and/or phone number (provided voluntarily when joining a loyalty card), and transaction/points history."
     },
     "technical": {
-      "title": "技术数据",
-      "content": "IP 地址、浏览器类型以及通过 Vercel 自动收集的使用数据，用于安全和性能监控。"
+      "title": "Technical Data",
+      "content": "IP address, browser type, and usage data collected automatically via Vercel for security and performance monitoring."
     }
   },
   "usage": {
-    "title": "3. 我们如何使用您的信息",
-    "point1": "生成和管理数字手工艺者会员卡。",
-    "point2": "促进商家和会员之间的沟通（通过 Resend 发送电子邮件，通过 Twilio 发送短信）。",
-    "point3": "通过 Creem 处理订阅和付款。",
-    "point4": "改善平台稳定性和用户体验。"
+    "title": "3. How We Use Your Information",
+    "point1": "Generate and manage digital artisan membership cards.",
+    "point2": "Facilitate communication (Email via Resend, SMS via Twilio) between Merchants and Members.",
+    "point3": "Process subscriptions and payments through Creem.",
+    "point4": "Improve platform stability and user experience."
   },
   "security": {
-    "title": "4. 数据存储和安全",
+    "title": "4. Data Storage and Security",
     "infrastructure": {
-      "title": "基础设施",
-      "content": "您的数据使用 Neon (PostgreSQL) 存储，这是一个安全的云原生数据库。"
+      "title": "Infrastructure",
+      "content": "Your data is stored using Neon (PostgreSQL), a secure, cloud-native database."
     },
     "protection": {
-      "title": "安全保护",
-      "content": "我们实施行业标准加密来保护静态和传输中的数据。但是，没有任何互联网传输方法是 100% 安全的。"
+      "title": "Security",
+      "content": "We implement industry-standard encryption to protect data at rest and in transit. However, no method of transmission over the internet is 100% secure."
     },
     "retention": {
-      "title": "数据保留",
-      "content": "我们仅在账户处于活动状态或需要提供服务时保留个人数据。"
+      "title": "Retention",
+      "content": "We retain personal data only as long as an account is active or as needed to provide services."
     }
   },
   "thirdParty": {
-    "title": "5. 第三方服务",
-    "intro": "为了提供无缝体验，我们与以下可信合作伙伴集成：",
-    "vercel": "托管和部署。",
-    "neon": "数据库管理。",
-    "creem": "支付处理（我们不存储信用卡详细信息）。",
-    "communication": "通信传递。"
+    "title": "5. Third-Party Services",
+    "intro": "To provide a seamless experience, we integrate with the following trusted partners:",
+    "vercel": "Hosting and Deployment.",
+    "neon": "Database Management.",
+    "creem": "Payment Processing (we do not store credit card details).",
+    "communication": "Communication delivery."
   },
   "rights": {
-    "title": "6. 您的权利（GDPR 和 CCPA）",
-    "intro": "根据您所在的位置，您拥有以下权利：",
+    "title": "6. Your Rights (GDPR & CCPA)",
+    "intro": "Depending on your location, you have the following rights:",
     "access": {
-      "title": "访问和可移植性",
-      "content": "请求我们持有的关于您的数据副本。"
+      "title": "Access & Portability",
+      "content": "Request a copy of the data we hold about you."
     },
     "correction": {
-      "title": "更正和删除",
-      "content": "请求我们更新或删除您的个人信息。"
+      "title": "Correction & Deletion",
+      "content": "Request that we update or erase your personal information."
     },
     "optout": {
-      "title": "选择退出",
-      "content": "会员可以随时使用电子邮件中的取消订阅链接或回复短信STOP来取消订阅营销通信。"
+      "title": "Opt-Out",
+      "content": "Members can unsubscribe from marketing communications at any time using the \"Unsubscribe\" link in emails or replying \"STOP\" to SMS."
     }
   },
   "cookies": {
-    "title": "7. Cookie",
-    "content": "我们使用必要的 Cookie 来维护您的会话并记住您的偏好。我们不使用侵入性跟踪或第三方广告 Cookie。"
+    "title": "7. Cookies",
+    "content": "We use essential cookies to maintain your session and remember your preferences. We do not use intrusive tracking or third-party advertising cookies."
   },
   "changes": {
-    "title": "8. 政策变更",
-    "content": "我们可能会不时更新本隐私政策。我们将通过在此页面上发布新政策并更新最后更新日期来通知您任何重大变更。"
+    "title": "8. Changes to This Policy",
+    "content": "We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on this page and updating the \"Last Updated\" date."
   },
   "contact": {
-    "title": "9. 联系我们",
-    "intro": "如果您对本隐私政策有任何疑问，请通过以下方式联系我们：",
-    "email": "电子邮件",
-    "website": "网站"
+    "title": "9. Contact Us",
+    "intro": "If you have any questions about this Privacy Policy, please contact us at:",
+    "email": "Email",
+    "website": "Website"
   }
 }
+
 
 

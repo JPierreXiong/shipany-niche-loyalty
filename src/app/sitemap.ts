@@ -17,6 +17,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/disclaimer',
   ];
 
+  // Programmatic SEO: Artisan-specific landing pages
+  // These capture long-tail keywords like "loyalty tool for pottery studios"
+  const artisanNiches = [
+    'pottery',
+    'jewelry',
+    'leather-craft',
+    'woodworking',
+    'ceramics',
+    'textile',
+    'glassblowing',
+    'metalwork',
+  ];
+
   // Known blog posts (add more as you create them)
   const blogPosts = [
     'how-decryption-works',
@@ -37,6 +50,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: route === '/blog' ? 'daily' : 'weekly',
         priority: route === '' ? 1.0 : route === '/pricing' ? 0.9 : 0.8,
+      });
+    });
+
+    // Add programmatic SEO pages for artisan niches
+    artisanNiches.forEach((niche) => {
+      const nicheUrl = locale === 'en'
+        ? `${baseUrl}/for/${niche}`
+        : `${baseUrl}/${locale}/for/${niche}`;
+      
+      sitemapEntries.push({
+        url: nicheUrl,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.7, // Good priority for niche landing pages
       });
     });
 

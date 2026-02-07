@@ -6,7 +6,9 @@ Allow: /
 Allow: /*/pricing
 Allow: /*/faq
 Allow: /*/about
+Allow: /*/contact
 Allow: /*/blog
+Allow: /*/for/*
 Allow: /_next/static/
 Allow: /static/
 
