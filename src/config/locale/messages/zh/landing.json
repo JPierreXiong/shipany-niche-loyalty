@@ -8,9 +8,9 @@
     "nav": {
       "items": [
         {
-          "title": "数字遗产",
-          "url": "/digital-heirloom/dashboard",
-          "icon": "Shield"
+          "title": "会员管理",
+          "url": "/niche-loyalty/dashboard",
+          "icon": "Heart"
         },
         {
           "title": "价格",
@@ -435,7 +435,7 @@
     "id": "faq",
     "title": "常见问题",
     "description": "还有其他问题？请通过邮件联系我们。",
-    "tip": "没有找到想要的答案？请联系 <a href='mailto:support@digitalheirloom.app' class='text-primary font-medium hover:underline'>我们的客服团队</a>",
+    "tip": "没有找到想要的答案？请联系 <a href='mailto:support@glow.app' class='text-primary font-medium hover:underline'>我们的客服团队</a>",
     "items": [
       {
         "question": "ShipAny 寄送的包裹里有我的 U 盘和数据吗？",
@@ -492,28 +492,24 @@
   },
   "cta": {
     "id": "cta",
-    "title": "发布你的第一个 AI SaaS 项目",
-    "description": "从这里出发，用 Digital Heirloom 极速交付。",
+    "title": "准备让您的品牌焕发光彩？",
+    "description": "加入数百个手工品牌，创建让人感觉像礼物的会员计划。",
+    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">前 50 名会员永久免费</span>",
     "buttons": [
       {
-        "title": "获取 Digital Heirloom",
-        "url": "https://www.subtitletk.app",
-        "target": "_blank",
-        "icon": "Zap"
-      },
-      {
-        "title": "阅读文档",
-        "url": "/docs",
-        "target": "_blank",
-        "variant": "outline",
-        "icon": "BookOpenText"
+        "title": "创建您的俱乐部",
+        "url": "/sign-up",
+        "target": "_self",
+        "icon": "Heart",
+        "variant": "default",
+        "className": ""
       }
     ]
   },
   "subscribe": {
     "id": "subscribe",
     "title": "订阅我们的邮件通知",
-    "description": "获取 Digital Heirloom 最新资讯与产品动态。",
+    "description": "获取 Glow 最新资讯与产品动态。",
     "submit": {
       "input": {
         "placeholder": "输入邮箱"
@@ -527,8 +523,8 @@
   "footer": {
     "id": "footer",
     "brand": {
-      "title": "Digital Heirloom",
-      "description": "Digital Heirloom is a high-performance digital toolkit designed to extract and translate subtitles from YouTube and TikTok videos. We believe in simple, transparent pricing.",
+      "title": "Glow",
+      "description": "Glow 是专为手工 Shopify 商店打造的优雅会员平台。我们帮助创作者通过精美、无干扰的会员体验与社区建立更深层次的联系。",
       "url": "/"
     },
     "nav": {
@@ -580,7 +576,7 @@
         {
           "title": "邮箱",
           "icon": "Mail",
-          "url": "mailto:support@digitalheirloom.app",
+          "url": "mailto:support@glow.app",
           "target": "_self"
         }
       ]
@@ -601,7 +597,7 @@
         }
       ]
     },
-    "copyright": "Digital Heirloom 是独立产品，与 Google (YouTube) 或 ByteDance (TikTok) 无关联。",
+    "copyright": "Glow - 手工品牌的优雅会员系统",
     "show_theme": true,
     "show_locale": true
   }
