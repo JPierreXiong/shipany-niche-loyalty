@@ -22,11 +22,8 @@ import { useNicheLoyaltyStore } from '@/shared/stores/niche-loyalty-store';
 import { 
   StatsCardGrid, 
   MemberCard,
-  MagicLinkFormInline,
 } from '@/themes/artisan/components';
 import { BrandConfigPanel } from '@/themes/artisan/components/BrandConfigPanel';
-
-import Link from 'next/link';
 
 export default function GlowDashboard() {
   const { brandConfig, stats, members, setStats, setMembers, isLoading, setLoading } = useNicheLoyaltyStore();
