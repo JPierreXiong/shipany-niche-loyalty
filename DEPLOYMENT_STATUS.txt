@@ -1,0 +1,107 @@
+
+=============================================================
+   ✅ GitHub 推送成功！
+=============================================================
+
+提交哈希: cf09a70
+分支: master
+仓库: JPierreXiong/shipany-niche-loyalty
+文件变更: 47 个文件 (+727 -197)
+
+=============================================================
+   🚀 现在开始部署到 Vercel
+=============================================================
+
+方法 1: 自动部署（如果已连接 GitHub）
+  - 访问: https://vercel.com/dashboard
+  - 查看 Deployments 标签
+  - 等待自动构建完成
+
+方法 2: 手动导入项目（首次部署）
+  - 访问: https://vercel.com/new
+  - 导入 GitHub 仓库
+  - 配置环境变量
+  - 点击 Deploy
+
+方法 3: 使用 Vercel CLI
+  - 运行: .\deploy-to-vercel.ps1
+  - 或: vercel --prod
+
+=============================================================
+   ⚠️  部署前必须配置的环境变量
+=============================================================
+
+在 Vercel Dashboard -> Settings -> Environment Variables 添加：
+
+必需变量：
+  DATABASE_URL=postgresql://...
+  BETTER_AUTH_SECRET=your-secret
+  BETTER_AUTH_URL=https://your-app.vercel.app
+  RESEND_API_KEY=re_xxxxx
+  QSTASH_CURRENT_SIGNING_KEY=sig_xxxxx
+  QSTASH_NEXT_SIGNING_KEY=sig_xxxxx
+  QSTASH_TOKEN=08976337-b4a3-48c8-99b1-e6c1ba91f92b
+
+可选变量：
+  SHOPIFY_STORE_DOMAIN=your-store.myshopify.com
+  SHOPIFY_ACCESS_TOKEN=shpat_xxxxx
+  CREEM_API_KEY=your-key
+
+=============================================================
+   📋 获取 Upstash 签名密钥
+=============================================================
+
+1. 访问: https://console.upstash.com/qstash
+2. 找到 "Signing Keys" 部分
+3. 复制 QSTASH_CURRENT_SIGNING_KEY (以 sig_ 开头)
+4. 复制 QSTASH_NEXT_SIGNING_KEY (以 sig_ 开头)
+5. 添加到 Vercel 环境变量
+
+=============================================================
+   🎯 部署后配置 Upstash Schedule
+=============================================================
+
+部署成功后，在 Upstash Console 创建定时任务：
+
+1. 访问: https://console.upstash.com/qstash
+2. 点击 Schedules -> Create Schedule
+3. 配置：
+   Name: glow-sync-production
+   Destination: https://your-app.vercel.app/api/cron/qstash-sync
+   Schedule: 0 */6 * * *
+   Method: POST
+   Retries: 3
+4. 点击 Create
+5. 点击 Trigger Now 测试
+
+=============================================================
+   ✅ 部署成功检查清单
+=============================================================
+
+[ ] GitHub 代码已推送 ✅
+[ ] Vercel 环境变量已配置
+[ ] Vercel 部署成功
+[ ] 网站可以访问
+[ ] Upstash Schedule 已创建
+[ ] QStash 测试触发成功
+[ ] 所有功能测试通过
+
+=============================================================
+   📚 相关文档
+=============================================================
+
+VERCEL_DEPLOYMENT_NEXT_STEPS.md - 详细部署步骤
+DEPLOYMENT_GUIDE.md - 完整部署指南
+docs/UPSTASH_QSTASH_SETUP.md - QStash 配置
+docs/QUICKSTART_TESTING.md - 功能测试指南
+
+=============================================================
+   🎉 准备就绪！
+=============================================================
+
+现在访问 Vercel Dashboard 开始部署：
+https://vercel.com/dashboard
+
+或运行部署脚本：
+.\deploy-to-vercel.ps1
+
