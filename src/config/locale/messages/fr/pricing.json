@@ -1,0 +1,165 @@
+{
+  "metadata": {
+    "title": "Tarifs | Glow - Système d'adhésion esthétique pour artisans",
+    "description": "Choisissez votre plan Glow. Du démarrage gratuit à l'échelle professionnelle. Belles cartes de fidélité pour artisans Shopify."
+  },
+  "pricing": {
+    "id": "pricing",
+    "sr_only_title": "Plans tarifaires Glow",
+    "title": "Le cadre Glow Up",
+    "description": "Plans d'adhésion élégants conçus pour les artisans. Commencez gratuitement, évoluez en grandissant.",
+    "groups": [
+      {
+        "name": "monthly",
+        "title": "Mensuel",
+        "is_featured": true,
+        "label": "Flexible"
+      }
+    ],
+    "items": [
+      {
+        "title": "Seed",
+        "description": "Pour les nouveaux créateurs et amateurs",
+        "label": "Gratuit pour toujours",
+        "features_title": "Fonctionnalités principales",
+        "features": [
+          "Jusqu'à 50 membres",
+          "Carte d'adhésion numérique standard",
+          "Intégration Apple/Google Wallet",
+          "Support par e-mail (réponse 48h)",
+          "Distribution manuelle des récompenses",
+          "Modèle de marque Glow"
+        ],
+        "interval": "month",
+        "amount": 0,
+        "currency": "USD",
+        "price": "$0",
+        "original_price": "",
+        "unit": "/ pour toujours",
+        "is_featured": false,
+        "tip": "Parfait pour essayer la fidélité esthétique !",
+        "button": {
+          "title": "Commencer gratuitement",
+          "url": "/niche-loyalty",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "glow-seed-free",
+        "product_name": "Glow Seed",
+        "group": "monthly",
+        "plan_name": "Seed"
+      },
+      {
+        "title": "Base",
+        "description": "Pour artisans établis et boutiques",
+        "label": "Le plus populaire",
+        "features_title": "Tout dans Seed, plus",
+        "features": [
+          "50 à 250 membres",
+          "✨ Personnalisation complète de la marque",
+          "Codes hex personnalisés et suppression du logo",
+          "Livraison numérique automatisée",
+          "Déclencheurs e-mail/SMS via Resend",
+          "Support prioritaire (réponse 24h)",
+          "Tableau de bord analytique de base",
+          "Suivi des taux d'ajout au portefeuille"
+        ],
+        "interval": "month",
+        "amount": 1990,
+        "currency": "USD",
+        "price": "$19.90",
+        "original_price": "",
+        "unit": "/ mois",
+        "is_featured": true,
+        "tip": "Idéal pour les marques artisanales en croissance !",
+        "button": {
+          "title": "Obtenir Base",
+          "url": "/niche-loyalty",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "glow-base-monthly",
+        "product_name": "Glow Base",
+        "payment_product_id": "prod_1lQWMwrdWZFzo6AgpVcCc7",
+        "group": "monthly",
+        "plan_name": "Base"
+      },
+      {
+        "title": "Pro",
+        "description": "Pour marques à fort volume et studios professionnels",
+        "label": "Échelle",
+        "features_title": "Tout dans Base, plus",
+        "features": [
+          "250+ membres (Illimité)",
+          "✨ Diffusions Glow illimitées",
+          "Segmentation avancée des membres",
+          "Domaine personnalisé (club.votrebrand.com)",
+          "Personnalisation CSS en marque blanche",
+          "Accès anticipé aux nouvelles fonctionnalités",
+          "Configuration VIP Concierge",
+          "Gestionnaire de succès dédié 1-à-1",
+          "Analyses et insights avancés"
+        ],
+        "interval": "month",
+        "amount": 5990,
+        "currency": "USD",
+        "price": "$59.90",
+        "original_price": "",
+        "unit": "/ mois",
+        "is_featured": false,
+        "tip": "Parfait pour les studios professionnels !",
+        "button": {
+          "title": "Obtenir Pro",
+          "url": "/niche-loyalty",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "glow-pro-monthly",
+        "product_name": "Glow Pro",
+        "payment_product_id": "prod_5bo10kkVzObfuZIjUglgI0",
+        "group": "monthly",
+        "plan_name": "Pro"
+      }
+    ]
+  },
+  "comparison": {
+    "title": "Comparaison des fonctionnalités",
+    "subtitle": "Choisissez le plan qui correspond à votre parcours artisanal",
+    "categories": [
+      {
+        "name": "Capacité des membres",
+        "seed": "Jusqu'à 50",
+        "base": "50 – 250",
+        "pro": "250+ (Illimité)"
+      },
+      {
+        "name": "Branding",
+        "seed": "Marque Glow",
+        "base": "Marque blanche (Votre marque)",
+        "pro": "Domaine personnalisé et CSS"
+      },
+      {
+        "name": "Automatisation",
+        "seed": "Manuel",
+        "base": "Déclencheurs automatisés",
+        "pro": "Logique et flux avancés"
+      },
+      {
+        "name": "Impact SEO",
+        "seed": "Faible",
+        "base": "Moyen (Recherche de marque)",
+        "pro": "Élevé (Autorité de domaine)"
+      },
+      {
+        "name": "Support",
+        "seed": "Communauté",
+        "base": "E-mail prioritaire",
+        "pro": "Gestionnaire de succès dédié"
+      }
+    ]
+  },
+  "page": {
+    "current_plan": "Plan actuel",
+    "processing": "Traitement",
+    "upgrade": "Mettre à niveau",
+    "downgrade": "Rétrograder",
+    "get_started": "Commencer"
+  }
+}

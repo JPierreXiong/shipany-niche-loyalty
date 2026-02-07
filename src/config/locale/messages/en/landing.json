@@ -1,0 +1,599 @@
+{
+  "header": {
+    "id": "header",
+    "brand": {
+      "title": "Glow",
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Niche Loyalty",
+          "url": "/niche-loyalty/dashboard",
+          "icon": "Sparkles"
+        },
+        {
+          "title": "Pricing",
+          "url": "/pricing",
+          "icon": "DollarSign"
+        }
+      ]
+    },
+    "buttons": [],
+    "user_nav": {
+      "show_name": true,
+      "show_credits": true,
+      "show_sign_out": true,
+      "items": [
+        {
+          "title": "Niche Loyalty",
+          "url": "/niche-loyalty/dashboard",
+          "icon": "Sparkles"
+        },
+        {
+          "title": "Billing",
+          "url": "/settings/billing",
+          "icon": "CreditCard"
+        }
+      ]
+    },
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "id": "hero",
+    "title": "Give your brand the glow it deserves",
+    "highlight_text": "",
+    "description": "Most loyalty apps feel like a chore. Glow feels like a gift. Create beautiful, digital membership cards that your customers will actually want to keep.",
+    "announcement": {
+      "badge": "For Artisan Shopify Stores",
+      "title": "✨ Apple Wallet Ready",
+      "url": "#apple-wallet"
+    },
+    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">Free forever for your first 50 members</span>",
+    "buttons": [
+      {
+        "title": "Launch your club for free",
+        "icon": "Sparkles",
+        "url": "/sign-up",
+        "target": "_self",
+        "variant": "default",
+        "className": ""
+      },
+      {
+        "title": "See how it works",
+        "icon": "Play",
+        "url": "/niche-loyalty",
+        "target": "_self",
+        "variant": "outline",
+        "className": ""
+      }
+    ],
+    "show_avatars": false,
+    "avatars_tip": "",
+    "show_award": false,
+    "image": {
+      "src": "/imgs/features/admin.png",
+      "alt": "hero"
+    },
+    "image_invert": {
+      "src": "/imgs/features/admin-dark.png",
+      "alt": "hero"
+    }
+  },
+  "logos": {
+    "title": "Digital Heirloom is built on the shoulders of giants",
+    "items": [
+      {
+        "title": "Next.js",
+        "image": {
+          "src": "/imgs/logos/nextjs.svg",
+          "alt": "Next.js"
+        }
+      },
+      {
+        "title": "React",
+        "image": {
+          "src": "/imgs/logos/react.svg",
+          "alt": "React"
+        }
+      },
+      {
+        "title": "TailwindCSS",
+        "image": {
+          "src": "/imgs/logos/tailwindcss.svg",
+          "alt": "TailwindCSS"
+        }
+      },
+      {
+        "title": "Shadcn/UI",
+        "image": {
+          "src": "/imgs/logos/shadcn.svg",
+          "alt": "Shadcn/UI"
+        }
+      },
+      {
+        "title": "Vercel",
+        "image": {
+          "src": "/imgs/logos/vercel.svg",
+          "alt": "Vercel"
+        }
+      }
+    ]
+  },
+  "introduce": {
+    "id": "introduce",
+    "title": "What is Digital Heirloom",
+    "label": "Introduce",
+    "description": "Digital Heirloom is a NextJS boilerplate for building AI SaaS startups, including templates, components, and documentation.",
+    "image": {
+      "src": "/imgs/features/landing-page.png",
+      "alt": "introduce"
+    },
+    "items": [
+      {
+        "title": "Ready-to-use Templates",
+        "description": "Choose from dozens of production-ready AI SaaS templates to quickly start your project.",
+        "icon": "RiNextjsFill",
+        "image": {
+          "src": "/imgs/features/1.png",
+          "alt": "introduce"
+        }
+      },
+      {
+        "title": "Infrastructure Setup",
+        "description": "Get instant access to scalable infrastructure with best practices built-in.",
+        "icon": "RiDatabase2Line",
+        "image": {
+          "src": "/imgs/features/2.png",
+          "alt": "introduce"
+        }
+      },
+      {
+        "title": "Quick Deployment",
+        "description": "Deploy your AI SaaS application to production in hours, not days.",
+        "icon": "RiCloudyFill",
+        "image": {
+          "src": "/imgs/features/3.png",
+          "alt": "introduce"
+        }
+      },
+      {
+        "title": "AI Integration",
+        "description": "Integrate AI into your project with ease using our built-in AI SDK.",
+        "icon": "RiRobot2Line",
+        "image": {
+          "src": "/imgs/features/4.png",
+          "alt": "introduce"
+        }
+      }
+    ]
+  },
+  "benefits": {
+    "id": "benefits",
+    "title": "Why Choose Digital Heirloom",
+    "label": "Benefits",
+    "description": "Get everything you need to launch your AI startup - from ready-to-use templates to technical support.",
+    "items": [
+      {
+        "title": "Complete Framework",
+        "description": "Built on Next.js with authentication, payments, and AI integration - everything works out of the box.",
+        "icon": "RiNextjsFill",
+        "image": {
+          "src": "/imgs/features/user-billing.png",
+          "alt": "benefits"
+        }
+      },
+      {
+        "title": "Rich Templates Library",
+        "description": "Choose from various AI SaaS templates to kickstart your project - chatbots, image generation, and more.",
+        "icon": "RiClapperboardAiLine",
+        "image": {
+          "src": "/imgs/features/admin-settings.png",
+          "alt": "benefits"
+        }
+      },
+      {
+        "title": "Technical Guidance",
+        "description": "Get dedicated support and join our developer community to ensure your successful launch.",
+        "icon": "RiCodeFill",
+        "image": {
+          "src": "/imgs/features/landing-page.png",
+          "alt": "benefits"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "id": "usage",
+    "title": "How to Launch with Digital Heirloom",
+    "description": "Get your AI SaaS startup running in three simple steps:",
+    "image": {
+      "src": "/imgs/features/1.png",
+      "alt": "usage"
+    },
+    "image_position": "left",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "Get Digital Heirloom",
+        "description": "Buy Digital Heirloom with a one-time payment. Check your email for the code and documentation.",
+        "image": {
+          "src": "/imgs/features/5.png",
+          "alt": "usage"
+        }
+      },
+      {
+        "title": "Start Your Project",
+        "description": "Read the documentation and clone the code of Digital Heirloom. Start building your AI SaaS startup.",
+        "image": {
+          "src": "/imgs/features/6.png",
+          "alt": "usage"
+        }
+      },
+      {
+        "title": "Customize Your Project",
+        "description": "Modify the template with your data and contents. Specific AI functionality needs.",
+        "image": {
+          "src": "/imgs/features/7.png",
+          "alt": "usage"
+        }
+      },
+      {
+        "title": "Deploy to Production",
+        "description": "Deploy your project to production with a few steps and start serving customers immediately.",
+        "image": {
+          "src": "/imgs/features/8.png",
+          "alt": "usage"
+        }
+      }
+    ]
+  },
+  "how-it-works": {
+    "id": "how-it-works",
+    "title": "The Anti-Complexity Loyalty App",
+    "description": "Them: 20-page setup manual. Glow: 5 minutes.",
+    "items": [
+      {
+        "title": "Your Brand, Your Way",
+        "description": "Customize colors, upload your logo, and create member cards that feel uniquely yours. Because your craft is personal. Your rewards should be too.",
+        "icon": "Palette"
+      },
+      {
+        "title": "Apple Wallet Ready",
+        "description": "Your brand, right in their pocket. Beautiful digital cards that live alongside their credit cards and boarding passes.",
+        "icon": "Smartphone"
+      },
+      {
+        "title": "Setup in 5 Minutes",
+        "description": "No 20-page manual. No developer needed. Just beautiful loyalty cards that work from day one.",
+        "icon": "Zap"
+      }
+    ]
+  },
+  "zero-knowledge-security": {
+    "id": "zero-knowledge-security",
+    "title": "Why Aesthetic Loyalty Matters",
+    "description": "High-end artisans need loyalty programs that match their craft. Your customers don't want a spreadsheet—they want an experience.",
+    "items": [
+      {
+        "title": "Aesthetic First, Software Second",
+        "description": "Your loyalty program shouldn't look like a spreadsheet. Glow blends into your brand's soul.",
+        "icon": "Palette"
+      },
+      {
+        "title": "Native Wallet Integration",
+        "description": "No apps for your customers to download. Just a beautiful card living natively in their Apple or Google Wallet.",
+        "icon": "Smartphone"
+      },
+      {
+        "title": "Frictionless Delight",
+        "description": "Points are boring. A Glow membership is an invitation to a community.",
+        "icon": "Heart"
+      },
+      {
+        "title": "Dynamic Card Designer",
+        "description": "Real-time UI customization to match your brand's hex codes and typography.",
+        "icon": "Paintbrush"
+      },
+      {
+        "title": "Automated Reward Triggers",
+        "description": "Set it and forget it. Glow rewards customers for purchases, birthdays, and referrals automatically.",
+        "icon": "Zap"
+      },
+      {
+        "title": "Shopify Deep-Sync",
+        "description": "Zero-latency integration with your Shopify checkout and customer segments.",
+        "icon": "RefreshCw"
+      }
+    ]
+  },
+  "features": {
+    "id": "features",
+    "title": "Key Features of Digital Heirloom",
+    "description": "Everything you need to launch your AI SaaS startup quickly and efficiently.",
+    "items": [
+      {
+        "title": "Next.js Boilerplate",
+        "description": "Production-ready Next.js templates with SEO-friendly structure and i18n support.",
+        "icon": "RiNextjsFill"
+      },
+      {
+        "title": "Authentication & Payments",
+        "description": "Integrated Google OAuth, one-tap login, and Stripe payment processing.",
+        "icon": "RiKey2Fill"
+      },
+      {
+        "title": "Data Infrastructure",
+        "description": "Built-in Supabase integration for reliable and scalable data storage.",
+        "icon": "RiDatabase2Line"
+      },
+      {
+        "title": "One-Click Deployment",
+        "description": "Seamless deployment to Vercel or Cloudflare with automated setup.",
+        "icon": "RiCloudy2Fill"
+      },
+      {
+        "title": "Business Analytics",
+        "description": "Integrated Google Analytics and Search Console for tracking growth.",
+        "icon": "RiBarChart2Line"
+      },
+      {
+        "title": "AI-Ready Infrastructure",
+        "description": "Pre-configured AI integration with built-in credits system and API sales.",
+        "icon": "RiRobot2Line"
+      }
+    ]
+  },
+  "stats": {
+    "id": "stats",
+    "title": "People Love Digital Heirloom",
+    "description": "for it's easy to use and fast to ship.",
+    "items": [
+      {
+        "title": "999+",
+        "description": "Customers"
+      },
+      {
+        "title": "200+",
+        "description": "Blocks"
+      },
+      {
+        "title": "50+",
+        "description": "Templates"
+      }
+    ]
+  },
+  "testimonials": {
+    "id": "testimonials",
+    "title": "What Users Say About Digital Heirloom",
+    "description": "Hear from content creators and businesses who transformed their video content with Digital Heirloom.",
+    "items": [
+      {
+        "name": "David Chen",
+        "role": "YouTube Content Creator",
+        "quote": "Digital Heirloom transformed my YouTube channel! I can now reach global audiences with accurate subtitles in 12 languages. My views increased by 300% after adding multilingual subtitles.",
+        "image": {
+          "src": "/imgs/avatars/1.png",
+          "alt": "david"
+        }
+      },
+      {
+        "name": "Rachel Kim",
+        "role": "TikTok Influencer",
+        "quote": "One-click subtitle extraction and translation saved me hours every week. My TikTok videos now connect with viewers worldwide, and my engagement has skyrocketed!",
+        "image": {
+          "src": "/imgs/avatars/2.png",
+          "alt": "rachel"
+        }
+      },
+      {
+        "name": "Marcus Thompson",
+        "role": "Video Production Agency Owner",
+        "quote": "As a small agency, Digital Heirloom gives us enterprise-level subtitle capabilities at a fraction of the cost. We process hundreds of videos monthly with perfect accuracy.",
+        "image": {
+          "src": "/imgs/avatars/3.png",
+          "alt": "marcus"
+        }
+      },
+      {
+        "name": "Sofia Garcia",
+        "role": "E-Learning Platform Manager",
+        "quote": "Digital Heirloom made our educational content accessible globally. Students from 50+ countries can now learn from our courses with accurate translations. Game-changer!",
+        "image": {
+          "src": "/imgs/avatars/4.png",
+          "alt": "sofia"
+        }
+      },
+      {
+        "name": "James Wilson",
+        "role": "Marketing Director",
+        "quote": "The AI-powered translation is incredibly accurate. We localize our marketing videos for different markets in minutes instead of days. ROI is through the roof!",
+        "image": {
+          "src": "/imgs/avatars/5.png",
+          "alt": "james"
+        }
+      },
+      {
+        "name": "Anna Zhang",
+        "role": "Content Strategist",
+        "quote": "Digital Heirloom's one-click solution turned our YouTube and TikTok content into a global powerhouse. Our international audience grew 500% in just 3 months!",
+        "image": {
+          "src": "/imgs/avatars/6.png",
+          "alt": "anna"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "id": "faq",
+    "title": "Frequently Asked Questions",
+    "description": "Have another question? Contact us by email.",
+    "tip": "Can't find what you're looking for? Contact our <a href='mailto:support@glow.app' class='text-primary font-medium hover:underline'>customer support team</a>",
+    "items": [
+      {
+        "question": "Will Glow slow down my Shopify store?",
+        "answer": "Not at all. Glow is built with lightweight principles, loading asynchronously. Your site stays fast, and your customers stay happy. We use a zero-drag script that won't impact your loading speed."
+      },
+      {
+        "question": "Do my customers need to download an app?",
+        "answer": "Never. Customers add their membership card directly to their phone's native wallet (Apple Wallet or Google Pay). It's one-tap access with zero friction. No app downloads, no passwords to remember."
+      },
+      {
+        "question": "Can I migrate from Smile or Yotpo?",
+        "answer": "Yes. We offer a clean import tool. Bring your existing customer points over to a more beautiful home in seconds. Our migration wizard handles everything automatically."
+      },
+      {
+        "question": "Is it customizable for my specific niche?",
+        "answer": "Whether you sell handmade ceramics, artisan jewelry, or digital brushes, Glow's UI is a canvas. You control the colors, the icons, and the vibe. Real-time preview lets you see changes instantly."
+      },
+      {
+        "question": "What happens if I exceed my member limit?",
+        "answer": "You'll receive a notification when you're approaching your plan limit. You can upgrade anytime with one click. Your existing members and their points are preserved during the upgrade."
+      },
+      {
+        "question": "How does the Apple Wallet integration work?",
+        "answer": "When a customer joins your loyalty program, they receive a beautifully designed digital card that can be added to Apple Wallet or Google Pay with one tap. The card updates automatically when they earn points."
+      }
+    ]
+  },
+  "technical-architecture": {
+    "id": "technical-architecture",
+    "title": "Feature Highlights",
+    "description": "Everything you need to create a loyalty program that feels like art",
+    "items": [
+      {
+        "title": "Dynamic Card Designer",
+        "description": "Real-time UI customization to match your brand's hex codes and typography. See changes instantly as you design your perfect membership card. No coding required.",
+        "icon": "Paintbrush"
+      },
+      {
+        "title": "Automated Reward Triggers",
+        "description": "Set it and forget it. Glow rewards customers for purchases, birthdays, and referrals automatically. Create custom triggers for your unique business needs.",
+        "icon": "Zap"
+      },
+      {
+        "title": "Shopify Deep-Sync",
+        "description": "Zero-latency integration with your Shopify checkout and customer segments. Points update in real-time. Works seamlessly with your existing store setup.",
+        "icon": "RefreshCw"
+      },
+      {
+        "title": "Lightweight & Fast",
+        "description": "A zero-drag script that won't slow down your site's loading speed. Built with performance in mind. Your customers will never notice the difference—except for the beautiful loyalty cards.",
+        "icon": "Gauge"
+      }
+    ]
+  },
+  "cta": {
+    "id": "cta",
+    "title": "Ready to make your brand glow?",
+    "description": "Join hundreds of artisan brands creating loyalty programs that feel like gifts.",
+    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">Free forever for your first 50 members • No credit card • Setup in 5 minutes</span>",
+    "buttons": [
+      {
+        "title": "Launch your club for free",
+        "url": "/sign-up",
+        "target": "_self",
+        "icon": "Sparkles",
+        "variant": "default",
+        "className": ""
+      }
+    ]
+  },
+  "subscribe": {
+    "id": "subscribe",
+    "title": "Subscribe to our newsletter",
+    "description": "Get the latest tips and updates for growing your artisan brand.",
+    "submit": {
+      "input": {
+        "placeholder": "Enter your email"
+      },
+      "button": {
+        "title": "Subscribe"
+      },
+      "action": "/api/subscribe"
+    }
+  },
+  "footer": {
+    "id": "footer",
+    "brand": {
+      "title": "Glow",
+      "description": "Glow is an aesthetic loyalty program for artisan Shopify stores. Create beautiful, digital membership cards that your customers will actually want to keep.",
+      "url": "/niche-loyalty"
+    },
+    "copyright": "Glow - Give your brand the glow it deserves",
+    "nav": {
+      "items": [
+        {
+          "title": "About",
+          "children": [
+            {
+              "title": "About Us",
+              "url": "/about",
+              "target": "_self"
+            },
+            {
+              "title": "Contact Us",
+              "url": "/contact",
+              "target": "_self"
+            },
+            {
+              "title": "Pricing",
+              "url": "/pricing",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Friends",
+          "children": [
+            {
+              "title": "Creem",
+              "url": "https://www.creem.io",
+              "target": "_blank"
+            },
+            {
+              "title": "ShipAny",
+              "url": "https://www.shipany.io",
+              "target": "_blank"
+            },
+            {
+              "title": "Resend",
+              "url": "https://resend.com",
+              "target": "_blank"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "Email",
+          "icon": "Mail",
+          "url": "mailto:support@digitalheirloom.app",
+          "target": "_self"
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "Privacy Policy",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Terms of Service",
+          "url": "/terms-of-service"
+        },
+        {
+          "title": "Disclaimer",
+          "url": "/disclaimer"
+        }
+      ]
+    },
+    "show_theme": true,
+    "show_locale": true
+  }
+}

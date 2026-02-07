@@ -1,0 +1,165 @@
+{
+  "metadata": {
+    "title": "定价 | Glow - 为手工艺者打造的美学会员系统",
+    "description": "选择您的 Glow 计划。从免费入门到专业规模。为 Shopify 手工艺者提供精美的忠诚度卡。"
+  },
+  "pricing": {
+    "id": "pricing",
+    "sr_only_title": "Glow 定价计划",
+    "title": "Glow Up 成长框架",
+    "description": "为手工艺者设计的优雅会员计划。免费开始，随着成长而扩展。",
+    "groups": [
+      {
+        "name": "monthly",
+        "title": "按月付费",
+        "is_featured": true,
+        "label": "灵活"
+      }
+    ],
+    "items": [
+      {
+        "title": "种子版",
+        "description": "适合新手创作者和爱好者",
+        "label": "永久免费",
+        "features_title": "核心功能",
+        "features": [
+          "最多 50 位会员",
+          "标准数字会员卡",
+          "Apple/Google 钱包集成",
+          "邮件支持（48小时响应）",
+          "手动奖励分发",
+          "Glow 品牌模板"
+        ],
+        "interval": "month",
+        "amount": 0,
+        "currency": "USD",
+        "price": "$0",
+        "original_price": "",
+        "unit": "/ 永久",
+        "is_featured": false,
+        "tip": "完美体验美学忠诚度系统！",
+        "button": {
+          "title": "免费开始",
+          "url": "/niche-loyalty",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "glow-seed-free",
+        "product_name": "Glow 种子版",
+        "group": "monthly",
+        "plan_name": "种子版"
+      },
+      {
+        "title": "基础版",
+        "description": "适合成熟的手工艺者和精品店",
+        "label": "最受欢迎",
+        "features_title": "种子版的所有功能，外加",
+        "features": [
+          "50 至 250 位会员",
+          "✨ 完整品牌定制",
+          "自定义颜色和移除 Logo",
+          "自动数字化交付",
+          "通过 Resend 发送邮件/短信",
+          "优先支持（24小时响应）",
+          "基础分析仪表板",
+          "追踪钱包添加率"
+        ],
+        "interval": "month",
+        "amount": 1990,
+        "currency": "USD",
+        "price": "$19.90",
+        "original_price": "",
+        "unit": "/ 月",
+        "is_featured": true,
+        "tip": "最适合成长中的手工艺品牌！",
+        "button": {
+          "title": "获取基础版",
+          "url": "/niche-loyalty",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "glow-base-monthly",
+        "product_name": "Glow 基础版",
+        "payment_product_id": "prod_1lQWMwrdWZFzo6AgpVcCc7",
+        "group": "monthly",
+        "plan_name": "基础版"
+      },
+      {
+        "title": "专业版",
+        "description": "适合高流量品牌和专业工作室",
+        "label": "规模化",
+        "features_title": "基础版的所有功能，外加",
+        "features": [
+          "250+ 会员（无限制）",
+          "✨ 无限 Glow 广播",
+          "高级会员细分",
+          "自定义域名（club.yourbrand.com）",
+          "白标 CSS 定制",
+          "抢先体验新功能",
+          "VIP 礼宾设置",
+          "1对1 专属成功经理",
+          "高级分析和洞察"
+        ],
+        "interval": "month",
+        "amount": 5990,
+        "currency": "USD",
+        "price": "$59.90",
+        "original_price": "",
+        "unit": "/ 月",
+        "is_featured": false,
+        "tip": "完美适合专业工作室！",
+        "button": {
+          "title": "获取专业版",
+          "url": "/niche-loyalty",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "glow-pro-monthly",
+        "product_name": "Glow 专业版",
+        "payment_product_id": "prod_5bo10kkVzObfuZIjUglgI0",
+        "group": "monthly",
+        "plan_name": "专业版"
+      }
+    ]
+  },
+  "comparison": {
+    "title": "功能对比",
+    "subtitle": "选择适合您手工艺之旅的计划",
+    "categories": [
+      {
+        "name": "会员容量",
+        "seed": "最多 50",
+        "base": "50 – 250",
+        "pro": "250+（无限制）"
+      },
+      {
+        "name": "品牌定制",
+        "seed": "Glow 品牌",
+        "base": "白标（您的品牌）",
+        "pro": "自定义域名和 CSS"
+      },
+      {
+        "name": "自动化",
+        "seed": "手动",
+        "base": "自动触发",
+        "pro": "高级逻辑和流程"
+      },
+      {
+        "name": "SEO 影响",
+        "seed": "低",
+        "base": "中（品牌搜索）",
+        "pro": "高（域名权威）"
+      },
+      {
+        "name": "支持",
+        "seed": "社区",
+        "base": "优先邮件",
+        "pro": "专属成功经理"
+      }
+    ]
+  },
+  "page": {
+    "current_plan": "当前计划",
+    "processing": "处理中",
+    "upgrade": "升级",
+    "downgrade": "降级",
+    "get_started": "开始使用"
+  }
+}

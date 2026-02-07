@@ -1,0 +1,165 @@
+{
+  "metadata": {
+    "title": "Pricing | Glow - Aesthetic Membership for Artisans",
+    "description": "Choose your Glow plan. From free starter to professional scale. Beautiful loyalty cards for Shopify artisans."
+  },
+  "pricing": {
+    "id": "pricing",
+    "sr_only_title": "Glow Pricing Plans",
+    "title": "The Glow Up Framework",
+    "description": "Elegant membership plans designed for artisans. Start free, scale as you grow.",
+    "groups": [
+      {
+        "name": "monthly",
+        "title": "Monthly",
+        "is_featured": true,
+        "label": "Flexible"
+      }
+    ],
+    "items": [
+      {
+        "title": "Seed",
+        "description": "For new makers and hobbyists",
+        "label": "Free Forever",
+        "features_title": "Core Features",
+        "features": [
+          "Up to 50 members",
+          "Standard Digital Membership Card",
+          "Apple/Google Wallet Integration",
+          "Email Support (48h response)",
+          "Manual Reward Distribution",
+          "Glow Branded Template"
+        ],
+        "interval": "month",
+        "amount": 0,
+        "currency": "USD",
+        "price": "$0",
+        "original_price": "",
+        "unit": "/ forever",
+        "is_featured": false,
+        "tip": "Perfect for trying out aesthetic loyalty!",
+        "button": {
+          "title": "Start Free",
+          "url": "/niche-loyalty",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "glow-seed-free",
+        "product_name": "Glow Seed",
+        "group": "monthly",
+        "plan_name": "Seed"
+      },
+      {
+        "title": "Base",
+        "description": "For established artisans and boutique shops",
+        "label": "Most Popular",
+        "features_title": "Everything in Seed, plus",
+        "features": [
+          "50 to 250 members",
+          "✨ Full Brand Customization",
+          "Custom hex codes & logo removal",
+          "Automated Digital Delivery",
+          "Email/SMS triggers via Resend",
+          "Priority Support (24h response)",
+          "Basic Analytics Dashboard",
+          "Track wallet add rates"
+        ],
+        "interval": "month",
+        "amount": 1990,
+        "currency": "USD",
+        "price": "$19.90",
+        "original_price": "",
+        "unit": "/ month",
+        "is_featured": true,
+        "tip": "Best for growing artisan brands!",
+        "button": {
+          "title": "Get Base",
+          "url": "/niche-loyalty",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "glow-base-monthly",
+        "product_name": "Glow Base",
+        "payment_product_id": "prod_1lQWMwrdWZFzo6AgpVcCc7",
+        "group": "monthly",
+        "plan_name": "Base"
+      },
+      {
+        "title": "Pro",
+        "description": "For high-volume brands and professional studios",
+        "label": "Scale",
+        "features_title": "Everything in Base, plus",
+        "features": [
+          "250+ members (Unlimited)",
+          "✨ Unlimited Glow Broadcasts",
+          "Advanced Member Segmentation",
+          "Custom Domain (club.yourbrand.com)",
+          "White-label CSS customization",
+          "Early Access to new features",
+          "VIP Concierge Setup",
+          "1-on-1 dedicated success manager",
+          "Advanced analytics & insights"
+        ],
+        "interval": "month",
+        "amount": 5990,
+        "currency": "USD",
+        "price": "$59.90",
+        "original_price": "",
+        "unit": "/ month",
+        "is_featured": false,
+        "tip": "Perfect for professional studios!",
+        "button": {
+          "title": "Get Pro",
+          "url": "/niche-loyalty",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "glow-pro-monthly",
+        "product_name": "Glow Pro",
+        "payment_product_id": "prod_5bo10kkVzObfuZIjUglgI0",
+        "group": "monthly",
+        "plan_name": "Pro"
+      }
+    ]
+  },
+  "comparison": {
+    "title": "Feature Comparison",
+    "subtitle": "Choose the plan that fits your artisan journey",
+    "categories": [
+      {
+        "name": "Member Capacity",
+        "seed": "Up to 50",
+        "base": "50 – 250",
+        "pro": "250+ (Unlimited)"
+      },
+      {
+        "name": "Branding",
+        "seed": "Glow Branded",
+        "base": "White-label (Your Brand)",
+        "pro": "Custom Domain & CSS"
+      },
+      {
+        "name": "Automation",
+        "seed": "Manual",
+        "base": "Automated Triggers",
+        "pro": "Advanced Logic & Flows"
+      },
+      {
+        "name": "SEO Impact",
+        "seed": "Low",
+        "base": "Medium (Brand Search)",
+        "pro": "High (Domain Authority)"
+      },
+      {
+        "name": "Support",
+        "seed": "Community",
+        "base": "Priority Email",
+        "pro": "Dedicated Success Manager"
+      }
+    ]
+  },
+  "page": {
+    "current_plan": "Current Plan",
+    "processing": "Processing",
+    "upgrade": "Upgrade",
+    "downgrade": "Downgrade",
+    "get_started": "Get Started"
+  }
+}

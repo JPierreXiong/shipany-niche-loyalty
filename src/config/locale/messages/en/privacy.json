@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "title": "Privacy Policy | Glow - Aesthetic Loyalty for Shopify Artisans",
+    "description": "Learn how Glow protects your data. GDPR and CCPA compliant privacy policy for our minimalist loyalty platform."
+  },
+  "title": "Privacy Policy",
+  "lastUpdated": "Last Updated",
+  "date": "February 6, 2026",
+  "introduction": {
+    "title": "1. Introduction",
+    "content": "Welcome to Glow (\"we,\" \"our,\" or \"us\"). We provide a lightweight membership and loyalty platform designed specifically for artisans and makers. We respect your privacy and are committed to protecting the personal data of both our Merchants (artisans) and their Members (customers)."
+  },
+  "collection": {
+    "title": "2. Information We Collect",
+    "merchants": {
+      "title": "For Merchants",
+      "content": "Name, email address, brand assets (logos/colors), and payment information (processed securely via Creem)."
+    },
+    "members": {
+      "title": "For Members",
+      "content": "Email address and/or phone number (provided voluntarily when joining a loyalty card), and transaction/points history."
+    },
+    "technical": {
+      "title": "Technical Data",
+      "content": "IP address, browser type, and usage data collected automatically via Vercel for security and performance monitoring."
+    }
+  },
+  "usage": {
+    "title": "3. How We Use Your Information",
+    "point1": "Generate and manage digital artisan membership cards.",
+    "point2": "Facilitate communication (Email via Resend, SMS via Twilio) between Merchants and Members.",
+    "point3": "Process subscriptions and payments through Creem.",
+    "point4": "Improve platform stability and user experience."
+  },
+  "security": {
+    "title": "4. Data Storage and Security",
+    "infrastructure": {
+      "title": "Infrastructure",
+      "content": "Your data is stored using Neon (PostgreSQL), a secure, cloud-native database."
+    },
+    "protection": {
+      "title": "Security",
+      "content": "We implement industry-standard encryption to protect data at rest and in transit. However, no method of transmission over the internet is 100% secure."
+    },
+    "retention": {
+      "title": "Retention",
+      "content": "We retain personal data only as long as an account is active or as needed to provide services."
+    }
+  },
+  "thirdParty": {
+    "title": "5. Third-Party Services",
+    "intro": "To provide a seamless experience, we integrate with the following trusted partners:",
+    "vercel": "Hosting and Deployment.",
+    "neon": "Database Management.",
+    "creem": "Payment Processing (we do not store credit card details).",
+    "communication": "Communication delivery."
+  },
+  "rights": {
+    "title": "6. Your Rights (GDPR & CCPA)",
+    "intro": "Depending on your location, you have the following rights:",
+    "access": {
+      "title": "Access & Portability",
+      "content": "Request a copy of the data we hold about you."
+    },
+    "correction": {
+      "title": "Correction & Deletion",
+      "content": "Request that we update or erase your personal information."
+    },
+    "optout": {
+      "title": "Opt-Out",
+      "content": "Members can unsubscribe from marketing communications at any time using the \"Unsubscribe\" link in emails or replying \"STOP\" to SMS."
+    }
+  },
+  "cookies": {
+    "title": "7. Cookies",
+    "content": "We use essential cookies to maintain your session and remember your preferences. We do not use intrusive tracking or third-party advertising cookies."
+  },
+  "changes": {
+    "title": "8. Changes to This Policy",
+    "content": "We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on this page and updating the \"Last Updated\" date."
+  },
+  "contact": {
+    "title": "9. Contact Us",
+    "intro": "If you have any questions about this Privacy Policy, please contact us at:",
+    "email": "Email",
+    "website": "Website"
+  }
+}
+
+

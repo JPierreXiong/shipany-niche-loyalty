@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "title": "About Us | Glow - Elegant Loyalty for Intentional Makers",
+    "description": "Discover the story behind Glow. We build beautiful, minimalist loyalty software for artisans who value craft and community."
+  },
+  "hero": {
+    "title": "Elegant Loyalty for the Intentional Maker",
+    "subtitle": "Our Craft, Your Community"
+  },
+  "story": {
+    "title": "The Narrative",
+    "paragraph1": "At Glow, we believe that software should be as beautiful as the products you create. Most loyalty platforms are built for corporations—cluttered with complex dashboards and intrusive pop-ups that distract from your brand's soul.",
+    "paragraph2": "We built Glow for the independent artisan. By leveraging a high-performance stack—Next.js, Neon, and Vercel—we offer a \"quiet\" technology that stays in the background, allowing your craftsmanship to shine.",
+    "paragraph3": "Our mission is simple: help makers build deeper connections with their communities through elegant, distraction-free loyalty experiences."
+  },
+  "promise": {
+    "title": "Our Promise",
+    "performance": {
+      "title": "Zero-Drag Performance",
+      "description": "Optimized for speed so your store remains fast and responsive."
+    },
+    "aesthetic": {
+      "title": "Aesthetic Integration",
+      "description": "Digital membership cards designed to live beautifully in your customer's Apple or Google Wallet."
+    },
+    "focus": {
+      "title": "Artisan Focus",
+      "description": "We don't just provide points; we provide a connection that deepens your community."
+    }
+  },
+  "tech": {
+    "title": "Built with Care",
+    "description": "We use modern, reliable technology to ensure Glow is fast, secure, and beautiful."
+  },
+  "cta": {
+    "title": "Ready to Make Your Brand Glow?",
+    "description": "Join artisans who are building meaningful relationships with their customers.",
+    "button": "Get in Touch"
+  }
+}
+
+

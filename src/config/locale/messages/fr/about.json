@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "title": "À propos de nous | Glow - Fidélité élégante pour les créateurs intentionnels",
+    "description": "Découvrez l'histoire derrière Glow. Nous créons des logiciels de fidélité beaux et minimalistes pour les artisans qui valorisent l'artisanat et la communauté."
+  },
+  "hero": {
+    "title": "Fidélité élégante pour le créateur intentionnel",
+    "subtitle": "Notre métier, votre communauté"
+  },
+  "story": {
+    "title": "Notre histoire",
+    "paragraph1": "Chez Glow, nous croyons que les logiciels devraient être aussi beaux que les produits que vous créez. La plupart des plateformes de fidélité sont conçues pour les entreprises—encombrées de tableaux de bord complexes et de pop-ups intrusifs qui distraient de l'âme de votre marque.",
+    "paragraph2": "Nous avons construit Glow pour l'artisan indépendant. En tirant parti d'une pile haute performance—Next.js, Neon et Vercel—nous offrons une technologie \"silencieuse\" qui reste en arrière-plan, permettant à votre savoir-faire de briller.",
+    "paragraph3": "Notre mission est simple : aider les créateurs à établir des liens plus profonds avec leurs communautés grâce à des expériences de fidélité élégantes et sans distraction."
+  },
+  "promise": {
+    "title": "Notre promesse",
+    "performance": {
+      "title": "Performance sans ralentissement",
+      "description": "Optimisé pour la vitesse afin que votre boutique reste rapide et réactive."
+    },
+    "aesthetic": {
+      "title": "Intégration esthétique",
+      "description": "Cartes de membre numériques conçues pour vivre magnifiquement dans le portefeuille Apple ou Google de votre client."
+    },
+    "focus": {
+      "title": "Focus artisan",
+      "description": "Nous ne fournissons pas seulement des points ; nous fournissons une connexion qui approfondit votre communauté."
+    }
+  },
+  "tech": {
+    "title": "Construit avec soin",
+    "description": "Nous utilisons une technologie moderne et fiable pour garantir que Glow est rapide, sécurisé et beau."
+  },
+  "cta": {
+    "title": "Prêt à faire briller votre marque ?",
+    "description": "Rejoignez les artisans qui construisent des relations significatives avec leurs clients.",
+    "button": "Nous contacter"
+  }
+}
+
+
