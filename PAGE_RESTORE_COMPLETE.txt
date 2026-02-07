@@ -1,0 +1,196 @@
+=============================================================
+   ✅ 页面恢复完成 - 2026年2月7日
+=============================================================
+
+问题诊断:
+在 commit 736bbe0 中删除旧路由时，意外删除了所有 niche-loyalty 页面
+只保留了 demo 页面，导致主要页面无法访问
+
+已恢复的页面:
+✅ src/app/[locale]/niche-loyalty/page.tsx (Landing Page)
+✅ src/app/[locale]/niche-loyalty/layout.tsx (SEO Layout)
+✅ src/app/[locale]/(dashboard)/niche-loyalty/layout.tsx (Dashboard Layout)
+✅ src/app/[locale]/(dashboard)/niche-loyalty/dashboard/page.tsx (Dashboard)
+
+提交信息:
+- Commit: 414e587
+- Message: "fix: restore niche-loyalty landing page and dashboard"
+- 已推送到 GitHub
+
+=============================================================
+   🎯 现在可以访问的 URL
+=============================================================
+
+Landing Page (Glow 主页):
+✅ http://localhost:3000/en/niche-loyalty
+✅ http://localhost:3000/zh/niche-loyalty
+✅ http://localhost:3000/fr/niche-loyalty
+
+Dashboard (管理后台):
+✅ http://localhost:3000/en/niche-loyalty/dashboard
+✅ http://localhost:3000/zh/niche-loyalty/dashboard
+✅ http://localhost:3000/fr/niche-loyalty/dashboard
+
+Demo Page (交互式演示):
+✅ http://localhost:3000/en/niche-loyalty/demo
+✅ http://localhost:3000/zh/niche-loyalty/demo
+✅ http://localhost:3000/fr/niche-loyalty/demo
+
+=============================================================
+   📋 完整业务流程测试清单
+=============================================================
+
+阶段 1: 用户注册和登录
+[ ] 1.1 访问 Landing Page
+[ ] 1.2 点击 "Launch your club for free"
+[ ] 1.3 输入邮箱提交 Magic Link
+[ ] 1.4 检查邮箱收到 Magic Link
+[ ] 1.5 点击链接完成登录
+
+阶段 2: 品牌配置
+[ ] 2.1 访问 Dashboard
+[ ] 2.2 进入 "Brand Setup" 标签
+[ ] 2.3 设置品牌名称
+[ ] 2.4 选择品牌颜色
+[ ] 2.5 上传品牌 Logo
+[ ] 2.6 实时预览会员卡效果
+
+阶段 3: 导入客户
+[ ] 3.1 点击 "Import Members"
+[ ] 3.2 上传 CSV 文件或手动添加
+[ ] 3.3 验证客户数据
+[ ] 3.4 确认导入
+
+阶段 4: Shopify 集成
+[ ] 4.1 点击 "Connect Shopify"
+[ ] 4.2 输入 Shopify 店铺 URL
+[ ] 4.3 授权访问
+[ ] 4.4 同步客户数据
+[ ] 4.5 配置积分规则
+
+阶段 5: 创建促销活动
+[ ] 5.1 进入 "Campaigns" 标签
+[ ] 5.2 点击 "Create Campaign"
+[ ] 5.3 选择活动类型（欢迎邮件/积分奖励）
+[ ] 5.4 设计邮件内容
+[ ] 5.5 选择目标客户
+[ ] 5.6 发送测试邮件
+[ ] 5.7 正式发送活动
+
+阶段 6: Shopify 反馈处理
+[ ] 6.1 客户在 Shopify 下单
+[ ] 6.2 Webhook 触发积分增加
+[ ] 6.3 Dashboard 显示积分变化
+[ ] 6.4 自动发送积分通知邮件
+[ ] 6.5 客户查看 Apple Wallet 卡片更新
+
+阶段 7: 数据分析
+[ ] 7.1 查看 Dashboard 统计数据
+[ ] 7.2 分析会员增长趋势
+[ ] 7.3 查看活动效果
+[ ] 7.4 导出报表
+
+=============================================================
+   🔧 需要的支持和配置
+=============================================================
+
+环境变量 (必需):
+✅ DATABASE_URL - 数据库连接
+✅ BETTER_AUTH_SECRET - 认证密钥
+✅ BETTER_AUTH_URL - 认证回调 URL
+✅ RESEND_API_KEY - 邮件发送 API
+⚠️ SHOPIFY_API_KEY - Shopify 集成 (待配置)
+⚠️ SHOPIFY_API_SECRET - Shopify 密钥 (待配置)
+✅ QSTASH_TOKEN - 定时任务
+✅ QSTASH_CURRENT_SIGNING_KEY - QStash 签名
+✅ QSTASH_NEXT_SIGNING_KEY - QStash 签名
+
+数据库表 (需要创建):
+⚠️ niche_loyalty_brands - 品牌配置
+⚠️ niche_loyalty_members - 会员数据
+⚠️ niche_loyalty_points - 积分记录
+⚠️ niche_loyalty_campaigns - 活动数据
+⚠️ niche_loyalty_shopify_stores - Shopify 店铺
+
+API 端点 (需要实现):
+⚠️ POST /api/niche-loyalty/brand/update - 更新品牌配置
+⚠️ POST /api/niche-loyalty/members/import - 导入会员
+⚠️ POST /api/niche-loyalty/shopify/connect - 连接 Shopify
+⚠️ POST /api/niche-loyalty/campaigns/create - 创建活动
+⚠️ POST /api/niche-loyalty/campaigns/send - 发送活动
+⚠️ POST /api/webhooks/shopify/orders - Shopify 订单 Webhook
+⚠️ GET /api/niche-loyalty/dashboard/stats - Dashboard 统计
+
+Shopify App 配置:
+⚠️ 创建 Shopify App
+⚠️ 配置 OAuth 回调
+⚠️ 设置 Webhook 订阅
+⚠️ 配置 API 权限
+
+=============================================================
+   🚀 下一步行动计划
+=============================================================
+
+立即执行 (5分钟):
+1. ✅ 恢复页面文件
+2. ✅ 推送到 GitHub
+3. [ ] 在浏览器中访问所有页面验证
+4. [ ] 截图确认页面显示正常
+
+短期任务 (1小时):
+1. [ ] 创建数据库表结构
+2. [ ] 实现基础 API 端点
+3. [ ] 配置 Resend 邮件模板
+4. [ ] 测试 Magic Link 登录流程
+
+中期任务 (1天):
+1. [ ] 实现 Shopify OAuth 集成
+2. [ ] 创建 Webhook 处理器
+3. [ ] 实现积分系统逻辑
+4. [ ] 测试完整业务流程
+
+长期任务 (1周):
+1. [ ] 完善 Dashboard 功能
+2. [ ] 实现活动管理系统
+3. [ ] 添加数据分析功能
+4. [ ] 部署到 Vercel 生产环境
+
+=============================================================
+   💡 关键提示
+=============================================================
+
+1. 页面已恢复，但功能尚未完全实现
+   - Landing Page: 静态展示 ✅
+   - Dashboard: UI 完成，API 待实现 ⚠️
+   - Demo Page: 完全可用 ✅
+
+2. 需要先实现后端 API 才能测试完整流程
+   - 建议先从 Magic Link 登录开始
+   - 然后实现品牌配置保存
+   - 最后集成 Shopify
+
+3. Shopify 集成需要单独的开发者账号
+   - 需要创建 Shopify Partner 账号
+   - 创建测试店铺
+   - 配置 App 权限
+
+4. 建议使用 Postman 测试 API
+   - 先测试单个端点
+   - 再测试完整流程
+   - 最后集成前端
+
+=============================================================
+   📞 需要的支持
+=============================================================
+
+请告诉我您想先实现哪个部分:
+
+A. 数据库表结构设计和创建
+B. Magic Link 登录流程测试
+C. 品牌配置 API 实现
+D. Shopify 集成开发
+E. 邮件活动系统
+F. 直接在浏览器中测试现有页面
+
+请选择 A-F，我会立即开始实现！
+

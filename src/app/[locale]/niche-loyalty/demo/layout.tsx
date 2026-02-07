@@ -57,51 +57,6 @@ export const metadata: Metadata = {
   },
 };
 
-// 结构化数据 (JSON-LD)
-export function generateMetadata() {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: 'Glow Loyalty Card Designer',
-    applicationCategory: 'BusinessApplication',
-    operatingSystem: 'Web',
-    offers: {
-      '@type': 'Offer',
-      price: '0',
-      priceCurrency: 'USD',
-      description: 'Free forever for first 50 members',
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      ratingCount: '127',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    featureList: [
-      'Real-time card preview',
-      'Custom brand colors',
-      'Apple Wallet compatible',
-      'No sign-up required',
-      'Free forever plan',
-    ],
-    screenshot: '/imgs/demo-screenshot.png',
-    softwareVersion: '1.0',
-    author: {
-      '@type': 'Organization',
-      name: 'Glow',
-      url: 'https://glow.com',
-    },
-  };
-
-  return {
-    ...metadata,
-    other: {
-      'application-ld+json': JSON.stringify(jsonLd),
-    },
-  };
-}
-
 export default function DemoLayout({
   children,
 }: {
