@@ -2,15 +2,15 @@
   "header": {
     "id": "header",
     "brand": {
-      "title": "Afterglow",
+      "title": "Glow",
       "url": "/"
     },
     "nav": {
       "items": [
         {
-          "title": "Héritage Numérique",
-          "url": "/digital-heirloom/dashboard",
-          "icon": "Shield"
+          "title": "Niche Loyalty",
+          "url": "/niche-loyalty/dashboard",
+          "icon": "Heart"
         },
         {
           "title": "Tarification",
@@ -26,9 +26,9 @@
       "show_sign_out": true,
       "items": [
         {
-          "title": "Héritage Numérique",
-          "url": "/digital-heirloom/dashboard",
-          "icon": "Shield"
+          "title": "Niche Loyalty",
+          "url": "/niche-loyalty/dashboard",
+          "icon": "Heart"
         },
         {
           "title": "Facturation",
@@ -48,28 +48,28 @@
   },
   "hero": {
     "id": "hero",
-    "title": "Sécurisez votre héritage numérique",
+    "title": "Donnez à Votre Marque l'Éclat qu'Elle Mérite",
     "highlight_text": "",
-    "description": "Assurez-vous que vos proches puissent accéder à vos actifs numériques quand ils en ont le plus besoin. Mots de passe, portefeuilles cryptographiques et messages personnels — protégés jusqu'au bon moment.",
+    "description": "La plupart des applications de fidélité sont une corvée. Glow est un cadeau. Créez de belles cartes de membre numériques que vos clients voudront vraiment garder.",
     "announcement": {
-      "badge": "Sécurité",
-      "title": "🔒 Chiffrement Zero-Knowledge",
-      "url": "#zero-knowledge-security"
+      "badge": "Pour Marques Artisanales",
+      "title": "🎨 Compatible Apple Wallet",
+      "url": "/niche-loyalty/demo"
     },
-    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">Aucune carte de crédit requise</span>",
+    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">Gratuit pour toujours pour vos 50 premiers membres</span>",
     "buttons": [
       {
-        "title": "Commencer gratuitement",
-        "icon": "Shield",
+        "title": "Lancez Votre Club",
+        "icon": "Heart",
         "url": "/sign-up",
         "target": "_self",
         "variant": "default",
         "className": ""
       },
       {
-        "title": "En savoir plus",
-        "icon": "Info",
-        "url": "/blog",
+        "title": "Essayer la Démo",
+        "icon": "Sparkles",
+        "url": "/niche-loyalty/demo",
         "target": "_self",
         "variant": "outline",
         "className": ""
@@ -527,8 +527,8 @@
   "footer": {
     "id": "footer",
     "brand": {
-      "title": "Digital Heirloom",
-      "description": "Digital Heirloom is a high-performance digital toolkit designed to extract and translate subtitles from YouTube and TikTok videos. We believe in simple, transparent pricing.",
+      "title": "Glow",
+      "description": "Glow est une plateforme de fidélité élégante pour les boutiques Shopify artisanales. Nous aidons les créateurs à établir des liens plus profonds avec leurs communautés grâce à de belles expériences de fidélité sans distraction.",
       "url": "/"
     },
     "nav": {
@@ -601,7 +601,7 @@
         }
       ]
     },
-    "copyright": "Digital Heirloom est un produit indépendant et n'est pas affilié à Google (YouTube) ou ByteDance (TikTok).",
+    "copyright": "Glow - Fidélité Élégante pour Artisans",
     "show_theme": true,
     "show_locale": true
   }
