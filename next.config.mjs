@@ -14,7 +14,9 @@ const withNextIntl = createNextIntlPlugin({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: process.env.VERCEL ? undefined : 'standalone',
+  // Temporarily disable standalone output to avoid middleware.js.nft.json error
+  // This is a known issue in Next.js 16.1.0 with Turbopack
+  output: undefined,
   reactStrictMode: false,
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   images: {
@@ -29,8 +31,17 @@ const nextConfig = {
     return [];
   },
   // Fix middleware.js.nft.json issue in Next.js 16
+  // Include middleware and i18n dependencies for proper file tracing
   outputFileTracingIncludes: {
-    '/': ['./middleware.ts'],
+    '/': ['./middleware.ts', './src/core/i18n/**/*'],
+  },
+  // Exclude unnecessary files from tracing to reduce bundle size
+  outputFileTracingExcludes: {
+    '*': [
+      'node_modules/@swc/core-linux-x64-gnu',
+      'node_modules/@swc/core-linux-x64-musl',
+      'node_modules/@esbuild/linux-x64',
+    ],
   },
   // 类型检查配置（用于快速通过 Vercel 部署）
   typescript: {
@@ -48,7 +59,8 @@ const nextConfig = {
     },
   },
   experimental: {
-    turbopackFileSystemCacheForDev: true,
+    // Only enable turbopack cache in development, not in production builds
+    ...(process.env.NODE_ENV === 'development' ? { turbopackFileSystemCacheForDev: true } : {}),
     // Disable mdxRs for Vercel deployment compatibility with fumadocs-mdx
     ...(process.env.VERCEL ? {} : { mdxRs: true }),
   },
