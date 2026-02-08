@@ -50,10 +50,10 @@
     "id": "hero",
     "title": "Give Your Brand the Glow It Deserves",
     "highlight_text": "",
-    "description": "Most loyalty apps feel like a chore. Glow feels like a gift. Create beautiful, digital membership cards that your customers will actually want to keep.",
+    "description": "Skip the complex point systems. Create a beautiful digital membership club that your customers will actually want to join. Designed for artisans.",
     "announcement": {
-      "badge": "For Artisan Brands",
-      "title": "🎨 Apple Wallet Ready",
+      "badge": "5-Minute Setup",
+      "title": "🎨 Native Wallet Integration",
       "url": "/niche-loyalty/demo"
     },
     "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">Free forever for your first 50 members</span>",
@@ -177,32 +177,32 @@
   },
   "benefits": {
     "id": "benefits",
-    "title": "Why Choose Digital Heirloom",
-    "label": "Benefits",
-    "description": "Get everything you need to launch your AI startup - from ready-to-use templates to technical support.",
+    "title": "Why Choose Glow",
+    "label": "Core Selling Points",
+    "description": "Your loyalty program shouldn't look like a spreadsheet. Glow blends into your brand's soul.",
     "items": [
       {
-        "title": "Complete Framework",
-        "description": "Built on Next.js with authentication, payments, and AI integration - everything works out of the box.",
-        "icon": "RiNextjsFill",
+        "title": "Aesthetic First, Software Second",
+        "description": "Your loyalty program shouldn't look like a spreadsheet. Glow blends into your brand's soul with real-time UI customization to match your hex codes and typography.",
+        "icon": "RiPaletteLine",
         "image": {
           "src": "/imgs/features/user-billing.png",
           "alt": "benefits"
         }
       },
       {
-        "title": "Rich Templates Library",
-        "description": "Choose from various AI SaaS templates to kickstart your project - chatbots, image generation, and more.",
-        "icon": "RiClapperboardAiLine",
+        "title": "The 5-Minute Setup",
+        "description": "Skip the manual. Launch your rewards club in the time it takes to pull an espresso shot. Set automated reward triggers and forget it.",
+        "icon": "RiTimerFlashLine",
         "image": {
           "src": "/imgs/features/admin-settings.png",
           "alt": "benefits"
         }
       },
       {
-        "title": "Technical Guidance",
-        "description": "Get dedicated support and join our developer community to ensure your successful launch.",
-        "icon": "RiCodeFill",
+        "title": "Native Wallet Integration",
+        "description": "No apps for your customers to download. Just a beautiful card living natively in their Apple or Google Wallet. Frictionless delight.",
+        "icon": "RiWallet3Line",
         "image": {
           "src": "/imgs/features/landing-page.png",
           "alt": "benefits"
@@ -316,38 +316,38 @@
   },
   "features": {
     "id": "features",
-    "title": "Key Features of Digital Heirloom",
-    "description": "Everything you need to launch your AI SaaS startup quickly and efficiently.",
+    "title": "Feature Highlights",
+    "description": "Everything you need to create a loyalty program that feels like an invitation to a community.",
     "items": [
       {
-        "title": "Next.js Boilerplate",
-        "description": "Production-ready Next.js templates with SEO-friendly structure and i18n support.",
-        "icon": "RiNextjsFill"
+        "title": "Dynamic Card Designer",
+        "description": "Real-time UI customization to match your brand's hex codes and typography. Make it yours.",
+        "icon": "RiPaletteLine"
       },
       {
-        "title": "Authentication & Payments",
-        "description": "Integrated Google OAuth, one-tap login, and Stripe payment processing.",
-        "icon": "RiKey2Fill"
+        "title": "Automated Reward Triggers",
+        "description": "Set it and forget it. Glow rewards customers for purchases, birthdays, and referrals automatically.",
+        "icon": "RiFlashlightLine"
       },
       {
-        "title": "Data Infrastructure",
-        "description": "Built-in Supabase integration for reliable and scalable data storage.",
-        "icon": "RiDatabase2Line"
+        "title": "Shopify Deep-Sync",
+        "description": "Zero-latency integration with your Shopify checkout and customer segments. Seamless.",
+        "icon": "RiShoppingBag3Line"
       },
       {
-        "title": "One-Click Deployment",
-        "description": "Seamless deployment to Vercel or Cloudflare with automated setup.",
-        "icon": "RiCloudy2Fill"
+        "title": "Lightweight Script",
+        "description": "A \"zero-drag\" app that won't slow down your site's loading speed. Vital for SEO and customer experience.",
+        "icon": "RiRocketLine"
       },
       {
-        "title": "Business Analytics",
-        "description": "Integrated Google Analytics and Search Console for tracking growth.",
-        "icon": "RiBarChart2Line"
+        "title": "Native Wallet Integration",
+        "description": "No apps to download. Beautiful cards living natively in Apple or Google Wallet.",
+        "icon": "RiWallet3Line"
       },
       {
-        "title": "AI-Ready Infrastructure",
-        "description": "Pre-configured AI integration with built-in credits system and API sales.",
-        "icon": "RiRobot2Line"
+        "title": "Frictionless Delight",
+        "description": "Points are boring. A \"Glow\" membership is an invitation to a community your customers want to join.",
+        "icon": "RiHeartLine"
       }
     ]
   },

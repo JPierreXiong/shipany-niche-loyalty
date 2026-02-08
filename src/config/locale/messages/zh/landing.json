@@ -48,15 +48,15 @@
   },
   "hero": {
     "id": "hero",
-    "title": "守护您的数字遗产",
+    "title": "让您的品牌，自带光芒",
     "highlight_text": "",
-    "description": "确保您所爱的人在需要时能够访问您的数字资产。密码、加密货币钱包和个人消息——在合适的时机之前都受到保护。",
+    "description": "告别复杂的积分系统。为手艺人量身定制的极简数字会员卡。",
     "announcement": {
-      "badge": "安全",
-      "title": "🔒 零知识加密",
-      "url": "#zero-knowledge-security"
+      "badge": "5分钟极速设置",
+      "title": "🎨 原生钱包集成",
+      "url": "/niche-loyalty/demo"
     },
-    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">无需信用卡</span>",
+    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">前 50 名会员永久免费</span>",
     "buttons": [
       {
         "title": "免费开始",
@@ -177,32 +177,32 @@
   },
   "benefits": {
     "id": "benefits",
-    "title": "为何选择 Digital Heirloom",
-    "label": "产品优势",
-    "description": "你获得一切 AI 创业所需——从开箱即用的模板到专业技术支持。",
+    "title": "为何选择 Glow",
+    "label": "核心卖点",
+    "description": "您的会员计划不应该看起来像电子表格。Glow 融入您品牌的灵魂。",
     "items": [
       {
-        "title": "全栈解决方案",
-        "description": "基于 Next.js，集成认证、支付、AI，一站式开箱即用。",
-        "icon": "RiNextjsFill",
+        "title": "美学优先，软件其次",
+        "description": "您的会员计划不应该看起来像电子表格。Glow 通过实时 UI 定制融入您品牌的灵魂，匹配您的十六进制色码和字体排版。",
+        "icon": "RiPaletteLine",
         "image": {
           "src": "/imgs/features/user-billing.png",
           "alt": "benefits"
         }
       },
       {
-        "title": "丰富模板库",
-        "description": "多样的 AI SaaS 模板，点击即用，涵盖聊天、图像生成等多场景。",
-        "icon": "RiClapperboardAiLine",
+        "title": "5分钟极速设置",
+        "description": "无需下载 App，一键收藏至手机钱包。5分钟极速设置，不影响网页加载速度。",
+        "icon": "RiTimerFlashLine",
         "image": {
           "src": "/imgs/features/admin-settings.png",
           "alt": "benefits"
         }
       },
       {
-        "title": "专属技术指导",
-        "description": "享受专属技术支持与开发者社区，为你的成功保驾护航。",
-        "icon": "RiCodeFill",
+        "title": "原生钱包集成",
+        "description": "客户无需下载任何应用。精美的卡片原生存储在他们的 Apple Wallet 或 Google Pay 中。无摩擦的愉悦体验。",
+        "icon": "RiWallet3Line",
         "image": {
           "src": "/imgs/features/landing-page.png",
           "alt": "benefits"
@@ -257,38 +257,38 @@
   },
   "features": {
     "id": "features",
-    "title": "Digital Heirloom 核心功能",
-    "description": "一切你需要的工具，助力 AI SaaS 项目高效上线。",
+    "title": "功能亮点",
+    "description": "创建一个让人感觉像是社区邀请函的会员计划所需的一切。",
     "items": [
       {
-        "title": "Next.js 项目模板",
-        "description": "生产就绪、支持 SEO 与多语言的 Next.js 脚手架。",
-        "icon": "RiNextjsFill"
+        "title": "动态卡片设计器",
+        "description": "实时 UI 定制，匹配您品牌的十六进制色码和字体排版。让它成为您的专属。",
+        "icon": "RiPaletteLine"
       },
       {
-        "title": "身份认证与支付",
-        "description": "集成谷歌 OAuth、一键登录，以及 Stripe 支付。",
-        "icon": "RiKey2Fill"
+        "title": "自动奖励触发器",
+        "description": "设置后即可忘记。Glow 自动为购买、生日和推荐奖励客户。",
+        "icon": "RiFlashlightLine"
       },
       {
-        "title": "数据基础设施",
-        "description": "内置 Supabase，稳定可靠的数据存储。",
-        "icon": "RiDatabase2Line"
+        "title": "Shopify 深度同步",
+        "description": "与您的 Shopify 结账和客户细分零延迟集成。无缝衔接。",
+        "icon": "RiShoppingBag3Line"
       },
       {
-        "title": "一键部署",
-        "description": "自动化部署到 Vercel 或 Cloudflare，极速上线。",
-        "icon": "RiCloudy2Fill"
+        "title": "轻量级脚本",
+        "description": ""零拖累"应用，不会减慢您网站的加载速度。对 SEO 和客户体验至关重要。",
+        "icon": "RiRocketLine"
       },
       {
-        "title": "商业分析",
-        "description": "集成 Google Analytics、Search Console，助力业务增长。",
-        "icon": "RiBarChart2Line"
+        "title": "原生钱包集成",
+        "description": "无需下载 App。精美的卡片原生存储在 Apple Wallet 或 Google Pay 中。",
+        "icon": "RiWallet3Line"
       },
       {
-        "title": "AI 原生基础设施",
-        "description": "预置 AI 集成、积分系统和 API 售卖能力。",
-        "icon": "RiRobot2Line"
+        "title": "无摩擦的愉悦体验",
+        "description": "积分很无聊。"Glow"会员资格是对客户想要加入的社区的邀请。",
+        "icon": "RiHeartLine"
       }
     ]
   },

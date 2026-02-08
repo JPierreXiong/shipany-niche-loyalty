@@ -50,10 +50,10 @@
     "id": "hero",
     "title": "Donnez à Votre Marque l'Éclat qu'Elle Mérite",
     "highlight_text": "",
-    "description": "La plupart des applications de fidélité sont une corvée. Glow est un cadeau. Créez de belles cartes de membre numériques que vos clients voudront vraiment garder.",
+    "description": "Créez un club de fidélité aussi raffiné que vos créations. Simple, élégant, indispensable.",
     "announcement": {
-      "badge": "Pour Marques Artisanales",
-      "title": "🎨 Compatible Apple Wallet",
+      "badge": "Configuration en 5 Minutes",
+      "title": "🎨 Intégration Native Wallet",
       "url": "/niche-loyalty/demo"
     },
     "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">Gratuit pour toujours pour vos 50 premiers membres</span>",
@@ -177,32 +177,32 @@
   },
   "benefits": {
     "id": "benefits",
-    "title": "Pourquoi choisir Digital Heirloom",
-    "label": "Avantages",
-    "description": "Obtenez tout ce dont vous avez besoin pour lancer votre startup IA - des modèles prêts à l'emploi au support technique.",
+    "title": "Pourquoi Choisir Glow",
+    "label": "Arguments Clés",
+    "description": "Votre programme de fidélité ne devrait pas ressembler à une feuille de calcul. Glow se fond dans l'âme de votre marque.",
     "items": [
       {
-        "title": "Framework complet",
-        "description": "Construit sur Next.js avec authentification, paiements et intégration IA - tout fonctionne immédiatement.",
-        "icon": "RiNextjsFill",
+        "title": "L'Esthétique d'Abord, le Logiciel Ensuite",
+        "description": "Votre programme de fidélité ne devrait pas ressembler à une feuille de calcul. Glow se fond dans l'âme de votre marque avec une personnalisation UI en temps réel pour correspondre à vos codes hex et typographie.",
+        "icon": "RiPaletteLine",
         "image": {
           "src": "/imgs/features/user-billing.png",
           "alt": "benefits"
         }
       },
       {
-        "title": "Bibliothèque de modèles riche",
-        "description": "Choisissez parmi divers modèles SaaS IA pour démarrer votre projet - chatbots, génération d'images, et plus encore.",
-        "icon": "RiClapperboardAiLine",
+        "title": "Configuration en 5 Minutes",
+        "description": "Sautez le manuel. Lancez votre club de récompenses dans le temps qu'il faut pour tirer un expresso. Optimisé pour la vitesse de votre boutique.",
+        "icon": "RiTimerFlashLine",
         "image": {
           "src": "/imgs/features/admin-settings.png",
           "alt": "benefits"
         }
       },
       {
-        "title": "Guidance technique",
-        "description": "Obtenez un support dédié et rejoignez notre communauté de développeurs pour assurer votre lancement réussi.",
-        "icon": "RiCodeFill",
+        "title": "Intégration Native avec Apple Wallet",
+        "description": "Pas d'application à télécharger pour vos clients. Juste une belle carte vivant nativement dans leur Apple Wallet ou Google Pay. Délice sans friction.",
+        "icon": "RiWallet3Line",
         "image": {
           "src": "/imgs/features/landing-page.png",
           "alt": "benefits"
@@ -257,38 +257,38 @@
   },
   "features": {
     "id": "features",
-    "title": "Fonctionnalités clés de Digital Heirloom",
-    "description": "Tout ce dont vous avez besoin pour lancer votre startup SaaS IA rapidement et efficacement.",
+    "title": "Fonctionnalités Clés",
+    "description": "Tout ce dont vous avez besoin pour créer un programme de fidélité qui ressemble à une invitation à rejoindre une communauté.",
     "items": [
       {
-        "title": "Modèle Next.js",
-        "description": "Modèles Next.js prêts pour la production avec structure optimisée pour le SEO et support i18n.",
-        "icon": "RiNextjsFill"
+        "title": "Concepteur de Cartes Dynamique",
+        "description": "Personnalisation UI en temps réel pour correspondre aux codes hex et à la typographie de votre marque. Faites-le vôtre.",
+        "icon": "RiPaletteLine"
       },
       {
-        "title": "Authentification et paiements",
-        "description": "OAuth Google intégré, connexion en un clic et traitement des paiements Stripe.",
-        "icon": "RiKey2Fill"
+        "title": "Déclencheurs de Récompenses Automatisés",
+        "description": "Configurez et oubliez. Glow récompense automatiquement les clients pour les achats, anniversaires et parrainages.",
+        "icon": "RiFlashlightLine"
       },
       {
-        "title": "Infrastructure de données",
-        "description": "Intégration Supabase intégrée pour un stockage de données fiable et évolutif.",
-        "icon": "RiDatabase2Line"
+        "title": "Synchronisation Profonde Shopify",
+        "description": "Intégration à latence zéro avec votre caisse Shopify et segments clients. Transparent.",
+        "icon": "RiShoppingBag3Line"
       },
       {
-        "title": "Déploiement en un clic",
-        "description": "Déploiement transparent vers Vercel ou Cloudflare avec configuration automatisée.",
-        "icon": "RiCloudy2Fill"
+        "title": "Script Ultra-Léger",
+        "description": "Une application \"zéro-ralentissement\" qui ne ralentira pas la vitesse de chargement de votre site. Vital pour le SEO et l'expérience client.",
+        "icon": "RiRocketLine"
       },
       {
-        "title": "Analyses commerciales",
-        "description": "Google Analytics et Search Console intégrés pour suivre la croissance.",
-        "icon": "RiBarChart2Line"
+        "title": "Intégration Native Wallet",
+        "description": "Aucune application à télécharger. De belles cartes vivant nativement dans Apple Wallet ou Google Pay.",
+        "icon": "RiWallet3Line"
       },
       {
-        "title": "Infrastructure prête pour l'IA",
-        "description": "Intégration IA préconfigurée avec système de crédits intégré et vente d'API.",
-        "icon": "RiRobot2Line"
+        "title": "Délice Sans Friction",
+        "description": "Les points sont ennuyeux. Une adhésion \"Glow\" est une invitation à une communauté que vos clients veulent rejoindre.",
+        "icon": "RiHeartLine"
       }
     ]
   },
