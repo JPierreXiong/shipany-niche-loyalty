@@ -438,28 +438,20 @@
     "tip": "Can't find what you're looking for? Contact our <a href='mailto:support@glow.app' class='text-primary font-medium hover:underline'>customer support team</a>",
     "items": [
       {
-        "question": "Does the ShipAny package contain a USB drive or my actual data?",
-        "answer": "No. For ultimate security, we never ship USB drives. The package contains only a high-strength physical encrypted credential (Recovery Kit). Your assets remain encrypted in the cloud; the physical credential is the sole \"key\" to unlock them."
+        "question": "Will the Glow app slow down my Shopify store's loading speed?",
+        "answer": "Not at all. Glow is engineered with \"Liquid-first\" principles and loads asynchronously, ensuring your store maintains a perfect Google Lighthouse score while your customers enjoy a seamless experience."
       },
       {
-        "question": "What happens if DigitalHeirloom's database is hacked?",
-        "answer": "This is the brilliance of our architecture. Even if hackers exfiltrated the entire database, they could read nothing. The critical decryption factors are not on our servers; they reside in the physical credentials sent to your beneficiaries. The algorithmic complexity makes cracking as difficult as finding a specific atom in the universe."
+        "question": "Do my customers need to download a separate app to join?",
+        "answer": "Never. Glow eliminates friction by allowing customers to add their digital membership cards directly to their native Apple or Google Wallet with one tap. No downloads, no clutter."
       },
       {
-        "question": "Does the platform guarantee the quality or integrity of my file content?",
-        "answer": "We guarantee the physical integrity and security of your encrypted data blocks via globally distributed storage. However, as a \"Zero-Knowledge\" platform, we do not audit or guarantee the internal content quality. We are the vault manufacturers, not content auditors."
+        "question": "Is it easy to migrate my data from Smile.io or Yotpo?",
+        "answer": "Yes. We offer a \"Clean Slate\" import tool that allows you to migrate your existing customer points and data to Glow in seconds, giving your loyalty program a more beautiful home."
       },
       {
-        "question": "Will my beneficiary still need my Master Password after receiving the physical credential?",
-        "answer": "No. Pro credentials feature \"Auto-Parsing\" technology. Once the beneficiary scans the encrypted QR code, the system validates identity via the physical medium, automatically bypassing the password input for a friction-less recovery."
-      },
-      {
-        "question": "Why emphasize \"Physical Credentials\" over pure digital passwords?",
-        "answer": "Digital passwords can be compromised via brute force or phishing. Our physical credentials are \"non-replicable.\" This dual-validation—binding digital legacy with physical logistics (ShipAny)—ensures that even if a hacker breaches your network, they cannot cross physical space."
-      },
-      {
-        "question": "Does decrypting a 2GB asset take a long time?",
-        "answer": "Decryption time depends on the beneficiary's local hardware, not bandwidth. Once the physical credential activates the channel, the system uses Vercel Edge computing for streaming decryption. A 2GB archive can typically be restored within minutes."
+        "question": "Can I customize the design for my specific artisan niche?",
+        "answer": "Absolutely. Whether you create handmade ceramics or digital brushes, Glow's UI is a canvas. You have full control over hex colors, icons, and typography to ensure it matches your brand's unique vibe."
       }
     ]
   },

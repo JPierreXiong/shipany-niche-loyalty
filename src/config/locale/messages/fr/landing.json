@@ -438,28 +438,20 @@
     "tip": "Vous ne trouvez pas ce que vous cherchez ? Contactez notre <a href='mailto:support@digitalheirloom.app' class='text-primary font-medium hover:underline'>équipe de support client</a>",
     "items": [
       {
-        "question": "Le colis ShipAny contient-il une clé USB ou mes données réelles ?",
-        "answer": "Non. Pour une sécurité maximale, nous n'expédions jamais de clés USB. Le colis contient uniquement un identifiant crypté physique haute résistance (Recovery Kit). Vos actifs restent cryptés dans le cloud ; l'identifiant physique est la seule \"clé\" pour les déverrouiller."
+        "question": "Est-ce que Glow va ralentir ma boutique Shopify ?",
+        "answer": "Pas du tout. Glow est conçu pour être ultra-léger et se charge de manière asynchrone. Votre site reste rapide et votre SEO intact, garantissant une navigation fluide pour vos clients."
       },
       {
-        "question": "Que se passe-t-il si la base de données de DigitalHeirloom est piratée ?",
-        "answer": "C'est la brillance de notre architecture. Même si les pirates exfiltrent toute la base de données, ils ne peuvent rien lire. Les facteurs de décryptage critiques ne sont pas sur nos serveurs ; ils résident dans les identifiants physiques envoyés à vos bénéficiaires. La complexité algorithmique rend le craquage aussi difficile que de trouver un atome spécifique dans l'univers."
+        "question": "Mes clients doivent-ils télécharger une application mobile ?",
+        "answer": "Jamais. Vos clients ajoutent leur carte de membre directement dans leur Apple Wallet ou Google Pay. C'est une solution sans friction qui respecte l'élégance de votre parcours client."
       },
       {
-        "question": "La plateforme garantit-elle la qualité ou l'intégrité du contenu de mes fichiers ?",
-        "answer": "Nous garantissons l'intégrité physique et la sécurité de vos blocs de données cryptés via un stockage distribué mondialement. Cependant, en tant que plateforme \"Zero-Knowledge\", nous n'auditons ni ne garantissons la qualité du contenu interne. Nous sommes les fabricants de coffres-forts, pas les auditeurs de contenu."
+        "question": "Puis-je importer mes données depuis Smile ou Yotpo ?",
+        "answer": "Oui. Grâce à notre outil d'importation \"Clean Slate\", vous pouvez transférer vos points et données clients existants vers Glow en quelques clics pour une transition en douceur."
       },
       {
-        "question": "Mon bénéficiaire aura-t-il encore besoin de mon mot de passe principal après avoir reçu l'identifiant physique ?",
-        "answer": "Non. Les identifiants Pro disposent de la technologie \"Auto-Parsing\". Une fois que le bénéficiaire scanne le code QR crypté, le système valide l'identité via le support physique, contournant automatiquement la saisie du mot de passe pour une récupération sans friction."
-      },
-      {
-        "question": "Pourquoi insister sur les \"Identifiants Physiques\" plutôt que sur des mots de passe purement numériques ?",
-        "answer": "Les mots de passe numériques peuvent être compromis par force brute ou hameçonnage. Nos identifiants physiques sont \"non réplicables\". Cette double validation—liant l'héritage numérique à la logistique physique (ShipAny)—garantit que même si un pirate franchit votre réseau, il ne peut pas franchir l'espace physique."
-      },
-      {
-        "question": "Le décryptage d'un actif de 2 Go prend-il beaucoup de temps ?",
-        "answer": "Le temps de décryptage dépend du matériel local du bénéficiaire, pas de la bande passante. Une fois que l'identifiant physique active le canal, le système utilise le calcul Edge de Vercel pour le décryptage en streaming. Une archive de 2 Go peut généralement être restaurée en quelques minutes."
+        "question": "Le design est-il adaptable à mon univers créatif ?",
+        "answer": "Absolument. Que vous vendiez des bijoux artisanaux ou des créations textiles, l'interface de Glow est entièrement personnalisable (couleurs, logos, typographie) pour s'aligner sur votre identité visuelle."
       }
     ]
   },
