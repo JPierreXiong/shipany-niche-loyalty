@@ -4,6 +4,7 @@ const path = require('path');
 const serverDir = path.join(process.cwd(), '.next/server');
 const nftPath = path.join(serverDir, 'middleware.js.nft.json');
 const manifestPath = path.join(serverDir, 'middleware-manifest.json');
+const middlewareJsPath = path.join(serverDir, 'middleware.js');
 
 try {
   if (fs.existsSync(manifestPath)) {
@@ -25,10 +26,17 @@ try {
         fs.mkdirSync(serverDir, { recursive: true });
       }
 
+      // 1. 生成 .nft.json
       fs.writeFileSync(nftPath, JSON.stringify(nftContent, null, 2));
       console.log('✅ [Vercel Fix] Successfully generated middleware.js.nft.json');
       console.log(`   Files traced: ${files.length}`);
       console.log(`   Output: ${path.relative(process.cwd(), nftPath)}`);
+
+      // 2. 关键：创建伪装的 middleware.js 解决 lstat 报错
+      if (!fs.existsSync(middlewareJsPath)) {
+        fs.writeFileSync(middlewareJsPath, '// Vercel placeholder - actual middleware runs via Edge Runtime chunks\n');
+        console.log('✅ [Vercel Fix] Created dummy middleware.js for lstat check');
+      }
     } else {
       console.warn('⚠️ [Vercel Fix] No middleware configuration found in manifest.');
     }
@@ -39,4 +47,3 @@ try {
   console.error('❌ [Vercel Fix] Failed to generate NFT file:', error.message);
   process.exit(1);
 }
-
