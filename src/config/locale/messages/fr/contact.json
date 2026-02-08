@@ -3,6 +3,27 @@
     "title": "Nous contacter | Glow - Nous sommes là pour faire briller votre marque",
     "description": "Contactez l'équipe Glow. Que vous soyez céramiste, bijoutier ou créateur numérique, nous parlons votre langue."
   },
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contacter Glow",
+    "description": "Page de contact pour le support et les demandes Glow.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Glow",
+      "email": "hello@glow.app",
+      "url": "https://glow.app/contact",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "",
+          "contactType": "customer support",
+          "email": "support@glow.app",
+          "availableLanguage": ["English", "French", "Chinese"]
+        }
+      ]
+    }
+  },
   "hero": {
     "title": "Nous sommes là pour faire briller votre marque",
     "subtitle": "Contactez-nous et créons quelque chose de beau ensemble."

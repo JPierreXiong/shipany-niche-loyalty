@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Privacy Policy | Glow - Aesthetic Loyalty for Shopify Artisans",
-    "description": "Learn how Glow protects your data. GDPR and CCPA compliant privacy policy for our minimalist loyalty platform."
+    "title": "Privacy Policy | Glow - GDPR & CCPA Compliant Loyalty Platform",
+    "description": "Learn how Glow protects your data. GDPR and CCPA compliant privacy policy for our minimalist loyalty platform designed for artisans."
   },
   "title": "Privacy Policy",
   "lastUpdated": "Last Updated",
@@ -12,6 +12,7 @@
   },
   "collection": {
     "title": "2. Information We Collect",
+    "intro": "We only collect the minimum amount of data necessary to provide our services:",
     "merchants": {
       "title": "For Merchants",
       "content": "Name, email address, brand assets (logos/colors), and payment information (processed securely via Creem)."
@@ -27,6 +28,7 @@
   },
   "usage": {
     "title": "3. How We Use Your Information",
+    "intro": "We use the collected data to:",
     "point1": "Generate and manage digital artisan membership cards.",
     "point2": "Facilitate communication (Email via Resend, SMS via Twilio) between Merchants and Members.",
     "point3": "Process subscriptions and payments through Creem.",
@@ -50,10 +52,26 @@
   "thirdParty": {
     "title": "5. Third-Party Services",
     "intro": "To provide a seamless experience, we integrate with the following trusted partners:",
-    "vercel": "Hosting and Deployment.",
-    "neon": "Database Management.",
-    "creem": "Payment Processing (we do not store credit card details).",
-    "communication": "Communication delivery."
+    "vercel": {
+      "name": "Vercel",
+      "purpose": "Hosting and Deployment."
+    },
+    "neon": {
+      "name": "Neon",
+      "purpose": "Database Management."
+    },
+    "creem": {
+      "name": "Creem",
+      "purpose": "Payment Processing (we do not store credit card details)."
+    },
+    "resend": {
+      "name": "Resend",
+      "purpose": "Email delivery."
+    },
+    "twilio": {
+      "name": "Twilio",
+      "purpose": "SMS delivery."
+    }
   },
   "rights": {
     "title": "6. Your Rights (GDPR & CCPA)",
@@ -82,11 +100,7 @@
   "contact": {
     "title": "9. Contact Us",
     "intro": "If you have any questions about this Privacy Policy, please contact us at:",
-    "email": "Email",
-    "website": "Website"
+    "email": "support@glow.app",
+    "website": "https://glow.app"
   }
 }
-
-
-
-

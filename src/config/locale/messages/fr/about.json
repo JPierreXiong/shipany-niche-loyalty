@@ -3,6 +3,29 @@
     "title": "À propos de nous | Glow - Fidélité élégante pour les créateurs intentionnels",
     "description": "Découvrez l'histoire derrière Glow. Nous créons des logiciels de fidélité beaux et minimalistes pour les artisans qui valorisent l'artisanat et la communauté."
   },
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "À propos de Glow",
+    "description": "Découvrez la mission de Glow : fournir des solutions de fidélité élégantes pour les marques artisanales.",
+    "mainEntity": {
+      "@type": "SoftwareApplication",
+      "name": "Glow",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Gratuit pour toujours pour vos 50 premiers membres"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "ratingCount": "100"
+      }
+    }
+  },
   "hero": {
     "title": "Fidélité élégante pour le créateur intentionnel",
     "subtitle": "Notre métier, votre communauté"

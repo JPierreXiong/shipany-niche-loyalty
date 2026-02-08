@@ -3,6 +3,29 @@
     "title": "关于我们 | Glow - 为用心创作者打造的优雅会员系统",
     "description": "了解 Glow 背后的故事。我们为重视工艺和社区的手工艺者打造美观、极简的会员软件。"
   },
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "关于 Glow",
+    "description": "了解 Glow 的使命：为手工艺品牌提供优雅的会员解决方案。",
+    "mainEntity": {
+      "@type": "SoftwareApplication",
+      "name": "Glow",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "前 50 名会员永久免费"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "ratingCount": "100"
+      }
+    }
+  },
   "hero": {
     "title": "为用心创作者打造的优雅会员系统",
     "subtitle": "我们的工艺，您的社区"

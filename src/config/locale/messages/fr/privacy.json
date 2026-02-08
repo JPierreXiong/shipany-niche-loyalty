@@ -1,42 +1,44 @@
 {
   "metadata": {
-    "title": "Politique de confidentialité | Glow - Fidélité esthétique pour les artisans Shopify",
+    "title": "Politique de Confidentialité | Glow - Conforme RGPD & CCPA",
     "description": "Découvrez comment Glow protège vos données. Politique de confidentialité conforme RGPD et CCPA pour notre plateforme de fidélité minimaliste."
   },
-  "title": "Politique de confidentialité",
+  "title": "Politique de Confidentialité",
   "lastUpdated": "Dernière mise à jour",
   "date": "6 février 2026",
   "introduction": {
     "title": "1. Introduction",
-    "content": "Bienvenue sur Glow (\"nous\", \"notre\"). Nous fournissons une plateforme d'adhésion et de fidélité légère conçue spécifiquement pour les artisans et les créateurs. Nous respectons votre vie privée et nous nous engageons à protéger les données personnelles de nos Marchands (artisans) et de leurs Membres (clients)."
+    "content": "Bienvenue sur Glow (\"nous\", \"notre\" ou \"nos\"). Nous fournissons une plateforme de fidélité et d'adhésion légère conçue spécifiquement pour les artisans et créateurs. Nous respectons votre vie privée et nous nous engageons à protéger les données personnelles de nos Marchands (artisans) et de leurs Membres (clients)."
   },
   "collection": {
-    "title": "2. Informations que nous collectons",
+    "title": "2. Informations que Nous Collectons",
+    "intro": "Nous ne collectons que le minimum de données nécessaires pour fournir nos services :",
     "merchants": {
-      "title": "Pour les marchands",
-      "content": "Nom, adresse e-mail, actifs de marque (logos/couleurs) et informations de paiement (traitées en toute sécurité via Creem)."
+      "title": "Pour les Marchands",
+      "content": "Nom, adresse e-mail, actifs de marque (logos/couleurs) et informations de paiement (traitées de manière sécurisée via Creem)."
     },
     "members": {
-      "title": "Pour les membres",
-      "content": "Adresse e-mail et/ou numéro de téléphone (fournis volontairement lors de l'adhésion à une carte de fidélité) et historique des transactions/points."
+      "title": "Pour les Membres",
+      "content": "Adresse e-mail et/ou numéro de téléphone (fournis volontairement lors de l'adhésion à une carte de fidélité), et historique des transactions/points."
     },
     "technical": {
-      "title": "Données techniques",
+      "title": "Données Techniques",
       "content": "Adresse IP, type de navigateur et données d'utilisation collectées automatiquement via Vercel pour la surveillance de la sécurité et des performances."
     }
   },
   "usage": {
-    "title": "3. Comment nous utilisons vos informations",
-    "point1": "Générer et gérer des cartes de membre artisan numériques.",
-    "point2": "Faciliter la communication (e-mail via Resend, SMS via Twilio) entre les marchands et les membres.",
-    "point3": "Traiter les abonnements et les paiements via Creem.",
+    "title": "3. Comment Nous Utilisons Vos Informations",
+    "intro": "Nous utilisons les données collectées pour :",
+    "point1": "Générer et gérer les cartes de membre numériques pour artisans.",
+    "point2": "Faciliter la communication (E-mail via Resend, SMS via Twilio) entre Marchands et Membres.",
+    "point3": "Traiter les abonnements et paiements via Creem.",
     "point4": "Améliorer la stabilité de la plateforme et l'expérience utilisateur."
   },
   "security": {
-    "title": "4. Stockage et sécurité des données",
+    "title": "4. Stockage et Sécurité des Données",
     "infrastructure": {
       "title": "Infrastructure",
-      "content": "Vos données sont stockées à l'aide de Neon (PostgreSQL), une base de données cloud native sécurisée."
+      "content": "Vos données sont stockées en utilisant Neon (PostgreSQL), une base de données cloud native et sécurisée."
     },
     "protection": {
       "title": "Sécurité",
@@ -44,26 +46,42 @@
     },
     "retention": {
       "title": "Conservation",
-      "content": "Nous conservons les données personnelles uniquement tant qu'un compte est actif ou selon les besoins pour fournir des services."
+      "content": "Nous conservons les données personnelles uniquement tant qu'un compte est actif ou selon les besoins pour fournir les services."
     }
   },
   "thirdParty": {
-    "title": "5. Services tiers",
-    "intro": "Pour offrir une expérience fluide, nous nous intégrons avec les partenaires de confiance suivants :",
-    "vercel": "Hébergement et déploiement.",
-    "neon": "Gestion de base de données.",
-    "creem": "Traitement des paiements (nous ne stockons pas les détails de carte de crédit).",
-    "communication": "Livraison de communications."
+    "title": "5. Services Tiers",
+    "intro": "Pour offrir une expérience fluide, nous intégrons les partenaires de confiance suivants :",
+    "vercel": {
+      "name": "Vercel",
+      "purpose": "Hébergement et Déploiement."
+    },
+    "neon": {
+      "name": "Neon",
+      "purpose": "Gestion de Base de Données."
+    },
+    "creem": {
+      "name": "Creem",
+      "purpose": "Traitement des Paiements (nous ne stockons pas les détails de carte bancaire)."
+    },
+    "resend": {
+      "name": "Resend",
+      "purpose": "Livraison d'e-mails."
+    },
+    "twilio": {
+      "name": "Twilio",
+      "purpose": "Livraison de SMS."
+    }
   },
   "rights": {
-    "title": "6. Vos droits (RGPD et CCPA)",
-    "intro": "Selon votre emplacement, vous disposez des droits suivants :",
+    "title": "6. Vos Droits (RGPD & CCPA)",
+    "intro": "Selon votre localisation, vous disposez des droits suivants :",
     "access": {
-      "title": "Accès et portabilité",
+      "title": "Accès & Portabilité",
       "content": "Demander une copie des données que nous détenons sur vous."
     },
     "correction": {
-      "title": "Correction et suppression",
+      "title": "Correction & Suppression",
       "content": "Demander que nous mettions à jour ou effacions vos informations personnelles."
     },
     "optout": {
@@ -76,17 +94,13 @@
     "content": "Nous utilisons des cookies essentiels pour maintenir votre session et mémoriser vos préférences. Nous n'utilisons pas de suivi intrusif ou de cookies publicitaires tiers."
   },
   "changes": {
-    "title": "8. Modifications de cette politique",
-    "content": "Nous pouvons mettre à jour cette politique de confidentialité de temps en temps. Nous vous informerons de tout changement important en publiant la nouvelle politique sur cette page et en mettant à jour la date de \"Dernière mise à jour\"."
+    "title": "8. Modifications de Cette Politique",
+    "content": "Nous pouvons mettre à jour cette Politique de Confidentialité de temps en temps. Nous vous informerons de tout changement significatif en publiant la nouvelle politique sur cette page et en mettant à jour la date de \"Dernière mise à jour\"."
   },
   "contact": {
-    "title": "9. Nous contacter",
-    "intro": "Si vous avez des questions concernant cette politique de confidentialité, veuillez nous contacter à :",
-    "email": "E-mail",
-    "website": "Site web"
+    "title": "9. Nous Contacter",
+    "intro": "Si vous avez des questions concernant cette Politique de Confidentialité, veuillez nous contacter à :",
+    "email": "support@glow.app",
+    "website": "https://glow.app"
   }
 }
-
-
-
-

@@ -1,32 +1,20 @@
-# https://www.digitalheirloom.app/robots.txt
+# Robots.txt for Glow - Artisan Loyalty Platform
+# Optimized for SEO crawling
 
 User-agent: *
-# 允许抓取营销核心页面
 Allow: /
-Allow: /*/pricing
-Allow: /*/faq
-Allow: /*/about
-Allow: /*/contact
-Allow: /*/blog
-Allow: /*/for/*
-Allow: /_next/static/
-Allow: /static/
-
-# 隐私禁区：绝对屏蔽用户私有数据和操作逻辑
 Disallow: /api/
-Disallow: /*/dashboard/
-Disallow: /*/vault/
-Disallow: /*/setup/
-Disallow: /*/settings/
-Disallow: /*/admin/
-Disallow: /*/onboarding/
-Disallow: /inherit/*
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /settings/
+Disallow: /activity/
+Disallow: /niche-loyalty/dashboard/
 
-# 屏蔽搜索参数页面，防止权重分散 (如：?ref=, ?source=)
-Disallow: /*?*
+# Allow public demo page
+Allow: /niche-loyalty/demo
 
-# 站点地图：使用绝对地址
-Sitemap: https://www.digitalheirloom.app/sitemap.xml
+# Sitemap location
+Sitemap: https://glow.app/sitemap.xml
 
-# 建议爬虫抓取间隔 (部分搜索引擎适用)
+# Crawl-delay for polite bots
 Crawl-delay: 1

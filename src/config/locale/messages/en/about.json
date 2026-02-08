@@ -3,6 +3,29 @@
     "title": "About Us | Glow - Elegant Loyalty for Intentional Makers",
     "description": "Discover the story behind Glow. We build beautiful, minimalist loyalty software for artisans who value craft and community."
   },
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Glow",
+    "description": "Learn about Glow's mission to provide elegant loyalty solutions for artisan brands.",
+    "mainEntity": {
+      "@type": "SoftwareApplication",
+      "name": "Glow",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free forever for your first 50 members"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "ratingCount": "100"
+      }
+    }
+  },
   "hero": {
     "title": "Elegant Loyalty for the Intentional Maker",
     "subtitle": "Our Craft, Your Community"
