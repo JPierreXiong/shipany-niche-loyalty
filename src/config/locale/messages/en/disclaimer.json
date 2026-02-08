@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "title": "Disclaimer | Glow - Shopify Loyalty Platform for Artisans",
+    "description": "Legal disclaimer for Glow, the minimalist loyalty app for Shopify makers and artisan brands."
+  },
+  "title": "Disclaimer",
+  "lastUpdated": "Last Updated",
+  "date": "February 6, 2026",
+  "asis": {
+    "title": "1. Service \"As-Is\"",
+    "content": "Glow is provided on an \"as-is\" and \"as-available\" basis. While we utilize high-performance stacks (Next.js, Neon, Vercel), we do not guarantee that the service will be uninterrupted or error-free."
+  },
+  "thirdParty": {
+    "title": "2. Third-Party Dependencies",
+    "content": "Glow relies on third-party services including Shopify, Apple Wallet, Google Pay, Resend, and Twilio. We are not responsible for service outages or policy changes initiated by these external providers."
+  },
+  "marketing": {
+    "title": "3. Marketing and Earnings Disclaimer",
+    "content": "Any \"Growth Blueprints\" or marketing suggestions provided by Glow are for educational purposes. We do not guarantee specific financial results, customer retention rates, or Shopify store growth. Your success depends on your individual brand effort and market conditions."
+  },
+  "advice": {
+    "title": "4. No Professional Advice",
+    "content": "The information provided on our website is not intended as legal, financial, or tax advice. Please consult with a professional regarding your specific business compliance requirements."
+  },
+  "dataLoss": {
+    "title": "5. Data Backup Responsibility",
+    "content": "While we implement robust backup systems, you are responsible for maintaining your own records of customer data and loyalty program configurations."
+  },
+  "changes": {
+    "title": "6. Changes to This Disclaimer",
+    "content": "We may update this Disclaimer from time to time. We will notify you of any significant changes by posting the new disclaimer on this page and updating the \"Last Updated\" date."
+  },
+  "contact": {
+    "title": "7. Contact Us",
+    "intro": "If you have any questions about this Disclaimer, please contact us at:",
+    "email": "Email",
+    "website": "Website"
+  }
+}
+

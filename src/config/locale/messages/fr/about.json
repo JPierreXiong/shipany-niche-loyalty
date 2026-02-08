@@ -8,24 +8,23 @@
     "subtitle": "Notre métier, votre communauté"
   },
   "story": {
-    "title": "Notre histoire",
+    "title": "Notre Histoire",
     "paragraph1": "Chez Glow, nous croyons que les logiciels devraient être aussi beaux que les produits que vous créez. La plupart des plateformes de fidélité sont conçues pour les entreprises—encombrées de tableaux de bord complexes et de pop-ups intrusifs qui distraient de l'âme de votre marque.",
-    "paragraph2": "Nous avons construit Glow pour l'artisan indépendant. En tirant parti d'une pile haute performance—Next.js, Neon et Vercel—nous offrons une technologie \"silencieuse\" qui reste en arrière-plan, permettant à votre savoir-faire de briller.",
-    "paragraph3": "Notre mission est simple : aider les créateurs à établir des liens plus profonds avec leurs communautés grâce à des expériences de fidélité élégantes et sans distraction."
+    "paragraph2": "Nous avons construit Glow pour l'artisan indépendant. En tirant parti d'une pile haute performance—Next.js, Neon et Vercel—nous offrons une technologie \"silencieuse\" qui reste en arrière-plan, permettant à votre savoir-faire de briller."
   },
   "promise": {
-    "title": "Notre promesse",
+    "title": "Notre Promesse",
     "performance": {
-      "title": "Performance sans ralentissement",
+      "title": "Performance Sans Ralentissement",
       "description": "Optimisé pour la vitesse afin que votre boutique reste rapide et réactive."
     },
     "aesthetic": {
-      "title": "Intégration esthétique",
+      "title": "Intégration Esthétique",
       "description": "Cartes de membre numériques conçues pour vivre magnifiquement dans le portefeuille Apple ou Google de votre client."
     },
     "focus": {
-      "title": "Focus artisan",
-      "description": "Nous ne fournissons pas seulement des points ; nous fournissons une connexion qui approfondit votre communauté."
+      "title": "Focus Artisan",
+      "description": "Nous ne fournissons pas seulement des points ; nous fournissons un \"Digital Heirloom\" qui vous connecte plus profondément avec votre communauté."
     }
   },
   "tech": {

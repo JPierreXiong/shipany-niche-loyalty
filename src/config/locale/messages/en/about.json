@@ -10,8 +10,7 @@
   "story": {
     "title": "The Narrative",
     "paragraph1": "At Glow, we believe that software should be as beautiful as the products you create. Most loyalty platforms are built for corporations—cluttered with complex dashboards and intrusive pop-ups that distract from your brand's soul.",
-    "paragraph2": "We built Glow for the independent artisan. By leveraging a high-performance stack—Next.js, Neon, and Vercel—we offer a \"quiet\" technology that stays in the background, allowing your craftsmanship to shine.",
-    "paragraph3": "Our mission is simple: help makers build deeper connections with their communities through elegant, distraction-free loyalty experiences."
+    "paragraph2": "We built Glow for the independent artisan. By leveraging a high-performance stack—Next.js, Neon, and Vercel—we offer a \"quiet\" technology that stays in the background, allowing your craftsmanship to shine."
   },
   "promise": {
     "title": "Our Promise",
@@ -25,7 +24,7 @@
     },
     "focus": {
       "title": "Artisan Focus",
-      "description": "We don't just provide points; we provide a connection that deepens your community."
+      "description": "We don't just provide points; we provide a \"Digital Heirloom\" that connects you deeper with your community."
     }
   },
   "tech": {

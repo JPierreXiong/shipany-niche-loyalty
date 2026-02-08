@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "title": "Avis de Non-Responsabilité | Glow - Plateforme de Fidélité Shopify pour Artisans",
+    "description": "Avis de non-responsabilité légal pour Glow, l'application de fidélité minimaliste pour les créateurs et marques artisanales Shopify."
+  },
+  "title": "Avis de Non-Responsabilité",
+  "lastUpdated": "Dernière mise à jour",
+  "date": "6 février 2026",
+  "asis": {
+    "title": "1. Service \"En l'État\"",
+    "content": "Glow est fourni sur une base \"en l'état\" et \"selon disponibilité\". Bien que nous utilisions des technologies de pointe (Next.js, Neon, Vercel), nous ne garantissons pas que le service sera ininterrompu ou sans erreur."
+  },
+  "thirdParty": {
+    "title": "2. Dépendances Tierces",
+    "content": "Glow dépend de services tiers incluant Shopify, Apple Wallet, Google Pay, Resend et Twilio. Nous ne sommes pas responsables des pannes de service ou des changements de politique initiés par ces fournisseurs externes."
+  },
+  "marketing": {
+    "title": "3. Avertissement Marketing et Revenus",
+    "content": "Tous les \"Plans de Croissance\" ou suggestions marketing fournis par Glow sont à des fins éducatives. Nous ne garantissons pas de résultats financiers spécifiques, de taux de rétention client ou de croissance de boutique Shopify. Votre succès dépend de vos efforts individuels et des conditions du marché."
+  },
+  "advice": {
+    "title": "4. Aucun Conseil Professionnel",
+    "content": "Les informations fournies sur notre site Web ne sont pas destinées à constituer des conseils juridiques, financiers ou fiscaux. Veuillez consulter un professionnel concernant vos exigences spécifiques de conformité commerciale."
+  },
+  "dataLoss": {
+    "title": "5. Responsabilité de Sauvegarde des Données",
+    "content": "Bien que nous mettions en œuvre des systèmes de sauvegarde robustes, vous êtes responsable de maintenir vos propres enregistrements des données clients et des configurations de programme de fidélité."
+  },
+  "changes": {
+    "title": "6. Modifications de cet Avis",
+    "content": "Nous pouvons mettre à jour cet Avis de Non-Responsabilité de temps en temps. Nous vous informerons de tout changement significatif en publiant le nouvel avis sur cette page et en mettant à jour la date de \"Dernière mise à jour\"."
+  },
+  "contact": {
+    "title": "7. Nous Contacter",
+    "intro": "Si vous avez des questions concernant cet Avis de Non-Responsabilité, veuillez nous contacter à :",
+    "email": "Email",
+    "website": "Site Web"
+  }
+}
+

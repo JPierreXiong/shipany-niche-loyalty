@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "title": "Terms of Service | Glow - Digital Loyalty for Shopify Artisans",
+    "description": "Terms of Service for Glow, the elegant loyalty platform designed for Shopify artisans and makers."
+  },
+  "title": "Terms of Service",
+  "lastUpdated": "Last Updated",
+  "date": "February 6, 2026",
+  "introduction": {
+    "content": "Welcome to Glow (the \"Service\"), a digital loyalty platform designed specifically for Shopify artisans. By accessing or using our platform, you agree to be bound by these Terms of Service."
+  },
+  "eligibility": {
+    "title": "1. Eligibility and Shopify Integration",
+    "content": "To use Glow, you must maintain an active Shopify store in good standing. Glow operates as a third-party integration; therefore, your use of our service is also subject to Shopify's API Terms and Acceptable Use Policies."
+  },
+  "license": {
+    "title": "2. The \"Digital Heirloom\" License",
+    "content": "Upon subscribing to a Glow plan, we grant you a non-exclusive, non-transferable license to create and distribute digital membership cards (Digital Heirlooms) to your customers. You retain all intellectual property rights to your brand assets (Logos, Colors, Fonts) uploaded to our platform."
+  },
+  "subscription": {
+    "title": "3. Subscription Tiers and Billing",
+    "seed": {
+      "title": "Seed (Free)",
+      "content": "Limited to 50 members."
+    },
+    "base": {
+      "title": "Base ($19.90)",
+      "content": "Limited to 250 members."
+    },
+    "pro": {
+      "title": "Pro ($59.90)",
+      "content": "Unlimited members and advanced automation."
+    },
+    "payment": "All payments are processed securely via Creem. Fees are non-refundable unless otherwise stated by local consumer law."
+  },
+  "conduct": {
+    "title": "4. Prohibited Conduct",
+    "content": "Users may not use Glow to distribute spam, fraudulent rewards, or content that violates intellectual property rights. We reserve the right to terminate accounts that diminish the \"Glow\" community standard."
+  },
+  "termination": {
+    "title": "5. Account Termination",
+    "content": "You may cancel your subscription at any time through your account settings. Upon cancellation, you will retain access until the end of your current billing period."
+  },
+  "liability": {
+    "title": "6. Limitation of Liability",
+    "content": "To the maximum extent permitted by law, Glow shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of the service."
+  },
+  "governing": {
+    "title": "7. Governing Law",
+    "content": "These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which Glow operates, without regard to its conflict of law provisions."
+  },
+  "contact": {
+    "title": "8. Contact Us",
+    "intro": "If you have any questions about these Terms of Service, please contact us at:",
+    "email": "Email",
+    "website": "Website"
+  }
+}
+

@@ -9,19 +9,22 @@
   },
   "general": {
     "title": "General Inquiry",
-    "description": "Questions about our aesthetic or features? We'd love to hear from you."
+    "description": "Questions about our aesthetic or features? Email us at hello@glow.app.",
+    "email": "hello@glow.app"
   },
   "support": {
     "title": "Technical Support",
-    "description": "Need help with your Shopify integration? Our team is here to assist."
+    "description": "Need help with your Shopify integration? Reach out to support@glow.app.",
+    "email": "support@glow.app"
   },
   "partnerships": {
     "title": "Collaborations",
-    "description": "Are you an agency working with boutique brands? Let's talk."
+    "description": "Are you an agency working with boutique brands? Let's talk: partners@glow.app.",
+    "email": "partners@glow.app"
   },
   "response": {
     "title": "Response Time",
-    "description": "As an intentional team, we prioritize human connection. Expect a thoughtful response within 24 hours."
+    "description": "As an intentional 1-person team, I prioritize human connection. Expect a thoughtful response within 24 hours."
   }
 }
 

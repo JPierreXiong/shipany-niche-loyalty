@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "title": "服务条款 | Glow - Shopify 手作人的数字会员平台",
+    "description": "Glow 服务条款，专为 Shopify 手作人和创作者设计的优雅会员平台。"
+  },
+  "title": "服务条款",
+  "lastUpdated": "最后更新日期",
+  "date": "2026年2月6日",
+  "introduction": {
+    "content": "欢迎使用 Glow（以下简称"本服务"）。Glow 是专门为 Shopify 手作人设计的数字会员平台。通过使用我们的平台，即表示您同意受本服务条款的约束。"
+  },
+  "eligibility": {
+    "title": "1. 资格与 Shopify 集成",
+    "content": "您必须拥有一个信誉良好的活跃 Shopify 店铺才能使用 Glow。Glow 作为第三方集成运行，因此您的使用还需遵守 Shopify 的 API 条款和可接受使用政策。"
+  },
+  "license": {
+    "title": "2. "数字传家宝" (Digital Heirloom) 许可",
+    "content": "订阅 Glow 计划后，我们授予您非独占、不可转让的许可，用于创建和分发数字会员卡（Digital Heirlooms）给您的客户。您保留上传到我们平台的所有品牌资产（Logo、颜色、字体）的知识产权。"
+  },
+  "subscription": {
+    "title": "3. 订阅层级与计费",
+    "seed": {
+      "title": "种子版 (Seed) - 免费",
+      "content": "限 50 名会员。"
+    },
+    "base": {
+      "title": "基础版 (Base) - $19.90/月",
+      "content": "限 250 名会员。"
+    },
+    "pro": {
+      "title": "专业版 (Pro) - $59.90/月",
+      "content": "无限制会员数及高级自动化功能。"
+    },
+    "payment": "所有付款均通过 Creem 安全处理。除非当地消费者法律另有规定，否则费用不予退还。"
+  },
+  "conduct": {
+    "title": "4. 禁止行为",
+    "content": "用户不得使用 Glow 分发垃圾邮件、欺诈性奖励或侵犯知识产权的内容。我们保留终止降低"Glow"社区标准的账户的权利。"
+  },
+  "termination": {
+    "title": "5. 账户终止",
+    "content": "您可以随时通过账户设置取消订阅。取消后，您将保留访问权限直到当前计费周期结束。"
+  },
+  "liability": {
+    "title": "6. 责任限制",
+    "content": "在法律允许的最大范围内，Glow 不对因您使用本服务而产生的任何间接、附带、特殊、后果性或惩罚性损害承担责任。"
+  },
+  "governing": {
+    "title": "7. 适用法律",
+    "content": "本条款应受 Glow 运营所在司法管辖区的法律管辖和解释，不考虑其法律冲突条款。"
+  },
+  "contact": {
+    "title": "8. 联系我们",
+    "intro": "如果您对本服务条款有任何疑问，请通过以下方式联系我们：",
+    "email": "邮箱",
+    "website": "网站"
+  }
+}
+

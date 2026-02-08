@@ -8,20 +8,23 @@
     "subtitle": "Contactez-nous et créons quelque chose de beau ensemble."
   },
   "general": {
-    "title": "Demande générale",
-    "description": "Des questions sur notre esthétique ou nos fonctionnalités ? Nous serions ravis de vous entendre."
+    "title": "Demande Générale",
+    "description": "Des questions sur notre esthétique ou nos fonctionnalités ? Écrivez-nous à hello@glow.app.",
+    "email": "hello@glow.app"
   },
   "support": {
-    "title": "Support technique",
-    "description": "Besoin d'aide avec votre intégration Shopify ? Notre équipe est là pour vous aider."
+    "title": "Support Technique",
+    "description": "Besoin d'aide avec votre intégration Shopify ? Contactez support@glow.app.",
+    "email": "support@glow.app"
   },
   "partnerships": {
     "title": "Collaborations",
-    "description": "Êtes-vous une agence travaillant avec des marques boutique ? Parlons-en."
+    "description": "Êtes-vous une agence travaillant avec des marques boutique ? Parlons-en : partners@glow.app.",
+    "email": "partners@glow.app"
   },
   "response": {
-    "title": "Temps de réponse",
-    "description": "En tant qu'équipe intentionnelle, nous privilégions la connexion humaine. Attendez-vous à une réponse réfléchie dans les 24 heures."
+    "title": "Temps de Réponse",
+    "description": "En tant qu'équipe intentionnelle d'une personne, je privilégie la connexion humaine. Attendez-vous à une réponse réfléchie dans les 24 heures."
   }
 }
 

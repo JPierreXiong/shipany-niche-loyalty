@@ -9,19 +9,22 @@
   },
   "general": {
     "title": "一般咨询",
-    "description": "对我们的美学或功能有疑问？我们很乐意倾听。"
+    "description": "对我们的美学或功能有疑问？请发送邮件至 hello@glow.app。",
+    "email": "hello@glow.app"
   },
   "support": {
     "title": "技术支持",
-    "description": "需要 Shopify 集成方面的帮助？我们的团队随时为您提供协助。"
+    "description": "需要 Shopify 集成方面的帮助？请联系 support@glow.app。",
+    "email": "support@glow.app"
   },
   "partnerships": {
     "title": "合作洽谈",
-    "description": "您是与精品品牌合作的代理机构吗？让我们聊聊。"
+    "description": "您是与精品品牌合作的代理机构吗？让我们聊聊：partners@glow.app。",
+    "email": "partners@glow.app"
   },
   "response": {
     "title": "响应时间",
-    "description": "作为一个用心的团队，我们重视人与人之间的联系。您将在 24 小时内收到我们深思熟虑的回复。"
+    "description": "作为一个用心的单人团队，我重视人与人之间的联系。您将在 24 小时内收到我深思熟虑的回复。"
   }
 }
 

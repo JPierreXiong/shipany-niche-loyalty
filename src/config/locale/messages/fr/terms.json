@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "title": "Conditions Générales d'Utilisation | Glow - Fidélité Digitale pour Artisans Shopify",
+    "description": "Conditions générales d'utilisation de Glow, la plateforme de fidélité élégante conçue pour les artisans Shopify."
+  },
+  "title": "Conditions Générales d'Utilisation",
+  "lastUpdated": "Dernière mise à jour",
+  "date": "6 février 2026",
+  "introduction": {
+    "content": "Bienvenue sur Glow (le \"Service\"), une plateforme de fidélité digitale conçue spécifiquement pour les artisans Shopify. En utilisant notre plateforme, vous acceptez d'être lié par ces Conditions Générales d'Utilisation."
+  },
+  "eligibility": {
+    "title": "1. Éligibilité et Intégration Shopify",
+    "content": "Pour utiliser Glow, vous devez posséder une boutique Shopify active en règle. Glow fonctionne comme une intégration tierce ; par conséquent, votre utilisation de notre service est également soumise aux Conditions d'API de Shopify et aux Politiques d'Utilisation Acceptable."
+  },
+  "license": {
+    "title": "2. La Licence \"Digital Heirloom\"",
+    "content": "En souscrivant à un plan Glow, nous vous accordons une licence non exclusive et non transférable pour créer et distribuer des cartes de membre digitales (Digital Heirlooms) à vos clients. Vous conservez tous les droits de propriété intellectuelle sur vos actifs de marque (Logos, Couleurs, Polices) téléchargés sur notre plateforme."
+  },
+  "subscription": {
+    "title": "3. Niveaux d'Abonnement et Facturation",
+    "seed": {
+      "title": "Seed (Gratuit)",
+      "content": "Limité à 50 membres."
+    },
+    "base": {
+      "title": "Base (19,90 $)",
+      "content": "Limité à 250 membres."
+    },
+    "pro": {
+      "title": "Pro (59,90 $)",
+      "content": "Membres illimités et automatisation avancée."
+    },
+    "payment": "Tous les paiements sont traités de manière sécurisée via Creem. Les frais ne sont pas remboursables sauf indication contraire par la loi locale sur la consommation."
+  },
+  "conduct": {
+    "title": "4. Conduite Interdite",
+    "content": "Les utilisateurs ne peuvent pas utiliser Glow pour distribuer du spam, des récompenses frauduleuses ou du contenu qui viole les droits de propriété intellectuelle. Nous nous réservons le droit de résilier les comptes qui diminuent le standard de la communauté \"Glow\"."
+  },
+  "termination": {
+    "title": "5. Résiliation du Compte",
+    "content": "Vous pouvez annuler votre abonnement à tout moment via les paramètres de votre compte. Après l'annulation, vous conserverez l'accès jusqu'à la fin de votre période de facturation en cours."
+  },
+  "liability": {
+    "title": "6. Limitation de Responsabilité",
+    "content": "Dans toute la mesure permise par la loi, Glow ne sera pas responsable des dommages indirects, accessoires, spéciaux, consécutifs ou punitifs résultant de votre utilisation du service."
+  },
+  "governing": {
+    "title": "7. Loi Applicable",
+    "content": "Ces Conditions seront régies et interprétées conformément aux lois de la juridiction dans laquelle Glow opère, sans égard à ses dispositions en matière de conflit de lois."
+  },
+  "contact": {
+    "title": "8. Nous Contacter",
+    "intro": "Si vous avez des questions concernant ces Conditions Générales d'Utilisation, veuillez nous contacter à :",
+    "email": "Email",
+    "website": "Site Web"
+  }
+}
+
