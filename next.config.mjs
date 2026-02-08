@@ -14,8 +14,8 @@ const withNextIntl = createNextIntlPlugin({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Temporarily disable standalone output to avoid middleware.js.nft.json error
-  // This is a known issue in Next.js 16.1.0 with Turbopack
+  // Remove standalone output - let Vercel use default Serverless mode
+  // Standalone mode causes path mapping issues in Vercel Edge Runtime
   output: undefined,
   reactStrictMode: false,
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
@@ -30,10 +30,14 @@ const nextConfig = {
   async redirects() {
     return [];
   },
-  // Fix middleware.js.nft.json issue in Next.js 16
-  // Include middleware and i18n dependencies for proper file tracing
+  // Enhanced file tracing for middleware - explicitly include i18n dependencies
+  // This fixes the middleware.js.nft.json error on Vercel
   outputFileTracingIncludes: {
-    '/': ['./middleware.ts', './src/core/i18n/**/*'],
+    '/middleware': [
+      './src/core/i18n/**/*',
+      './src/config/locale/**/*',
+      './messages/**/*',
+    ],
   },
   // Exclude unnecessary files from tracing to reduce bundle size
   outputFileTracingExcludes: {
