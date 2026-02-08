@@ -18,8 +18,8 @@
   ],
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
-    "build:fast": "NODE_OPTIONS='--max-old-space-size=4096' next build",
+    "build": "next build && node scripts/generate-middleware-nft.js",
+    "build:fast": "NODE_OPTIONS='--max-old-space-size=4096' next build && node scripts/generate-middleware-nft.js",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
