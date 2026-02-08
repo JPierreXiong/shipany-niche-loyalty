@@ -1,12 +1,13 @@
 {
   "buildCommand": "pnpm build",
-  "installCommand": "pnpm install --frozen-lockfile",
+  "installCommand": "pnpm install --frozen-lockfile --ignore-scripts",
   "framework": "nextjs",
   "build": {
     "env": {
       "NODE_OPTIONS": "--max-old-space-size=4096",
       "NEXT_TELEMETRY_DISABLED": "1",
-      "NEXT_DISABLE_TURBOPACK": "1"
+      "NEXT_DISABLE_TURBOPACK": "1",
+      "SKIP_ENV_VALIDATION": "1"
     }
   },
   "functions": {
