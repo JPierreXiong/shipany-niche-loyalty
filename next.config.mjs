@@ -28,6 +28,10 @@ const nextConfig = {
   async redirects() {
     return [];
   },
+  // Fix middleware.js.nft.json issue in Next.js 16
+  outputFileTracingIncludes: {
+    '/': ['./middleware.ts'],
+  },
   // 类型检查配置（用于快速通过 Vercel 部署）
   typescript: {
     // 允许构建时忽略 TypeScript 错误（仅在 Vercel 环境下使用）
