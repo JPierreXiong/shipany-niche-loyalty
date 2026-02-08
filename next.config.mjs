@@ -52,23 +52,11 @@ const nextConfig = {
     // 允许构建时忽略 TypeScript 错误（仅在 Vercel 环境下使用）
     ignoreBuildErrors: process.env.VERCEL === 'true',
   },
-  // 注意：Next.js 16+ 中 eslint 配置已移除，通过环境变量控制
-  turbopack: {
-    // 明确指定项目根目录，避免 Next.js 错误推断工作区根目录
-    root: process.cwd(),
-    resolveAlias: {
-      // fs: {
-      //   browser: './empty.ts', // We recommend to fix code imports before using this method
-      // },
-    },
-  },
+  // 注意：Next.js 15 中 eslint 配置已移除，通过环境变量控制
   experimental: {
-    // Only enable turbopack cache in development, not in production builds
-    ...(process.env.NODE_ENV === 'development' ? { turbopackFileSystemCacheForDev: true } : {}),
     // Disable mdxRs for Vercel deployment compatibility with fumadocs-mdx
     ...(process.env.VERCEL ? {} : { mdxRs: true }),
   },
-  reactCompiler: true,
   // Webpack 配置：忽略可选依赖 jsqr（如果未安装）
   webpack: (config, { isServer }) => {
     if (!isServer) {

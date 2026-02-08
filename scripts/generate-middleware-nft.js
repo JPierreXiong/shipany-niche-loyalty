@@ -10,7 +10,7 @@ try {
   if (fs.existsSync(manifestPath)) {
     const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
     
-    // 兼容 Next.js 16 的清单结构，提取主路径 "/" 的文件依赖
+    // 兼容 Next.js 15/16 的清单结构，提取主路径 "/" 的文件依赖
     const middlewareConfig = manifest.middleware['/'];
     if (middlewareConfig && middlewareConfig.files) {
       const files = middlewareConfig.files;
@@ -26,24 +26,24 @@ try {
         fs.mkdirSync(serverDir, { recursive: true });
       }
 
-      // 1. 生成 .nft.json
+      // 1. 生成 middleware.js.nft.json
       fs.writeFileSync(nftPath, JSON.stringify(nftContent, null, 2));
-      console.log('✅ [Vercel Fix] Successfully generated middleware.js.nft.json');
+      console.log('✅ [ShipAny Fix] Successfully generated middleware.js.nft.json');
       console.log(`   Files traced: ${files.length}`);
       console.log(`   Output: ${path.relative(process.cwd(), nftPath)}`);
 
-      // 2. 关键：创建伪装的 middleware.js 解决 lstat 报错
+      // 2. 创建伪装的 middleware.js 解决 lstat 报错
       if (!fs.existsSync(middlewareJsPath)) {
         fs.writeFileSync(middlewareJsPath, '// Vercel placeholder - actual middleware runs via Edge Runtime chunks\n');
-        console.log('✅ [Vercel Fix] Created dummy middleware.js for lstat check');
+        console.log('✅ [ShipAny Fix] Created dummy middleware.js for lstat check');
       }
     } else {
-      console.warn('⚠️ [Vercel Fix] No middleware configuration found in manifest.');
+      console.warn('⚠️ [ShipAny Fix] No middleware configuration found in manifest.');
     }
   } else {
-    console.warn('⚠️ [Vercel Fix] middleware-manifest.json not found, skipping NFT generation.');
+    console.warn('⚠️ [ShipAny Fix] middleware-manifest.json not found, skipping NFT generation.');
   }
 } catch (error) {
-  console.error('❌ [Vercel Fix] Failed to generate NFT file:', error.message);
+  console.error('❌ [ShipAny Fix] Failed to generate NFT file:', error.message);
   process.exit(1);
 }
