@@ -257,23 +257,23 @@
   },
   "how-it-works": {
     "id": "how-it-works",
-    "title": "How It Works",
-    "description": "A simple, secure system to protect what matters most",
+    "title": "Seamless Integration. Beautiful Results.",
+    "description": "Glow lives inside your Shopify store, but it's built for your customers' lives.",
     "items": [
       {
-        "title": "Encrypted Vault",
-        "description": "Store passwords, crypto keys, and personal notes with military-grade encryption that even we can't read.",
-        "icon": "Lock"
+        "title": "Auto-Install",
+        "description": "Our lightweight script integrates with your theme without slowing it down. Zero-drag code that respects your site's performance.",
+        "icon": "Zap"
       },
       {
-        "title": "Dead Man's Switch",
-        "description": "Regular check-ins confirm you're okay. Miss them, and your designated contacts are notified automatically.",
-        "icon": "Clock"
+        "title": "Earn on Every Order",
+        "description": "Whether they buy a handmade ring or a digital print, points are added instantly. Set automated reward triggers and forget it.",
+        "icon": "ShoppingBag"
       },
       {
-        "title": "Trusted Beneficiaries",
-        "description": "Designate family members, friends, or attorneys to receive specific items from your vault.",
-        "icon": "Users"
+        "title": "The Wallet Experience",
+        "description": "No login required. Customers tap a link in their order confirmation and save their card. It's loyalty, simplified.",
+        "icon": "Wallet"
       }
     ]
   },

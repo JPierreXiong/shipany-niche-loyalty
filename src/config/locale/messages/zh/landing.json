@@ -2,18 +2,18 @@
   "header": {
     "id": "header",
     "brand": {
-      "title": "Afterglow",
+      "title": "Glow",
       "url": "/"
     },
     "nav": {
       "items": [
         {
-          "title": "会员管理",
+          "title": "Niche Loyalty",
           "url": "/niche-loyalty/dashboard",
           "icon": "Heart"
         },
         {
-          "title": "价格",
+          "title": "Pricing",
           "url": "/pricing",
           "icon": "DollarSign"
         }
@@ -26,17 +26,17 @@
       "show_sign_out": true,
       "items": [
         {
-          "title": "数字遗产",
-          "url": "/digital-heirloom/dashboard",
-          "icon": "Shield"
+          "title": "Niche Loyalty",
+          "url": "/niche-loyalty/dashboard",
+          "icon": "Heart"
         },
         {
-          "title": "账单",
+          "title": "Billing",
           "url": "/settings/billing",
           "icon": "CreditCard"
         },
         {
-          "title": "活动",
+          "title": "Activity",
           "url": "/activity",
           "icon": "Activity"
         }
@@ -48,28 +48,28 @@
   },
   "hero": {
     "id": "hero",
-    "title": "让您的品牌，自带光芒",
+    "title": "Give Your Brand the Glow It Deserves",
     "highlight_text": "",
-    "description": "告别复杂的积分系统。为手艺人量身定制的极简数字会员卡。",
+    "description": "Skip the complex point systems. Create a beautiful digital membership club that your customers will actually want to join. Designed for artisans.",
     "announcement": {
-      "badge": "5分钟极速设置",
-      "title": "🎨 原生钱包集成",
+      "badge": "5-Minute Setup",
+      "title": "🎨 Native Wallet Integration",
       "url": "/niche-loyalty/demo"
     },
-    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">前 50 名会员永久免费</span>",
+    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">Free forever for your first 50 members</span>",
     "buttons": [
       {
-        "title": "免费开始",
-        "icon": "Shield",
+        "title": "Launch Your Club",
+        "icon": "Heart",
         "url": "/sign-up",
         "target": "_self",
         "variant": "default",
         "className": ""
       },
       {
-        "title": "了解更多",
-        "icon": "Info",
-        "url": "/blog",
+        "title": "Try Demo",
+        "icon": "Sparkles",
+        "url": "/niche-loyalty/demo",
         "target": "_self",
         "variant": "outline",
         "className": ""
@@ -88,7 +88,7 @@
     }
   },
   "logos": {
-    "title": "Digital Heirloom 使用以下技术栈构建",
+    "title": "Glow is built on the shoulders of giants",
     "items": [
       {
         "title": "Next.js",
@@ -129,17 +129,17 @@
   },
   "introduce": {
     "id": "introduce",
-    "title": "Digital Heirloom 是什么？",
-    "label": "产品简介",
-    "description": "Digital Heirloom 是专为 AI SaaS 创业项目打造的 NextJS 脚手架，包括丰富模板、组件及文档。",
+    "title": "What is Digital Heirloom",
+    "label": "Introduce",
+    "description": "Digital Heirloom is a NextJS boilerplate for building AI SaaS startups, including templates, components, and documentation.",
     "image": {
       "src": "/imgs/features/landing-page.png",
       "alt": "introduce"
     },
     "items": [
       {
-        "title": "开箱即用的模板",
-        "description": "从数十款生产级 AI SaaS 模板中选择，快速开启你的项目。",
+        "title": "Ready-to-use Templates",
+        "description": "Choose from dozens of production-ready AI SaaS templates to quickly start your project.",
         "icon": "RiNextjsFill",
         "image": {
           "src": "/imgs/features/1.png",
@@ -147,8 +147,8 @@
         }
       },
       {
-        "title": "基础设施搭建",
-        "description": "内置最佳实践，即刻拥有可扩展的基础设施。",
+        "title": "Infrastructure Setup",
+        "description": "Get instant access to scalable infrastructure with best practices built-in.",
         "icon": "RiDatabase2Line",
         "image": {
           "src": "/imgs/features/2.png",
@@ -156,8 +156,8 @@
         }
       },
       {
-        "title": "极速部署",
-        "description": "AI SaaS 产品快速上线，助力小时级交付。",
+        "title": "Quick Deployment",
+        "description": "Deploy your AI SaaS application to production in hours, not days.",
         "icon": "RiCloudyFill",
         "image": {
           "src": "/imgs/features/3.png",
@@ -165,8 +165,8 @@
         }
       },
       {
-        "title": "AI 集成",
-        "description": "通过内置的 AI SDK，轻松为你的项目集成 AI 能力。",
+        "title": "AI Integration",
+        "description": "Integrate AI into your project with ease using our built-in AI SDK.",
         "icon": "RiRobot2Line",
         "image": {
           "src": "/imgs/features/4.png",
@@ -177,13 +177,13 @@
   },
   "benefits": {
     "id": "benefits",
-    "title": "为何选择 Glow",
-    "label": "核心卖点",
-    "description": "您的会员计划不应该看起来像电子表格。Glow 融入您品牌的灵魂。",
+    "title": "Why Choose Glow",
+    "label": "Core Selling Points",
+    "description": "Your loyalty program shouldn't look like a spreadsheet. Glow blends into your brand's soul.",
     "items": [
       {
-        "title": "美学优先，软件其次",
-        "description": "您的会员计划不应该看起来像电子表格。Glow 通过实时 UI 定制融入您品牌的灵魂，匹配您的十六进制色码和字体排版。",
+        "title": "Aesthetic First, Software Second",
+        "description": "Your loyalty program shouldn't look like a spreadsheet. Glow blends into your brand's soul with real-time UI customization to match your hex codes and typography.",
         "icon": "RiPaletteLine",
         "image": {
           "src": "/imgs/features/user-billing.png",
@@ -191,8 +191,8 @@
         }
       },
       {
-        "title": "5分钟极速设置",
-        "description": "无需下载 App，一键收藏至手机钱包。5分钟极速设置，不影响网页加载速度。",
+        "title": "The 5-Minute Setup",
+        "description": "Skip the manual. Launch your rewards club in the time it takes to pull an espresso shot. Set automated reward triggers and forget it.",
         "icon": "RiTimerFlashLine",
         "image": {
           "src": "/imgs/features/admin-settings.png",
@@ -200,8 +200,8 @@
         }
       },
       {
-        "title": "原生钱包集成",
-        "description": "客户无需下载任何应用。精美的卡片原生存储在他们的 Apple Wallet 或 Google Pay 中。无摩擦的愉悦体验。",
+        "title": "Native Wallet Integration",
+        "description": "No apps for your customers to download. Just a beautiful card living natively in their Apple or Google Wallet. Frictionless delight.",
         "icon": "RiWallet3Line",
         "image": {
           "src": "/imgs/features/landing-page.png",
@@ -212,8 +212,8 @@
   },
   "usage": {
     "id": "usage",
-    "title": "三步使用 Digital Heirloom 极速上线",
-    "description": "只需三步，快速开启你的 AI SaaS 创业之路：",
+    "title": "How to Launch with Digital Heirloom",
+    "description": "Get your AI SaaS startup running in three simple steps:",
     "image": {
       "src": "/imgs/features/1.png",
       "alt": "usage"
@@ -222,32 +222,32 @@
     "text_align": "center",
     "items": [
       {
-        "title": "获取 Digital Heirloom",
-        "description": "一次性购买 Digital Heirloom，查收邮件获取代码与文档。",
+        "title": "Get Digital Heirloom",
+        "description": "Buy Digital Heirloom with a one-time payment. Check your email for the code and documentation.",
         "image": {
           "src": "/imgs/features/5.png",
           "alt": "usage"
         }
       },
       {
-        "title": "启动你的项目",
-        "description": "阅读说明文档，克隆 Digital Heirloom 代码，开始开发你的 AI SaaS 项目。",
+        "title": "Start Your Project",
+        "description": "Read the documentation and clone the code of Digital Heirloom. Start building your AI SaaS startup.",
         "image": {
           "src": "/imgs/features/6.png",
           "alt": "usage"
         }
       },
       {
-        "title": "个性化定制",
-        "description": "根据需求修改模板内容和数据，配置专属 AI 能力。",
+        "title": "Customize Your Project",
+        "description": "Modify the template with your data and contents. Specific AI functionality needs.",
         "image": {
           "src": "/imgs/features/7.png",
           "alt": "usage"
         }
       },
       {
-        "title": "部署上线",
-        "description": "简单几步将你的项目推向生产环境，立刻为客户提供服务。",
+        "title": "Deploy to Production",
+        "description": "Deploy your project to production with a few steps and start serving customers immediately.",
         "image": {
           "src": "/imgs/features/8.png",
           "alt": "usage"
@@ -255,130 +255,130 @@
       }
     ]
   },
-  "features": {
-    "id": "features",
-    "title": "功能亮点",
-    "description": "创建一个让人感觉像是社区邀请函的会员计划所需的一切。",
-    "items": [
-      {
-        "title": "动态卡片设计器",
-        "description": "实时 UI 定制，匹配您品牌的十六进制色码和字体排版。让它成为您的专属。",
-        "icon": "RiPaletteLine"
-      },
-      {
-        "title": "自动奖励触发器",
-        "description": "设置后即可忘记。Glow 自动为购买、生日和推荐奖励客户。",
-        "icon": "RiFlashlightLine"
-      },
-      {
-        "title": "Shopify 深度同步",
-        "description": "与您的 Shopify 结账和客户细分零延迟集成。无缝衔接。",
-        "icon": "RiShoppingBag3Line"
-      },
-      {
-        "title": "轻量级脚本",
-        "description": ""零拖累"应用，不会减慢您网站的加载速度。对 SEO 和客户体验至关重要。",
-        "icon": "RiRocketLine"
-      },
-      {
-        "title": "原生钱包集成",
-        "description": "无需下载 App。精美的卡片原生存储在 Apple Wallet 或 Google Pay 中。",
-        "icon": "RiWallet3Line"
-      },
-      {
-        "title": "无摩擦的愉悦体验",
-        "description": "积分很无聊。"Glow"会员资格是对客户想要加入的社区的邀请。",
-        "icon": "RiHeartLine"
-      }
-    ]
-  },
   "how-it-works": {
     "id": "how-it-works",
-    "title": "工作原理",
-    "description": "简单、安全的系统，保护您最珍贵的数字资产",
+    "title": "无缝集成，点亮品牌",
+    "description": "Glow 深度嵌入您的 Shopify 店铺，却是为客户的日常生活而生。",
     "items": [
       {
-        "title": "加密保险箱",
-        "description": "使用军用级加密存储密码、加密货币密钥和个人笔记，即使我们也无法读取。",
-        "icon": "Lock"
+        "title": "自动安装",
+        "description": "我们的轻量化脚本与您的主题无缝融合，绝不拖慢加载速度。零拖累代码，尊重您网站的性能表现。",
+        "icon": "Zap"
       },
       {
-        "title": "死信开关",
-        "description": "定期打卡确认您的安全。如果错过打卡，系统会自动通知您指定的联系人。",
-        "icon": "Clock"
+        "title": "每单积分",
+        "description": "无论是手工戒指还是数字画作，积分都会在下单后即时更新。设置自动奖励触发器，一劳永逸。",
+        "icon": "ShoppingBag"
       },
       {
-        "title": "可信受益人",
-        "description": "指定家庭成员、朋友或律师，让他们在需要时接收您保险箱中的特定物品。",
-        "icon": "Users"
+        "title": "钱包体验",
+        "description": "无需登录。客户只需点击订单确认函中的链接，即可将会员卡存入手机钱包。这就是极致简单的忠诚度管理。",
+        "icon": "Wallet"
       }
     ]
   },
   "zero-knowledge-security": {
     "id": "zero-knowledge-security",
-    "title": "零知识安全架构",
-    "description": "您的数据在到达我们的服务器之前就在您的设备上加密。我们永远看不到您的密码或秘密——在您希望之前，任何人都看不到。",
+    "title": "Zero-Knowledge Security",
+    "description": "Your data is encrypted on your device before it ever reaches our servers. We never see your passwords or secrets — and neither does anyone else until you want them to.",
     "items": [
       {
-        "title": "端到端加密",
+        "title": "End-to-end encryption",
         "description": "",
         "icon": "Shield"
       },
       {
-        "title": "无后门或主密钥",
+        "title": "No backdoors or master keys",
         "description": "",
         "icon": "Key"
       },
       {
-        "title": "定期安全审计",
+        "title": "Regular security audits",
         "description": "",
         "icon": "Search"
       },
       {
-        "title": "客户端密钥生成",
+        "title": "Client-side key generation",
         "description": "",
         "icon": "Cpu"
       },
       {
-        "title": "开源加密算法",
+        "title": "Open-source cryptography",
         "description": "",
         "icon": "Code"
       },
       {
-        "title": "符合 GDPR 和 CCPA 规范",
+        "title": "GDPR & CCPA compliant",
         "description": "",
         "icon": "FileCheck"
       }
     ]
   },
+  "features": {
+    "id": "features",
+    "title": "Feature Highlights",
+    "description": "Everything you need to create a loyalty program that feels like an invitation to a community.",
+    "items": [
+      {
+        "title": "Dynamic Card Designer",
+        "description": "Real-time UI customization to match your brand's hex codes and typography. Make it yours.",
+        "icon": "RiPaletteLine"
+      },
+      {
+        "title": "Automated Reward Triggers",
+        "description": "Set it and forget it. Glow rewards customers for purchases, birthdays, and referrals automatically.",
+        "icon": "RiFlashlightLine"
+      },
+      {
+        "title": "Shopify Deep-Sync",
+        "description": "Zero-latency integration with your Shopify checkout and customer segments. Seamless.",
+        "icon": "RiShoppingBag3Line"
+      },
+      {
+        "title": "Lightweight Script",
+        "description": "A \"zero-drag\" app that won't slow down your site's loading speed. Vital for SEO and customer experience.",
+        "icon": "RiRocketLine"
+      },
+      {
+        "title": "Native Wallet Integration",
+        "description": "No apps to download. Beautiful cards living natively in Apple or Google Wallet.",
+        "icon": "RiWallet3Line"
+      },
+      {
+        "title": "Frictionless Delight",
+        "description": "Points are boring. A \"Glow\" membership is an invitation to a community your customers want to join.",
+        "icon": "RiHeartLine"
+      }
+    ]
+  },
   "stats": {
     "id": "stats",
-    "title": "用户喜爱 Digital Heirloom",
-    "description": "因其易用且上线飞快。",
+    "title": "People Love Digital Heirloom",
+    "description": "for it's easy to use and fast to ship.",
     "items": [
       {
         "title": "999+",
-        "description": "位用户"
+        "description": "Customers"
       },
       {
         "title": "200+",
-        "description": "组件块"
+        "description": "Blocks"
       },
       {
         "title": "50+",
-        "description": "专业模板"
+        "description": "Templates"
       }
     ]
   },
   "testimonials": {
     "id": "testimonials",
-    "title": "用户对 Digital Heirloom 的评价",
-    "description": "听听内容创作者和企业如何用 Digital Heirloom 改变他们的视频内容。",
+    "title": "What Users Say About Digital Heirloom",
+    "description": "Hear from content creators and businesses who transformed their video content with Digital Heirloom.",
     "items": [
       {
         "name": "David Chen",
-        "role": "YouTube 内容创作者",
-        "quote": "Digital Heirloom 改变了我的 YouTube 频道！现在我可以为全球观众提供 12 种语言的准确字幕。添加多语言字幕后，我的观看量增长了 300%。",
+        "role": "YouTube Content Creator",
+        "quote": "Digital Heirloom transformed my YouTube channel! I can now reach global audiences with accurate subtitles in 12 languages. My views increased by 300% after adding multilingual subtitles.",
         "image": {
           "src": "/imgs/avatars/1.png",
           "alt": "david"
@@ -386,8 +386,8 @@
       },
       {
         "name": "Rachel Kim",
-        "role": "TikTok 网红",
-        "quote": "一键字幕提取和翻译每周为我节省数小时。我的 TikTok 视频现在可以连接全球观众，参与度大幅提升！",
+        "role": "TikTok Influencer",
+        "quote": "One-click subtitle extraction and translation saved me hours every week. My TikTok videos now connect with viewers worldwide, and my engagement has skyrocketed!",
         "image": {
           "src": "/imgs/avatars/2.png",
           "alt": "rachel"
@@ -395,8 +395,8 @@
       },
       {
         "name": "Marcus Thompson",
-        "role": "视频制作机构负责人",
-        "quote": "作为小型机构，Digital Heirloom 以极低成本为我们提供了企业级的字幕能力。我们每月处理数百个视频，准确度完美。",
+        "role": "Video Production Agency Owner",
+        "quote": "As a small agency, Digital Heirloom gives us enterprise-level subtitle capabilities at a fraction of the cost. We process hundreds of videos monthly with perfect accuracy.",
         "image": {
           "src": "/imgs/avatars/3.png",
           "alt": "marcus"
@@ -404,8 +404,8 @@
       },
       {
         "name": "Sofia Garcia",
-        "role": "在线教育平台经理",
-        "quote": "Digital Heirloom 让我们的教育内容走向全球。来自 50 多个国家的学生现在可以通过准确的翻译学习我们的课程。改变游戏规则！",
+        "role": "E-Learning Platform Manager",
+        "quote": "Digital Heirloom made our educational content accessible globally. Students from 50+ countries can now learn from our courses with accurate translations. Game-changer!",
         "image": {
           "src": "/imgs/avatars/4.png",
           "alt": "sofia"
@@ -413,8 +413,8 @@
       },
       {
         "name": "James Wilson",
-        "role": "营销总监",
-        "quote": "AI 驱动的翻译准确度极高。我们可以在几分钟内为不同市场本地化营销视频，而不是几天。投资回报率超高！",
+        "role": "Marketing Director",
+        "quote": "The AI-powered translation is incredibly accurate. We localize our marketing videos for different markets in minutes instead of days. ROI is through the roof!",
         "image": {
           "src": "/imgs/avatars/5.png",
           "alt": "james"
@@ -422,8 +422,8 @@
       },
       {
         "name": "Anna Zhang",
-        "role": "内容策略师",
-        "quote": "Digital Heirloom 的一键解决方案将我们的 YouTube 和 TikTok 内容变成了全球力量。我们的国际观众在短短 3 个月内增长了 500%！",
+        "role": "Content Strategist",
+        "quote": "Digital Heirloom's one-click solution turned our YouTube and TikTok content into a global powerhouse. Our international audience grew 500% in just 3 months!",
         "image": {
           "src": "/imgs/avatars/6.png",
           "alt": "anna"
@@ -433,63 +433,63 @@
   },
   "faq": {
     "id": "faq",
-    "title": "常见问题",
-    "description": "还有其他问题？请通过邮件联系我们。",
-    "tip": "没有找到想要的答案？请联系 <a href='mailto:support@glow.app' class='text-primary font-medium hover:underline'>我们的客服团队</a>",
+    "title": "Frequently Asked Questions",
+    "description": "Have another question? Contact us by email.",
+    "tip": "Can't find what you're looking for? Contact our <a href='mailto:support@glow.app' class='text-primary font-medium hover:underline'>customer support team</a>",
     "items": [
       {
-        "question": "Glow 会减慢我的 Shopify 店铺加载速度吗？",
-        "answer": "绝不会。Glow 采用"异步加载"技术构建，完全不占用主程渲染时间。在保证店铺极速访问的同时，为您的客户提供流畅的会员体验。"
+        "question": "Will the Glow app slow down my Shopify store's loading speed?",
+        "answer": "Not at all. Glow is engineered with \"Liquid-first\" principles and loads asynchronously, ensuring your store maintains a perfect Google Lighthouse score while your customers enjoy a seamless experience."
       },
       {
-        "question": "客户需要额外下载 App 才能使用会员卡吗？",
-        "answer": "完全不需要。客户只需点击一下，即可将数字会员卡直接存入手机原生钱包（Apple Wallet 或 Google Pay）。告别繁琐下载，真正实现零阻力入会。"
+        "question": "Do my customers need to download a separate app to join?",
+        "answer": "Never. Glow eliminates friction by allowing customers to add their digital membership cards directly to their native Apple or Google Wallet with one tap. No downloads, no clutter."
       },
       {
-        "question": "我可以从 Smile 或 Yotpo 迁移现有的会员数据吗？",
-        "answer": "当然可以。我们提供"一键迁移"工具，可在几秒钟内将现有的积分和客户数据导入 Glow，为您以往的积累换一个更具美感的"新家"。"
+        "question": "Is it easy to migrate my data from Smile.io or Yotpo?",
+        "answer": "Yes. We offer a \"Clean Slate\" import tool that allows you to migrate your existing customer points and data to Glow in seconds, giving your loyalty program a more beautiful home."
       },
       {
-        "question": "Glow 的界面可以针对我的垂直领域进行深度定制吗？",
-        "answer": "没问题。无论您是经营手作陶瓷还是数字艺术，Glow 的 UI 都是您的画布。您可以自由定义品牌色、图标和整体风格，确保会员体验与您的匠心品牌高度契合。"
+        "question": "Can I customize the design for my specific artisan niche?",
+        "answer": "Absolutely. Whether you create handmade ceramics or digital brushes, Glow's UI is a canvas. You have full control over hex colors, icons, and typography to ensure it matches your brand's unique vibe."
       }
     ]
   },
   "technical-architecture": {
     "id": "technical-architecture",
-    "title": "技术架构与合规性",
-    "description": "了解更多：技术架构与合规性",
+    "title": "Technical Architecture & Compliance",
+    "description": "Learn More: Technical Architecture & Compliance",
     "items": [
       {
-        "title": "核心技术：BIP39 与 AES-256-GCM",
-        "description": "Afterglow 的基础建立在 BIP39 助记词标准之上，这是领先的加密货币钱包使用的相同协议。系统生成一个 24 词的\"恢复包\"来保护您的主密码备份。每个数据片段都使用 AES-256-GCM 加密，提供商业用途中最高级别的加密安全性。",
+        "title": "Core Technology: BIP39 & AES-256-GCM",
+        "description": "Afterglow's foundation is built upon the BIP39 Mnemonic standard, the same protocol used by leading cryptocurrency wallets. The system generates a 24-word \"Recovery Kit\" to protect your Master Password backup. Every piece of data is encrypted using AES-256-GCM, providing the highest level of cryptographic security available for commercial use.",
         "icon": "Shield"
       },
       {
-        "title": "物理-数字桥梁：由 ShipAny 驱动",
-        "description": "我们通过与 ShipAny（全球物流编排平台）的深度集成，弥合了数字数据与物理遗产之间的差距。自动化触发：通过高性能边缘函数进行实时监控。人工介入（HITL）：为防止不可逆的寄送错误，每个 Pro 级别的物理寄送都需要 Afterglow 管理后台的手动二次授权。隐私优先物流：受益人的寄送地址在我们的数据库中保持加密状态，仅在生成寄送标签时才解密。",
+        "title": "Physical-Digital Bridge: Powered by ShipAny",
+        "description": "We have bridged the gap between digital data and physical heirlooms through deep integration with ShipAny, a global logistics orchestration platform. Automated Triggers: Real-time monitoring via high-performance Edge Functions. Human-in-the-Loop (HITL): To prevent irreversible shipping errors, every Pro-tier physical dispatch requires manual secondary authorization from the Afterglow administrative dashboard. Privacy-First Logistics: Beneficiary shipping addresses remain encrypted in our database and are only decrypted at the moment the shipping label is generated.",
         "icon": "Package"
       },
       {
-        "title": "为什么升级到 Pro 家庭计划？",
-        "description": "对于管理高价值资产的用户——如私钥、敏感法律文件或珍贵的家庭档案——Pro 计划提供\"交付确定性\"：全渠道警报：避免仅依赖电子邮件通知的单点故障风险。物流结算引擎：集成的 Creem 网关允许受益人一键结算寄送费用。无限受益人：非常适合复杂的遗产规划和家庭信托结构。",
+        "title": "Why Upgrade to Pro Family Plan?",
+        "description": "For users managing high-value assets—such as private keys, sensitive legal documents, or priceless family archives—the Pro Plan offers \"Certainty of Delivery\": Omni-channel Alerts: Avoid single-point-of-failure risks associated with email-only notifications. Logistics Settlement Engine: Integrated Creem gateway allows beneficiaries to settle shipping fees with a single click. Unlimited Beneficiaries: Perfect for complex estate planning and family trust structures.",
         "icon": "ArrowUpCircle"
       },
       {
-        "title": "法律免责声明与最佳实践",
-        "description": "虽然 Afterglow 提供最先进的技术安全性，但我们强烈建议用户打印其恢复包并将其存储在安全、防火的位置。我们的服务作为您遗产计划的技术补充，不能替代您当地司法管辖区定义的具有法律约束力的遗嘱或遗书。请咨询法律专业人士以进行全面的遗产规划。",
+        "title": "Legal Disclaimer & Best Practices",
+        "description": "While Afterglow provides state-of-the-art technical security, we strongly recommend that users print their Recovery Kit and store it in a secure, fireproof location. Our service serves as a technological supplement to your estate plan and does not replace a legally binding will or testament as defined by your local jurisdiction. Please consult with a legal professional for comprehensive estate planning.",
         "icon": "FileText"
       }
     ]
   },
   "cta": {
     "id": "cta",
-    "title": "准备让您的品牌焕发光彩？",
-    "description": "加入数百个手工品牌，创建让人感觉像礼物的会员计划。",
-    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">前 50 名会员永久免费</span>",
+    "title": "Ready to Make Your Brand Glow?",
+    "description": "Join hundreds of artisan brands creating loyalty programs that feel like gifts.",
+    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">Free forever for your first 50 members</span>",
     "buttons": [
       {
-        "title": "创建您的俱乐部",
+        "title": "Launch Your Club",
         "url": "/sign-up",
         "target": "_self",
         "icon": "Heart",
@@ -500,14 +500,14 @@
   },
   "subscribe": {
     "id": "subscribe",
-    "title": "订阅我们的邮件通知",
-    "description": "获取 Glow 最新资讯与产品动态。",
+    "title": "Subscribe to our newsletter",
+    "description": "Get the latest news and updates from Glow.",
     "submit": {
       "input": {
-        "placeholder": "输入邮箱"
+        "placeholder": "Enter your email"
       },
       "button": {
-        "title": "订阅"
+        "title": "Subscribe"
       },
       "action": "/api/subscribe"
     }
@@ -516,33 +516,34 @@
     "id": "footer",
     "brand": {
       "title": "Glow",
-      "description": "Glow 是专为手工 Shopify 商店打造的优雅会员平台。我们帮助创作者通过精美、无干扰的会员体验与社区建立更深层次的联系。",
+      "description": "Glow is an elegant loyalty platform for artisan Shopify stores. We help makers build deeper connections with their communities through beautiful, distraction-free loyalty experiences.",
       "url": "/"
     },
+    "copyright": "Glow - Elegant Loyalty for Artisans",
     "nav": {
       "items": [
         {
-          "title": "关于我们",
+          "title": "About",
           "children": [
             {
-              "title": "关于我们",
+              "title": "About Us",
               "url": "/about",
               "target": "_self"
             },
             {
-              "title": "联系我们",
+              "title": "Contact Us",
               "url": "/contact",
               "target": "_self"
             },
             {
-              "title": "价格",
+              "title": "Pricing",
               "url": "/pricing",
               "target": "_self"
             }
           ]
         },
         {
-          "title": "合作伙伴",
+          "title": "Friends",
           "children": [
             {
               "title": "Creem",
@@ -566,7 +567,7 @@
     "social": {
       "items": [
         {
-          "title": "邮箱",
+          "title": "Email",
           "icon": "Mail",
           "url": "mailto:support@glow.app",
           "target": "_self"
@@ -576,20 +577,19 @@
     "agreement": {
       "items": [
         {
-          "title": "隐私政策",
+          "title": "Privacy Policy",
           "url": "/privacy-policy"
         },
         {
-          "title": "服务条款",
+          "title": "Terms of Service",
           "url": "/terms-of-service"
         },
         {
-          "title": "免责声明",
+          "title": "Disclaimer",
           "url": "/disclaimer"
         }
       ]
     },
-    "copyright": "Glow - 手工品牌的优雅会员系统",
     "show_theme": true,
     "show_locale": true
   }

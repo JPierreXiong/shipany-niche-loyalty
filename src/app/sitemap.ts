@@ -8,6 +8,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Core marketing pages
   const routes = [
     '',
+    '/niche-loyalty',
+    '/niche-loyalty/pricing',
+    '/niche-loyalty/demo',
     '/pricing',
     '/about',
     '/contact',

@@ -1,21 +1,20 @@
 {
   "metadata": {
-    "title": "隐私政策 | Glow - 符合 GDPR 和 CCPA 的会员平台",
-    "description": "了解 Glow 如何保护您的数据。符合 GDPR 和 CCPA 的隐私政策，专为手工艺者设计的极简会员平台。"
+    "title": "隐私政策 | Glow - Shopify 手工艺者的美学会员系统",
+    "description": "了解 Glow 如何保护您的数据。符合 GDPR 和 CCPA 标准的极简会员平台隐私政策。"
   },
   "title": "隐私政策",
-  "lastUpdated": "最后更新日期",
+  "lastUpdated": "最后更新",
   "date": "2026年2月6日",
   "introduction": {
     "title": "1. 简介",
-    "content": "欢迎使用 Glow（"我们"、"我们的"）。我们提供专为手工艺者和创作者设计的轻量级会员和忠诚度平台。我们尊重您的隐私，并致力于保护我们的商家（手工艺者）及其会员（客户）的个人数据。"
+    "content": "欢迎使用 Glow（我们、我们的）。我们为手工艺者和创作者提供轻量级的会员和忠诚度平台。我们尊重您的隐私，致力于保护商家（手工艺者）和会员（客户）的个人数据。"
   },
   "collection": {
     "title": "2. 我们收集的信息",
-    "intro": "我们仅收集提供服务所需的最少数据：",
     "merchants": {
       "title": "商家信息",
-      "content": "姓名、电子邮件地址、品牌资产（Logo/颜色）以及支付信息（通过 Creem 安全处理）。"
+      "content": "姓名、电子邮件地址、品牌资产（徽标/颜色）以及支付信息（通过 Creem 安全处理）。"
     },
     "members": {
       "title": "会员信息",
@@ -23,16 +22,15 @@
     },
     "technical": {
       "title": "技术数据",
-      "content": "通过 Vercel 自动收集的 IP 地址、浏览器类型和使用数据，用于安全和性能监控。"
+      "content": "IP 地址、浏览器类型以及通过 Vercel 自动收集的使用数据，用于安全和性能监控。"
     }
   },
   "usage": {
     "title": "3. 我们如何使用您的信息",
-    "intro": "我们使用收集的数据来：",
     "point1": "生成和管理数字手工艺者会员卡。",
     "point2": "促进商家和会员之间的沟通（通过 Resend 发送电子邮件，通过 Twilio 发送短信）。",
     "point3": "通过 Creem 处理订阅和付款。",
-    "point4": "提高平台稳定性和用户体验。"
+    "point4": "改善平台稳定性和用户体验。"
   },
   "security": {
     "title": "4. 数据存储和安全",
@@ -41,37 +39,21 @@
       "content": "您的数据使用 Neon (PostgreSQL) 存储，这是一个安全的云原生数据库。"
     },
     "protection": {
-      "title": "安全性",
-      "content": "我们实施行业标准加密来保护静态和传输中的数据。但是，没有任何通过互联网传输的方法是 100% 安全的。"
+      "title": "安全保护",
+      "content": "我们实施行业标准加密来保护静态和传输中的数据。但是，没有任何互联网传输方法是 100% 安全的。"
     },
     "retention": {
-      "title": "保留期限",
-      "content": "我们仅在账户处于活动状态或根据提供服务的需要保留个人数据。"
+      "title": "数据保留",
+      "content": "我们仅在账户处于活动状态或需要提供服务时保留个人数据。"
     }
   },
   "thirdParty": {
     "title": "5. 第三方服务",
-    "intro": "为了提供无缝体验，我们与以下可信赖的合作伙伴集成：",
-    "vercel": {
-      "name": "Vercel",
-      "purpose": "托管和部署。"
-    },
-    "neon": {
-      "name": "Neon",
-      "purpose": "数据库管理。"
-    },
-    "creem": {
-      "name": "Creem",
-      "purpose": "支付处理（我们不存储信用卡详细信息）。"
-    },
-    "resend": {
-      "name": "Resend",
-      "purpose": "电子邮件发送。"
-    },
-    "twilio": {
-      "name": "Twilio",
-      "purpose": "短信发送。"
-    }
+    "intro": "为了提供无缝体验，我们与以下可信合作伙伴集成：",
+    "vercel": "托管和部署。",
+    "neon": "数据库管理。",
+    "creem": "支付处理（我们不存储信用卡详细信息）。",
+    "communication": "通信传递。"
   },
   "rights": {
     "title": "6. 您的权利（GDPR 和 CCPA）",
@@ -85,22 +67,24 @@
       "content": "请求我们更新或删除您的个人信息。"
     },
     "optout": {
-      "title": "退出",
-      "content": "会员可以随时使用电子邮件中的"取消订阅"链接或回复短信"STOP"来取消订阅营销通信。"
+      "title": "选择退出",
+      "content": "会员可以随时使用电子邮件中的取消订阅链接或回复短信STOP来取消订阅营销通信。"
     }
   },
   "cookies": {
-    "title": "7. Cookies",
-    "content": "我们使用必要的 cookies 来维护您的会话并记住您的偏好。我们不使用侵入性跟踪或第三方广告 cookies。"
+    "title": "7. Cookie",
+    "content": "我们使用必要的 Cookie 来维护您的会话并记住您的偏好。我们不使用侵入性跟踪或第三方广告 Cookie。"
   },
   "changes": {
-    "title": "8. 本政策的变更",
-    "content": "我们可能会不时更新本隐私政策。我们将通过在此页面上发布新政策并更新"最后更新日期"来通知您任何重大变更。"
+    "title": "8. 政策变更",
+    "content": "我们可能会不时更新本隐私政策。我们将通过在此页面上发布新政策并更新最后更新日期来通知您任何重大变更。"
   },
   "contact": {
     "title": "9. 联系我们",
     "intro": "如果您对本隐私政策有任何疑问，请通过以下方式联系我们：",
-    "email": "support@glow.app",
-    "website": "https://glow.app"
+    "email": "电子邮件",
+    "website": "网站"
   }
 }
+
+

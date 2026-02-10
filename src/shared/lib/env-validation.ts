@@ -27,22 +27,7 @@ const REQUIRED_ENV_VARS = {
   RESEND_API_KEY: undefined,
 } as const;
 
-const OPTIONAL_ENV_VARS = {
-  // Supabase Service Role Key（仅服务端使用）
-  SUPABASE_SERVICE_ROLE_KEY: undefined,
-  
-  // ShipAny 发件人配置
-  SHIPANY_SENDER_NAME: undefined,
-  SHIPANY_SENDER_PHONE: undefined,
-  SHIPANY_SENDER_ADDRESS_LINE1: undefined,
-  SHIPANY_SENDER_CITY: undefined,
-  SHIPANY_SENDER_ZIP_CODE: undefined,
-  SHIPANY_SENDER_COUNTRY_CODE: undefined,
-  
-  // 存储配置
-  BLOB_READ_WRITE_TOKEN: undefined,
-  STORAGE_PROVIDER: undefined,
-} as const;
+const OPTIONAL_ENV_VARS = {} as const;
 
 /**
  * 验证环境变量

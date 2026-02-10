@@ -1,6 +1,6 @@
 /**
  * API 路由认证辅助函数
- * 确保所有 Digital Heirloom API 路由都使用统一的认证检查
+ * 用于 Niche Loyalty API 路由的统一认证检查
  */
 
 import { respErr } from '@/shared/lib/resp';
@@ -20,7 +20,7 @@ export async function requireAuth(): Promise<{ user: User; error?: null } | { us
     };
   }
 
-  // 从数据库获取完整的用户信息（包含 planType, freeTrialUsed, lastCheckinDate 等字段）
+  // 从数据库获取完整的用户信息
   const user = await findUserById(sessionUser.id);
   
   if (!user) {
@@ -30,49 +30,6 @@ export async function requireAuth(): Promise<{ user: User; error?: null } | { us
   }
 
   return { user, error: null };
-}
-
-/**
- * 验证用户是否拥有指定的保险箱
- */
-export async function requireVaultOwnership(
-  vaultId: string,
-  userId: string
-): Promise<{ authorized: boolean; error?: Response }> {
-  const { findDigitalVaultByUserId } = await import('@/shared/models/digital-vault');
-  
-  const vault = await findDigitalVaultByUserId(userId);
-  
-  if (!vault || vault.id !== vaultId) {
-    return {
-      authorized: false,
-      error: respErr('no permission to access this vault', 403),
-    };
-  }
-
-  return { authorized: true };
-}
-
-/**
- * 组合认证和权限检查
- */
-export async function requireAuthAndVaultOwnership(vaultId: string) {
-  const authResult = await requireAuth();
-  
-  if (authResult.error) {
-    return authResult;
-  }
-
-  const ownershipResult = await requireVaultOwnership(vaultId, authResult.user.id);
-  
-  if (!ownershipResult.authorized) {
-    return {
-      user: null,
-      error: ownershipResult.error,
-    };
-  }
-
-  return authResult;
 }
 
 

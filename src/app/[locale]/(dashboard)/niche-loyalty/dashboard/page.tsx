@@ -179,7 +179,8 @@ export default function GlowDashboard() {
               </div>
             </div>
 
-            {/* Stats Grid */}
+            {/* Stats Grid - COMMENTED OUT: Waiting for real customer data */}
+            {/* 
             <div>
               <h3 className="text-xl font-medium text-stone-800 mb-6">Key Metrics</h3>
               <StatsCardGrid
@@ -222,8 +223,10 @@ export default function GlowDashboard() {
                 ]}
               />
             </div>
+            */}
 
-            {/* Recent Members */}
+            {/* Recent Members - COMMENTED OUT: Waiting for real customer data */}
+            {/* 
             <div>
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-xl font-medium text-stone-800">Recent Members</h3>
@@ -260,6 +263,7 @@ export default function GlowDashboard() {
                 ))}
               </div>
             </div>
+            */}
 
             {/* Growth Tip */}
             <div className="artisan-card p-6 bg-gradient-to-br from-stone-50 to-white">

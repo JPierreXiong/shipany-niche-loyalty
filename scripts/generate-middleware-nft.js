@@ -17,8 +17,8 @@ try {
 
       const nftContent = {
         version: 1,
-        // 将路径中的 'server/' 前缀去除，因为 nft.json 是相对于 server 目录的
-        files: files.map(f => path.relative('server', f))
+        // 保持原始路径，因为 files 已经是相对于 .next 目录的
+        files: files
       };
 
       // 确保目录存在

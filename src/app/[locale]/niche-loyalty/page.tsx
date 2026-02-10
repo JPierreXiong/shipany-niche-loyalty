@@ -62,7 +62,8 @@ export default function GlowLandingPage() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Stats Section - COMMENTED OUT: Waiting for real customer data */}
+      {/* 
       <section className="py-20 px-6 bg-stone-50">
         <div className="container">
           <div className="text-center mb-12">
@@ -116,6 +117,7 @@ export default function GlowLandingPage() {
           />
         </div>
       </section>
+      */}
 
       {/* Features Section */}
       <section className="py-20 px-6 bg-white">
@@ -181,7 +183,8 @@ export default function GlowLandingPage() {
         </div>
       </section>
 
-      {/* Demo Section */}
+      {/* Demo Section - COMMENTED OUT: Waiting for real customer data to showcase */}
+      {/* 
       <section id="demo" className="py-20 px-6 bg-stone-50">
         <div className="container max-w-6xl">
           <div className="text-center mb-16">
@@ -238,6 +241,7 @@ export default function GlowLandingPage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Pricing Section */}
       <section className="py-20 px-6 bg-white">

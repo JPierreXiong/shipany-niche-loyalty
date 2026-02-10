@@ -294,23 +294,23 @@
   },
   "how-it-works": {
     "id": "how-it-works",
-    "title": "Comment ça fonctionne",
-    "description": "Un système simple et sécurisé pour protéger ce qui compte le plus",
+    "title": "Intégration invisible. Résultats éclatants.",
+    "description": "Glow s'intègre au cœur de votre boutique Shopify, tout en restant centré sur l'expérience de vos clients.",
     "items": [
       {
-        "title": "Coffre-fort chiffré",
-        "description": "Stockez des mots de passe, des clés cryptographiques et des notes personnelles avec un chiffrement de niveau militaire que même nous ne pouvons pas lire.",
-        "icon": "Lock"
+        "title": "Installation Automatique",
+        "description": "Notre script ultra-léger s'intègre à votre thème sans ralentir votre site. Code zéro-ralentissement qui respecte les performances de votre site.",
+        "icon": "Zap"
       },
       {
-        "title": "Interrupteur mort",
-        "description": "Des vérifications régulières confirment que vous allez bien. Si vous les manquez, vos contacts désignés sont automatiquement notifiés.",
-        "icon": "Clock"
+        "title": "Gagnez à chaque commande",
+        "description": "Qu'il s'agisse d'une bague artisanale ou d'un tirage numérique, les points sont ajoutés instantanément. Configurez des déclencheurs de récompenses automatisés et oubliez-les.",
+        "icon": "ShoppingBag"
       },
       {
-        "title": "Bénéficiaires de confiance",
-        "description": "Désignez des membres de la famille, des amis ou des avocats pour recevoir des éléments spécifiques de votre coffre-fort.",
-        "icon": "Users"
+        "title": "L'Expérience Wallet",
+        "description": "Aucune connexion requise. Les clients cliquent sur un lien dans leur confirmation de commande et enregistrent leur carte. La fidélité, simplifiée.",
+        "icon": "Wallet"
       }
     ]
   },

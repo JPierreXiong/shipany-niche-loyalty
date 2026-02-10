@@ -1,18 +1,17 @@
-import { envConfigs } from '..';
-
 export const localeNames: any = {
   en: 'English',
   zh: '中文',
   fr: 'Français',
 };
 
-export const locales = ['en', 'zh', 'fr'];
+export const locales = ['en', 'zh', 'fr'] as const;
 
-export const defaultLocale = envConfigs.locale;
+// 直接使用环境变量，避免引用 envConfigs（包含 Node.js API）
+export const defaultLocale = (process.env.NEXT_PUBLIC_DEFAULT_LOCALE || 'en') as typeof locales[number];
 
-export const localePrefix = 'as-needed';
+export const localePrefix = 'as-needed' as const;
 
-export const localeDetection = false;
+export const localeDetection = true;
 
 export const localeMessagesRootPath = '@/config/locale/messages';
 
@@ -25,7 +24,6 @@ export const localeMessagesPaths = [
   'about',
   'contact',
   'privacy',
-  'digital-heirloom',
   'settings/sidebar',
   'settings/profile',
   'settings/security',
@@ -44,13 +42,5 @@ export const localeMessagesPaths = [
   'admin/credits',
   'admin/settings',
   'admin/apikeys',
-  // 'admin/ai-tasks', // 已删除 - Digital Heirloom 项目不需要
-  // 'admin/chats', // 已删除 - Digital Heirloom 项目不需要
-  // 'ai/music', // 已删除 - Digital Heirloom 项目不需要
-  // 'ai/chat', // 已删除 - Digital Heirloom 项目不需要
-  // 'ai/image', // 已删除 - Digital Heirloom 项目不需要
-  // 'ai/media', // 已删除 - Digital Heirloom 项目不需要
   'activity/sidebar',
-  // 'activity/ai-tasks', // 已删除 - Digital Heirloom 项目不需要
-  // 'activity/chats', // 已删除 - Digital Heirloom 项目不需要
 ];

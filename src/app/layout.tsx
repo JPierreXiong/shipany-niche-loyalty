@@ -41,8 +41,15 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const locale = await getLocale();
-  setRequestLocale(locale);
+  // Get locale with fallback to default
+  let locale = 'en';
+  try {
+    locale = await getLocale();
+    setRequestLocale(locale);
+  } catch (error) {
+    // Fallback to default locale if getLocale fails
+    console.warn('Failed to get locale, using default:', error);
+  }
 
   const isProduction = process.env.NODE_ENV === 'production';
   const isDebug = process.env.NEXT_PUBLIC_DEBUG === 'true';
