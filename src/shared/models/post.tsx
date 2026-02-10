@@ -4,8 +4,8 @@ import { createRelativeLink } from 'fumadocs-ui/mdx';
 import moment from 'moment';
 
 import { db } from '@/core/db';
-import { pagesSource, postsSource } from '@/core/docs/source';
-import { generateTOC } from '@/core/docs/toc';
+// import { pagesSource, postsSource } from '@/core/docs/source';
+// import { generateTOC } from '@/core/docs/toc';
 import { post } from '@/config/db/schema';
 import { MarkdownContent } from '@/shared/blocks/common/markdown-content';
 import {
@@ -190,10 +190,11 @@ export async function getPost({
     console.log('get post from database failed:', e);
   }
 
-  // get post from locale file
-  const localPost = await getLocalPost({ slug, locale, postPrefix });
-
-  return localPost;
+  // get post from locale file (disabled - no fumadocs)
+  // const localPost = await getLocalPost({ slug, locale, postPrefix });
+  // return localPost;
+  
+  return null;
 }
 
 export async function getLocalPost({
@@ -205,6 +206,9 @@ export async function getLocalPost({
   locale: string;
   postPrefix?: string;
 }): Promise<BlogPostType | null> {
+  // Disabled - fumadocs not available
+  return null;
+  /*
   const localPost = await postsSource.getPage([slug], locale);
   if (!localPost) {
     return null;
@@ -244,6 +248,7 @@ export async function getLocalPost({
   };
 
   return post;
+  */
 }
 
 // get local page from: content/pages/*.md
@@ -254,6 +259,9 @@ export async function getLocalPage({
   slug: string;
   locale: string;
 }): Promise<BlogPostType | null> {
+  // Disabled - fumadocs not available
+  return null;
+  /*
   const localPage = await pagesSource.getPage([slug], locale);
   if (!localPage) {
     return null;
@@ -293,6 +301,7 @@ export async function getLocalPage({
   };
 
   return post;
+  */
 }
 
 // get posts and categories, both from local files and database
@@ -316,7 +325,8 @@ export async function getPostsAndCategories({
   // remote posts have higher priority
   const postsMap = new Map<string, BlogPostType>();
 
-  // 1. get local posts
+  // 1. get local posts (disabled - no fumadocs)
+  /*
   const {
     posts: localPosts,
     postsCount: localPostsCount,
@@ -334,6 +344,7 @@ export async function getPostsAndCategories({
       postsMap.set(post.slug, post);
     }
   });
+  */
 
   // 2. get remote posts
   const {
@@ -460,6 +471,14 @@ export async function getLocalPostsAndCategories({
   postPrefix?: string;
   categoryPrefix?: string;
 }) {
+  // Disabled - fumadocs not available
+  return {
+    posts: [],
+    postsCount: 0,
+    categories: [],
+    categoriesCount: 0,
+  };
+  /*
   const localPostsList: BlogPostType[] = [];
 
   // get posts from local files
@@ -510,6 +529,7 @@ export async function getLocalPostsAndCategories({
     categories: [],
     categoriesCount: 0,
   };
+  */
 }
 
 // Helper function to replace slug for local posts
