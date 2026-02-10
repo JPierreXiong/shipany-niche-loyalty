@@ -210,7 +210,8 @@ export async function getLocalPost({
     return null;
   }
 
-  const MDXContent = localPost.data.body;
+  const postData = localPost.data as any;
+  const MDXContent = postData.body;
   const body = (
     <MDXContent
       components={getMDXComponents({
@@ -220,16 +221,16 @@ export async function getLocalPost({
     />
   );
 
-  const frontmatter = localPost.data as any;
+  const frontmatter = postData;
 
   const post: BlogPostType = {
     id: localPost.path,
     slug: slug,
-    title: localPost.data.title || '',
-    description: localPost.data.description || '',
+    title: postData.title || '',
+    description: postData.description || '',
     content: '',
     body: body,
-    toc: localPost.data.toc, // Use fumadocs auto-generated TOC
+    toc: postData.toc, // Use fumadocs auto-generated TOC
     created_at: frontmatter.created_at
       ? getPostDate({
           created_at: frontmatter.created_at,
@@ -258,7 +259,8 @@ export async function getLocalPage({
     return null;
   }
 
-  const MDXContent = localPage.data.body;
+  const pageData = localPage.data as any;
+  const MDXContent = pageData.body;
   const body = (
     <MDXContent
       components={getMDXComponents({
@@ -268,16 +270,16 @@ export async function getLocalPage({
     />
   );
 
-  const frontmatter = localPage.data as any;
+  const frontmatter = pageData;
 
   const post: BlogPostType = {
     id: localPage.path,
     slug: slug,
-    title: localPage.data.title || '',
-    description: localPage.data.description || '',
+    title: pageData.title || '',
+    description: pageData.description || '',
     content: '',
     body: body,
-    toc: localPage.data.toc, // Use fumadocs auto-generated TOC
+    toc: pageData.toc, // Use fumadocs auto-generated TOC
     created_at: frontmatter.created_at
       ? getPostDate({
           created_at: frontmatter.created_at,
