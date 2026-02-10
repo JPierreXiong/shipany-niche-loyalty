@@ -41,6 +41,11 @@ const cormorantGaramond = Cormorant_Garamond({
   display: 'swap',
 });
 
+// Generate static params for all locales
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
 export default async function LocaleLayout({
   children,
   params,

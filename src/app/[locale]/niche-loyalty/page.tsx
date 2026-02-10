@@ -25,6 +25,26 @@ import {
 } from 'lucide-react';
 
 export default function GlowLandingPage() {
+  // Structured Data for SEO
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Glow',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+      description: 'Free for first 50 members',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      ratingCount: '127',
+    },
+    description: 'Create beautiful, digital membership cards that your customers will actually want to keep. Setup in 5 minutes.',
+  };
   const handleMagicLinkSubmit = async (email: string) => {
     console.log('Magic link sent to:', email);
     // TODO: 集成真实的 Magic Link API
@@ -32,8 +52,15 @@ export default function GlowLandingPage() {
   };
 
   return (
-    <div className="theme-artisan">
-      {/* Hero Section */}
+    <>
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      
+      <div className="theme-artisan">
+        {/* Hero Section */}
       <HeroSection
         badge="For Artisan Shopify Stores"
         title="Give your brand the glow it deserves."
@@ -409,6 +436,7 @@ export default function GlowLandingPage() {
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   );
 }

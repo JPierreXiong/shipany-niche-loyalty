@@ -162,8 +162,8 @@ export async function getPost({
       // Convert markdown content to MarkdownContent component
       const body = content ? <MarkdownContent content={content} /> : undefined;
 
-      // Generate TOC from content
-      const toc = content ? generateTOC(content) : undefined;
+      // Generate TOC from content (disabled - fumadocs not available)
+      const toc = undefined;
 
       post = {
         id: postData.id,
