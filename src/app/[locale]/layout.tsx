@@ -1,14 +1,45 @@
-import { notFound } from 'next/navigation';
-import { hasLocale, NextIntlClientProvider } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import '@/config/style/global.css';
 
+import { JetBrains_Mono, Merriweather, Noto_Sans_Mono, Cormorant_Garamond } from 'next/font/google';
+import { notFound } from 'next/navigation';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, setRequestLocale } from 'next-intl/server';
+import NextTopLoader from 'nextjs-toploader';
+
+import { envConfigs } from '@/config';
+import { locales } from '@/config/locale';
 import { routing } from '@/core/i18n/config';
 import { ThemeProvider } from '@/core/theme/provider';
 import { Toaster } from '@/shared/components/ui/sonner';
 import { AppContextProvider } from '@/shared/contexts/app';
-import { getMetadata } from '@/shared/lib/seo';
+import { getAdsService } from '@/shared/services/ads';
+import { getAffiliateService } from '@/shared/services/affiliate';
+import { getAnalyticsService } from '@/shared/services/analytics';
+import { getCustomerService } from '@/shared/services/customer_service';
 
-export const generateMetadata = getMetadata();
+const notoSansMono = Noto_Sans_Mono({
+  subsets: ['latin'],
+  variable: '--font-sans',
+});
+
+const merriweather = Merriweather({
+  subsets: ['latin'],
+  weight: ['300', '400', '700', '900'],
+  variable: '--font-serif',
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+});
+
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-artisan-heading',
+  display: 'swap',
+});
 
 export default async function LocaleLayout({
   children,
@@ -18,20 +49,142 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  if (!hasLocale(routing.locales, locale)) {
+  
+  // 验证 locale
+  if (!routing.locales.includes(locale as any)) {
     notFound();
   }
 
+  // 静态渲染优化
   setRequestLocale(locale);
 
+  // 获取国际化消息（修复 Hydration Error 的关键）
+  const messages = await getMessages();
+
+  const isProduction = process.env.NODE_ENV === 'production';
+  const isDebug = process.env.NEXT_PUBLIC_DEBUG === 'true';
+
+  // app url
+  const appUrl = envConfigs.app_url || '';
+
+  // ads components
+  let adsMetaTags = null;
+  let adsHeadScripts = null;
+  let adsBodyScripts = null;
+
+  // analytics components
+  let analyticsMetaTags = null;
+  let analyticsHeadScripts = null;
+  let analyticsBodyScripts = null;
+
+  // affiliate components
+  let affiliateMetaTags = null;
+  let affiliateHeadScripts = null;
+  let affiliateBodyScripts = null;
+
+  // customer service components
+  let customerServiceMetaTags = null;
+  let customerServiceHeadScripts = null;
+  let customerServiceBodyScripts = null;
+
+  if (isProduction || isDebug) {
+    // get ads components
+    const adsService = await getAdsService();
+    adsMetaTags = adsService.getMetaTags();
+    adsHeadScripts = adsService.getHeadScripts();
+    adsBodyScripts = adsService.getBodyScripts();
+
+    // get analytics components
+    const analyticsService = await getAnalyticsService();
+    analyticsMetaTags = analyticsService.getMetaTags();
+    analyticsHeadScripts = analyticsService.getHeadScripts();
+    analyticsBodyScripts = analyticsService.getBodyScripts();
+
+    // get affiliate components
+    const affiliateService = await getAffiliateService();
+    affiliateMetaTags = affiliateService.getMetaTags();
+    affiliateHeadScripts = affiliateService.getHeadScripts();
+    affiliateBodyScripts = affiliateService.getBodyScripts();
+
+    // get customer service components
+    const customerService = await getCustomerService();
+    customerServiceMetaTags = customerService.getMetaTags();
+    customerServiceHeadScripts = customerService.getHeadScripts();
+    customerServiceBodyScripts = customerService.getBodyScripts();
+  }
+
   return (
-    <NextIntlClientProvider>
-      <ThemeProvider>
-        <AppContextProvider>
-          {children}
-          <Toaster position="top-center" richColors />
-        </AppContextProvider>
-      </ThemeProvider>
-    </NextIntlClientProvider>
+    <html
+      lang={locale}
+      className={`${notoSansMono.variable} ${merriweather.variable} ${jetbrainsMono.variable} ${cormorantGaramond.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* inject locales */}
+        {locales ? (
+          <>
+            <link
+              rel="alternate"
+              hrefLang="x-default"
+              href={`${appUrl}`}
+            />
+            {locales.map((loc) => (
+              <link
+                key={loc}
+                rel="alternate"
+                hrefLang={loc}
+                href={`${appUrl}${loc === 'en' ? '' : `/${loc}`}`}
+              />
+            ))}
+          </>
+        ) : null}
+
+        {/* inject ads meta tags */}
+        {adsMetaTags}
+        {adsHeadScripts}
+
+        {/* inject analytics meta tags */}
+        {analyticsMetaTags}
+        {analyticsHeadScripts}
+
+        {/* inject affiliate meta tags */}
+        {affiliateMetaTags}
+        {affiliateHeadScripts}
+
+        {/* inject customer service meta tags */}
+        {customerServiceMetaTags}
+        {customerServiceHeadScripts}
+      </head>
+      <body suppressHydrationWarning className="overflow-x-hidden">
+        <NextTopLoader
+          color="#6466F1"
+          initialPosition={0.08}
+          crawlSpeed={200}
+          height={3}
+          crawl={true}
+          showSpinner={true}
+          easing="ease"
+          speed={200}
+        />
+
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <ThemeProvider>
+            <AppContextProvider>
+              {children}
+              <Toaster position="top-center" richColors />
+            </AppContextProvider>
+          </ThemeProvider>
+        </NextIntlClientProvider>
+
+        {/* inject ads body scripts */}
+        {adsBodyScripts}
+        {analyticsBodyScripts}
+        {affiliateBodyScripts}
+        {customerServiceBodyScripts}
+      </body>
+    </html>
   );
 }
