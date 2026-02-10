@@ -18,18 +18,19 @@ export default async function DocsContentPage(props: {
 
   if (!page) notFound();
 
-  const MDXContent = page.data.body;
+  const pageData = page.data as any;
+  const MDXContent = pageData.body;
 
   return (
     <DocsPage
-      toc={page.data.toc}
-      full={page.data.full}
+      toc={pageData.toc}
+      full={pageData.full}
       tableOfContent={{
         style: 'clerk',
       }}
     >
-      <DocsTitle>{page.data.title}</DocsTitle>
-      <DocsDescription>{page.data.description}</DocsDescription>
+      <DocsTitle>{pageData.title}</DocsTitle>
+      <DocsDescription>{pageData.description}</DocsDescription>
       <DocsBody>
         <MDXContent
           components={getMDXComponents({
@@ -53,8 +54,10 @@ export async function generateMetadata(props: {
   const page = source.getPage(params.slug, params.locale);
   if (!page) notFound();
 
+  const pageData = page.data as any;
+
   return {
-    title: page.data.title,
-    description: page.data.description,
+    title: pageData.title,
+    description: pageData.description,
   };
 }
