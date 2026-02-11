@@ -52,27 +52,10 @@
   "thirdParty": {
     "title": "5. Third-Party Services",
     "intro": "To provide a seamless experience, we integrate with the following trusted partners:",
-    "vercel": {
-      "name": "Vercel",
-      "purpose": "Hosting and Deployment."
-    },
-    "neon": {
-      "name": "Neon",
-      "purpose": "Database Management."
-    },
-    "creem": {
-      "name": "Creem",
-      "purpose": "Payment Processing (we do not store credit card details)."
-    },
-    "resend": {
-      "name": "Resend",
-      "purpose": "Email delivery."
-    },
-    "twilio": {
-      "name": "Twilio",
-      "purpose": "SMS delivery."
-    },
-    "communication": "These partners may process your data in accordance with their own privacy policies. We ensure all third-party services meet industry-standard security and privacy requirements."
+    "vercel": "Hosting and Deployment.",
+    "neon": "Database Management.",
+    "creem": "Payment Processing (we do not store credit card details).",
+    "communication": "Email delivery (Resend) and SMS delivery (Twilio). These partners may process your data in accordance with their own privacy policies. We ensure all third-party services meet industry-standard security and privacy requirements."
   },
   "rights": {
     "title": "6. Your Rights (GDPR & CCPA)",

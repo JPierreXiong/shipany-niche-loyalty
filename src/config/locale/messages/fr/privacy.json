@@ -52,27 +52,10 @@
   "thirdParty": {
     "title": "5. Services Tiers",
     "intro": "Pour offrir une expérience fluide, nous intégrons les partenaires de confiance suivants :",
-    "vercel": {
-      "name": "Vercel",
-      "purpose": "Hébergement et Déploiement."
-    },
-    "neon": {
-      "name": "Neon",
-      "purpose": "Gestion de Base de Données."
-    },
-    "creem": {
-      "name": "Creem",
-      "purpose": "Traitement des Paiements (nous ne stockons pas les détails de carte bancaire)."
-    },
-    "resend": {
-      "name": "Resend",
-      "purpose": "Livraison d'e-mails."
-    },
-    "twilio": {
-      "name": "Twilio",
-      "purpose": "Livraison de SMS."
-    },
-    "communication": "Ces partenaires peuvent traiter vos données conformément à leurs propres politiques de confidentialité. Nous veillons à ce que tous les services tiers respectent les normes de sécurité et de confidentialité de l'industrie."
+    "vercel": "Hébergement et Déploiement.",
+    "neon": "Gestion de Base de Données.",
+    "creem": "Traitement des Paiements (nous ne stockons pas les détails de carte bancaire).",
+    "communication": "Livraison d'e-mails (Resend) et livraison de SMS (Twilio). Ces partenaires peuvent traiter vos données conformément à leurs propres politiques de confidentialité. Nous veillons à ce que tous les services tiers respectent les normes de sécurité et de confidentialité de l'industrie."
   },
   "rights": {
     "title": "6. Vos Droits (RGPD & CCPA)",
