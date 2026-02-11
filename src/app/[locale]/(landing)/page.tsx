@@ -18,32 +18,27 @@ export default async function LandingPage({
   const page: Landing = {
     hero: {
       ...t.raw('hero'),
-      // 关闭可能导致误会的"后台截图"图片，符合 Creem 合规要求
       image: undefined,
       image_invert: undefined,
-      // 确保不显示虚假用户头像
       show_avatars: false,
     },
-    // 明确设为 undefined 阻止 UI 渲染
+    // 只保留 Niche Loyalty 相关内容
     logos: undefined,
-    introduce: undefined,
-    benefits: undefined,
-    usage: undefined,
-    features: undefined,
-    stats: undefined,
+    introduce: t.raw('introduce'),
+    benefits: t.raw('benefits'),
+    usage: t.raw('usage'),
+    features: t.raw('features'),
+    stats: t.raw('stats'),
     
-    // Digital Heirloom: 新增部分
-    'how-it-works': t.raw('how-it-works'),
-    'zero-knowledge-security': t.raw('zero-knowledge-security'),
-    'technical-architecture': t.raw('technical-architecture'),
+    // 移除 Digital Heirloom 内容
+    'how-it-works': undefined,
+    'zero-knowledge-security': undefined,
+    'technical-architecture': undefined,
     
-    // 隐藏用户评价
     testimonials: undefined,
-    
-    // 可选保留的区块
     subscribe: t.raw('subscribe'),
     faq: t.raw('faq'),
-    cta: t.raw('cta'), // 激活 CTA 区块
+    cta: t.raw('cta'),
   };
 
   // load page component
