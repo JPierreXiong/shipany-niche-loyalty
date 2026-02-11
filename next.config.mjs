@@ -29,18 +29,11 @@ const nextConfig = {
   },
   
   // 必须添加这个，防止 D 盘根目录下的系统文件锁死编译进程
-  webpack: (config) => {
+  webpack: (config, { isServer }) => {
     config.watchOptions = {
-      ignored: [
-        '**/node_modules/**',
-        '**/.next/**',
-        'D:/*.sys',      // 屏蔽 D 盘所有系统驱动文件
-        'D:/*.tmp',      // 屏蔽 DumpStack
-        'D:/*.log',
-        'D:/pagefile.sys',
-        'D:/DumpStack.log.tmp',
-        'C:/*.sys',
-      ],
+      poll: 1000, // 使用轮询模式，避免文件监听问题
+      aggregateTimeout: 300,
+      ignored: /node_modules|\.next|\.git|pagefile\.sys|DumpStack\.log\.tmp/,
     };
     return config;
   },

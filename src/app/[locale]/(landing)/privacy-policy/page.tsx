@@ -2,10 +2,11 @@ import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'privacy' });
 
   return {
@@ -16,10 +17,11 @@ export async function generateMetadata({
 }
 
 export default async function PrivacyPolicyPage({
-  params: { locale },
+  params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'privacy' });
 
   return (

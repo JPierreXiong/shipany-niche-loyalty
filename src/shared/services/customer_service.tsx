@@ -47,9 +47,9 @@ let customerServiceManager: CustomerServiceManager | null = null;
  * get customer service instance
  */
 export async function getCustomerService(): Promise<CustomerServiceManager> {
-  if (true) {
+  if (!customerServiceManager) {
     const configs = await getAllConfigs();
     customerServiceManager = getCustomerServiceWithConfigs(configs);
   }
-  return customerServiceManager;
+  return customerServiceManager!;
 }

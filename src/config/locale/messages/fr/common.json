@@ -42,5 +42,6 @@
   "locale_detector": {
     "title": "Nous avons détecté que la langue de votre navigateur est {locale}. Voulez-vous changer ?",
     "switch_to": "Passer à {locale}"
-  }
+  },
+  "app_name": "Niche Loyalty"
 }

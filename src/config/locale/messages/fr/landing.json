@@ -314,7 +314,8 @@
       }
     ]
   },
-  "zero-knowledge-security": {
+  "_comment_zero-knowledge-security": "COMMENTED OUT - Not relevant for Niche Loyalty",
+  "_zero-knowledge-security": {
     "id": "zero-knowledge-security",
     "title": "Sécurité Zero-Knowledge",
     "description": "Vos données sont chiffrées sur votre appareil avant d'atteindre nos serveurs. Nous ne voyons jamais vos mots de passe ou secrets — et personne d'autre non plus jusqu'à ce que vous le souhaitiez.",
@@ -457,28 +458,28 @@
   },
   "technical-architecture": {
     "id": "technical-architecture",
-    "title": "Architecture Technique et Conformité",
-    "description": "En savoir plus : Architecture Technique et Conformité",
+    "title": "Pourquoi Niche Loyalty Surpasse la Concurrence",
+    "description": "Quatre raisons pour lesquelles les marques artisanales choisissent Glow plutôt que Smile.io ou Yotpo",
     "items": [
       {
-        "title": "Technologie de Base : BIP39 et AES-256-GCM",
-        "description": "La fondation d'Afterglow est construite sur la norme mnémonique BIP39, le même protocole utilisé par les portefeuilles de cryptomonnaies leaders. Le système génère un \"Kit de Récupération\" de 24 mots pour protéger votre sauvegarde de mot de passe principal. Chaque donnée est chiffrée à l'aide d'AES-256-GCM, offrant le plus haut niveau de sécurité cryptographique disponible pour un usage commercial.",
-        "icon": "Shield"
+        "title": "Réduction de 80% des Coûts",
+        "description": "Smile.io facture 599$/mois pour 5 000 membres. Glow vous offre le même nombre pour 99$/mois. Pas de frais cachés, pas de surprises. Juste une fidélité élégante à un prix équitable.",
+        "icon": "DollarSign"
       },
       {
-        "title": "Pont Physique-Numérique : Alimenté par ShipAny",
-        "description": "Nous avons comblé le fossé entre les données numériques et les héritages physiques grâce à une intégration approfondie avec ShipAny, une plateforme d'orchestration logistique mondiale. Déclencheurs Automatisés : Surveillance en temps réel via des fonctions Edge haute performance. Humain dans la Boucle (HITL) : Pour éviter les erreurs d'expédition irréversibles, chaque expédition physique de niveau Pro nécessite une autorisation secondaire manuelle depuis le tableau de bord administratif d'Afterglow. Logistique Prioritaire à la Confidentialité : Les adresses d'expédition des bénéficiaires restent chiffrées dans notre base de données et ne sont déchiffrées qu'au moment de la génération de l'étiquette d'expédition.",
-        "icon": "Package"
+        "title": "Fidélité + Email Tout-en-Un",
+        "description": "Pourquoi payer Klaviyo ET un outil de fidélité séparément ? Glow intègre des campagnes email déclenchées (anniversaires, récompenses, rappels) directement dans votre tableau de bord. Une plateforme, une facture.",
+        "icon": "Mail"
       },
       {
-        "title": "Pourquoi Passer au Plan Familial Pro ?",
-        "description": "Pour les utilisateurs gérant des actifs de grande valeur—tels que les clés privées, les documents juridiques sensibles ou les archives familiales inestimables—le Plan Pro offre une \"Certitude de Livraison\" : Alertes Omnicanales : Évitez les risques de point de défaillance unique associés aux notifications par e-mail uniquement. Moteur de Règlement Logistique : La passerelle Creem intégrée permet aux bénéficiaires de régler les frais d'expédition en un seul clic. Bénéficiaires Illimités : Parfait pour la planification successorale complexe et les structures de fiducie familiale.",
-        "icon": "ArrowUpCircle"
+        "title": "Synchronisation Shopify Sans Friction",
+        "description": "Pas de webhooks cassés. Pas de décalages de données. Glow se synchronise en temps réel avec votre caisse Shopify et vos segments clients. Configuration en 5 minutes, pas 5 jours.",
+        "icon": "Zap"
       },
       {
-        "title": "Avertissement Juridique et Meilleures Pratiques",
-        "description": "Bien qu'Afterglow fournisse une sécurité technique de pointe, nous recommandons fortement aux utilisateurs d'imprimer leur Kit de Récupération et de le stocker dans un endroit sûr et ignifuge. Notre service sert de complément technologique à votre plan successoral et ne remplace pas un testament ou une disposition testamentaire légalement contraignant tel que défini par votre juridiction locale. Veuillez consulter un professionnel juridique pour une planification successorale complète.",
-        "icon": "FileText"
+        "title": "Analytiques Axées sur le ROI",
+        "description": "Smile vous montre des \"points distribués\". Glow vous montre la Valeur Vie Client (LTV), le taux de rachat et le ROI réel de votre programme. Parce que les vanity metrics ne paient pas les factures.",
+        "icon": "TrendingUp"
       }
     ]
   },

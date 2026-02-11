@@ -7,6 +7,7 @@ export const localeNames: any = {
 export const locales = ['en', 'zh', 'fr'] as const;
 
 // 直接使用环境变量，避免引用 envConfigs（包含 Node.js API）
+// 默认语言为英文 (en)
 export const defaultLocale = (process.env.NEXT_PUBLIC_DEFAULT_LOCALE || 'en') as typeof locales[number];
 
 export const localePrefix = 'as-needed' as const;

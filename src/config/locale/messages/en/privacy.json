@@ -71,7 +71,8 @@
     "twilio": {
       "name": "Twilio",
       "purpose": "SMS delivery."
-    }
+    },
+    "communication": "These partners may process your data in accordance with their own privacy policies. We ensure all third-party services meet industry-standard security and privacy requirements."
   },
   "rights": {
     "title": "6. Your Rights (GDPR & CCPA)",

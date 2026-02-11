@@ -71,7 +71,8 @@
     "twilio": {
       "name": "Twilio",
       "purpose": "Livraison de SMS."
-    }
+    },
+    "communication": "Ces partenaires peuvent traiter vos données conformément à leurs propres politiques de confidentialité. Nous veillons à ce que tous les services tiers respectent les normes de sécurité et de confidentialité de l'industrie."
   },
   "rights": {
     "title": "6. Vos Droits (RGPD & CCPA)",

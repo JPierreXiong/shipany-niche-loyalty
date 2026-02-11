@@ -277,7 +277,8 @@
       }
     ]
   },
-  "zero-knowledge-security": {
+  "_COMMENTED_zero-knowledge-security": {
+    "_NOTE": "此部分已注释 - 与 Niche Loyalty 无关",
     "id": "zero-knowledge-security",
     "title": "Zero-Knowledge Security",
     "description": "Your data is encrypted on your device before it ever reaches our servers. We never see your passwords or secrets — and neither does anyone else until you want them to.",
@@ -457,28 +458,28 @@
   },
   "technical-architecture": {
     "id": "technical-architecture",
-    "title": "Technical Architecture & Compliance",
-    "description": "Learn More: Technical Architecture & Compliance",
+    "title": "为什么 Shopify 卖家选择 Niche Loyalty",
+    "description": "用我们精简、高利润的架构替代 Smile.io 等昂贵工具",
     "items": [
       {
-        "title": "Core Technology: BIP39 & AES-256-GCM",
-        "description": "Afterglow's foundation is built upon the BIP39 Mnemonic standard, the same protocol used by leading cryptocurrency wallets. The system generates a 24-word \"Recovery Kit\" to protect your Master Password backup. Every piece of data is encrypted using AES-256-GCM, providing the highest level of cryptographic security available for commercial use.",
-        "icon": "Shield"
+        "title": "降低 80% 的成本",
+        "description": "用我们精简、高利润的架构替代 Smile.io 等昂贵工具。以极低的成本获得企业级忠诚度功能。前 50 名会员永久免费，随着业务增长可负担地扩展。",
+        "icon": "DollarSign"
       },
       {
-        "title": "Physical-Digital Bridge: Powered by ShipAny",
-        "description": "We have bridged the gap between digital data and physical heirlooms through deep integration with ShipAny, a global logistics orchestration platform. Automated Triggers: Real-time monitoring via high-performance Edge Functions. Human-in-the-Loop (HITL): To prevent irreversible shipping errors, every Pro-tier physical dispatch requires manual secondary authorization from the Afterglow administrative dashboard. Privacy-First Logistics: Beneficiary shipping addresses remain encrypted in our database and are only decrypted at the moment the shipping label is generated.",
-        "icon": "Package"
+        "title": "忠诚度与邮件营销一体化",
+        "description": "集成了会员管理与通过 Resend 实现的自动化邮件营销。创建活动、发送个性化折扣码、追踪核销率——全部在一个精美的仪表板中完成。",
+        "icon": "Mail"
       },
       {
-        "title": "Why Upgrade to Pro Family Plan?",
-        "description": "For users managing high-value assets—such as private keys, sensitive legal documents, or priceless family archives—the Pro Plan offers \"Certainty of Delivery\": Omni-channel Alerts: Avoid single-point-of-failure risks associated with email-only notifications. Logistics Settlement Engine: Integrated Creem gateway allows beneficiaries to settle shipping fees with a single click. Unlimited Beneficiaries: Perfect for complex estate planning and family trust structures.",
-        "icon": "ArrowUpCircle"
+        "title": "零阻力 Shopify 同步",
+        "description": "支持 CSV 批量导入会员，并通过 Shopify Webhook 自动同步订单数据。自动生成折扣码并追踪核销情况。无需手动操作。",
+        "icon": "Zap"
       },
       {
-        "title": "Legal Disclaimer & Best Practices",
-        "description": "While Afterglow provides state-of-the-art technical security, we strongly recommend that users print their Recovery Kit and store it in a secure, fireproof location. Our service serves as a technological supplement to your estate plan and does not replace a legally binding will or testament as defined by your local jurisdiction. Please consult with a legal professional for comprehensive estate planning.",
-        "icon": "FileText"
+        "title": "以投资回报率为核心的分析",
+        "description": "通过简洁的仪表板追踪折扣核销率和收入增长。精确了解哪些活动带来销售，哪些会员是您最有价值的客户。",
+        "icon": "TrendingUp"
       }
     ]
   },

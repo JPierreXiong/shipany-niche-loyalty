@@ -33,7 +33,8 @@
   "story": {
     "title": "Notre Histoire",
     "paragraph1": "Chez Glow, nous croyons que les logiciels devraient être aussi beaux que les produits que vous créez. La plupart des plateformes de fidélité sont conçues pour les entreprises—encombrées de tableaux de bord complexes et de pop-ups intrusifs qui distraient de l'âme de votre marque.",
-    "paragraph2": "Nous avons construit Glow pour l'artisan indépendant. En tirant parti d'une pile haute performance—Next.js, Neon et Vercel—nous offrons une technologie \"silencieuse\" qui reste en arrière-plan, permettant à votre savoir-faire de briller."
+    "paragraph2": "Nous avons construit Glow pour l'artisan indépendant. En tirant parti d'une pile haute performance—Next.js, Neon et Vercel—nous offrons une technologie \"silencieuse\" qui reste en arrière-plan, permettant à votre savoir-faire de briller.",
+    "paragraph3": "Notre mission est d'aider les artisans à établir des relations durables avec leurs clients grâce à des programmes de fidélité élégants et minimalistes qui semblent être une extension naturelle de leur marque."
   },
   "promise": {
     "title": "Notre Promesse",
