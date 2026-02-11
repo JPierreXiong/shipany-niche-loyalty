@@ -129,45 +129,45 @@
   },
   "introduce": {
     "id": "introduce",
-    "title": "What is Digital Heirloom",
+    "title": "What is Niche Loyalty",
     "label": "Introduce",
-    "description": "Digital Heirloom is a NextJS boilerplate for building AI SaaS startups, including templates, components, and documentation.",
+    "description": "Niche Loyalty is a beautiful, distraction-free loyalty platform designed specifically for artisan Shopify stores. Create digital membership clubs that your customers will actually want to join.",
     "image": {
       "src": "/imgs/features/landing-page.png",
       "alt": "introduce"
     },
     "items": [
       {
-        "title": "Ready-to-use Templates",
-        "description": "Choose from dozens of production-ready AI SaaS templates to quickly start your project.",
-        "icon": "RiNextjsFill",
+        "title": "Beautiful Digital Cards",
+        "description": "Create stunning membership cards that live in your customers' Apple or Google Wallet. No apps to download, just pure elegance.",
+        "icon": "RiWallet3Line",
         "image": {
           "src": "/imgs/features/1.png",
           "alt": "introduce"
         }
       },
       {
-        "title": "Infrastructure Setup",
-        "description": "Get instant access to scalable infrastructure with best practices built-in.",
-        "icon": "RiDatabase2Line",
+        "title": "Seamless Shopify Integration",
+        "description": "Connect your Shopify store in minutes. Automatic order sync, discount code generation, and member management.",
+        "icon": "RiShoppingBag3Line",
         "image": {
           "src": "/imgs/features/2.png",
           "alt": "introduce"
         }
       },
       {
-        "title": "Quick Deployment",
-        "description": "Deploy your AI SaaS application to production in hours, not days.",
-        "icon": "RiCloudyFill",
+        "title": "Automated Campaigns",
+        "description": "Set up automated email campaigns with personalized discount codes. Reward your most loyal customers effortlessly.",
+        "icon": "RiMailLine",
         "image": {
           "src": "/imgs/features/3.png",
           "alt": "introduce"
         }
       },
       {
-        "title": "AI Integration",
-        "description": "Integrate AI into your project with ease using our built-in AI SDK.",
-        "icon": "RiRobot2Line",
+        "title": "Brand Customization",
+        "description": "Match your brand perfectly with custom colors, typography, and design. Make it uniquely yours.",
+        "icon": "RiPaletteLine",
         "image": {
           "src": "/imgs/features/4.png",
           "alt": "introduce"
@@ -212,8 +212,8 @@
   },
   "usage": {
     "id": "usage",
-    "title": "How to Launch with Digital Heirloom",
-    "description": "Get your AI SaaS startup running in three simple steps:",
+    "title": "How to Launch Your Loyalty Club",
+    "description": "Get your loyalty program running in four simple steps:",
     "image": {
       "src": "/imgs/features/1.png",
       "alt": "usage"
@@ -222,32 +222,32 @@
     "text_align": "center",
     "items": [
       {
-        "title": "Get Digital Heirloom",
-        "description": "Buy Digital Heirloom with a one-time payment. Check your email for the code and documentation.",
+        "title": "Sign Up & Connect Shopify",
+        "description": "Create your Glow account and connect your Shopify store in minutes. Our seamless integration syncs your products and customers automatically.",
         "image": {
           "src": "/imgs/features/5.png",
           "alt": "usage"
         }
       },
       {
-        "title": "Start Your Project",
-        "description": "Read the documentation and clone the code of Digital Heirloom. Start building your AI SaaS startup.",
+        "title": "Design Your Membership Card",
+        "description": "Customize your digital membership card with your brand colors, logo, and typography. Make it uniquely yours.",
         "image": {
           "src": "/imgs/features/6.png",
           "alt": "usage"
         }
       },
       {
-        "title": "Customize Your Project",
-        "description": "Modify the template with your data and contents. Specific AI functionality needs.",
+        "title": "Import Your Members",
+        "description": "Upload your existing customer list via CSV or let new members join automatically after their first purchase.",
         "image": {
           "src": "/imgs/features/7.png",
           "alt": "usage"
         }
       },
       {
-        "title": "Deploy to Production",
-        "description": "Deploy your project to production with a few steps and start serving customers immediately.",
+        "title": "Launch & Grow",
+        "description": "Send your first campaign, watch members add cards to their wallets, and track redemptions in real-time. It's that simple.",
         "image": {
           "src": "/imgs/features/8.png",
           "alt": "usage"
@@ -373,61 +373,61 @@
   },
   "testimonials": {
     "id": "testimonials",
-    "title": "What Users Say About Digital Heirloom",
-    "description": "Hear from content creators and businesses who transformed their video content with Digital Heirloom.",
+    "title": "What Artisans Say About Glow",
+    "description": "Hear from makers and creators who transformed their customer relationships with Niche Loyalty.",
     "items": [
       {
-        "name": "David Chen",
-        "role": "YouTube Content Creator",
-        "quote": "Digital Heirloom transformed my YouTube channel! I can now reach global audiences with accurate subtitles in 12 languages. My views increased by 300% after adding multilingual subtitles.",
+        "name": "Emma Chen",
+        "role": "Ceramic Artist & Shop Owner",
+        "quote": "Glow transformed how I connect with my customers. The digital membership cards are so beautiful, my customers actually show them off! My repeat purchase rate increased by 45% in just 3 months.",
         "image": {
           "src": "/imgs/avatars/1.png",
-          "alt": "david"
+          "alt": "emma"
         }
       },
       {
-        "name": "Rachel Kim",
-        "role": "TikTok Influencer",
-        "quote": "One-click subtitle extraction and translation saved me hours every week. My TikTok videos now connect with viewers worldwide, and my engagement has skyrocketed!",
+        "name": "Marcus Rodriguez",
+        "role": "Handmade Jewelry Designer",
+        "quote": "Setting up took literally 5 minutes. The Shopify integration is seamless, and my customers love the wallet cards. No more clunky apps or complicated point systems.",
         "image": {
           "src": "/imgs/avatars/2.png",
-          "alt": "rachel"
-        }
-      },
-      {
-        "name": "Marcus Thompson",
-        "role": "Video Production Agency Owner",
-        "quote": "As a small agency, Digital Heirloom gives us enterprise-level subtitle capabilities at a fraction of the cost. We process hundreds of videos monthly with perfect accuracy.",
-        "image": {
-          "src": "/imgs/avatars/3.png",
           "alt": "marcus"
         }
       },
       {
-        "name": "Sofia Garcia",
-        "role": "E-Learning Platform Manager",
-        "quote": "Digital Heirloom made our educational content accessible globally. Students from 50+ countries can now learn from our courses with accurate translations. Game-changer!",
+        "name": "Sophie Laurent",
+        "role": "Artisan Candle Maker",
+        "quote": "I switched from Smile.io and saved $200/month while getting a much more elegant solution. The automated campaigns are a game-changer for my small business.",
+        "image": {
+          "src": "/imgs/avatars/3.png",
+          "alt": "sophie"
+        }
+      },
+      {
+        "name": "David Kim",
+        "role": "Leather Goods Craftsman",
+        "quote": "Glow feels like it was made for artisans. The design is clean, the setup is simple, and my customers actually use it. My email open rates doubled since switching.",
         "image": {
           "src": "/imgs/avatars/4.png",
-          "alt": "sofia"
+          "alt": "david"
         }
       },
       {
-        "name": "James Wilson",
-        "role": "Marketing Director",
-        "quote": "The AI-powered translation is incredibly accurate. We localize our marketing videos for different markets in minutes instead of days. ROI is through the roof!",
+        "name": "Isabella Martinez",
+        "role": "Botanical Print Artist",
+        "quote": "The brand customization is incredible. My loyalty cards match my aesthetic perfectly. It's not just a tool, it's an extension of my brand.",
         "image": {
           "src": "/imgs/avatars/5.png",
-          "alt": "james"
+          "alt": "isabella"
         }
       },
       {
-        "name": "Anna Zhang",
-        "role": "Content Strategist",
-        "quote": "Digital Heirloom's one-click solution turned our YouTube and TikTok content into a global powerhouse. Our international audience grew 500% in just 3 months!",
+        "name": "James Thompson",
+        "role": "Woodworking Studio Owner",
+        "quote": "Free for my first 50 members was perfect for testing. Now I'm on the Base plan and it's still cheaper than my old loyalty app. Plus, it actually works beautifully.",
         "image": {
           "src": "/imgs/avatars/6.png",
-          "alt": "anna"
+          "alt": "james"
         }
       }
     ]
