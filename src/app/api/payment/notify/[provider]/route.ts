@@ -71,10 +71,10 @@ export async function POST(
         ) {
           // only handle subscription renewal payment
           const existingSubscription =
-            await findSubscriptionByProviderSubscriptionId(
-              provider,
-              session.subscriptionId
-            );
+            await findSubscriptionByProviderSubscriptionId({
+              provider: provider,
+              subscriptionId: session.subscriptionId,
+            });
           if (!existingSubscription) {
             throw new Error('subscription not found');
           }
@@ -97,10 +97,10 @@ export async function POST(
       }
 
       const existingSubscription =
-        await findSubscriptionByProviderSubscriptionId(
-          provider,
-          session.subscriptionId
-        );
+        await findSubscriptionByProviderSubscriptionId({
+          provider: provider,
+          subscriptionId: session.subscriptionId,
+        });
       if (!existingSubscription) {
         throw new Error('subscription not found');
       }
@@ -116,10 +116,10 @@ export async function POST(
       }
 
       const existingSubscription =
-        await findSubscriptionByProviderSubscriptionId(
-          provider,
-          session.subscriptionId
-        );
+        await findSubscriptionByProviderSubscriptionId({
+          provider: provider,
+          subscriptionId: session.subscriptionId,
+        });
       if (!existingSubscription) {
         throw new Error('subscription not found');
       }
