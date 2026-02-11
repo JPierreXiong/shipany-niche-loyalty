@@ -6,8 +6,6 @@ import { PaymentType } from '@/extensions/payment';
 
 import { NewCredit } from './credit';
 import {
-  NewSubscription,
-  UpdateSubscription,
   updateSubscriptionBySubscriptionNo,
 } from './subscription';
 import { appendUserToResult, User } from './user';
@@ -177,7 +175,7 @@ export async function updateOrderInTransaction({
 }: {
   orderNo: string;
   updateOrder: UpdateOrder;
-  newSubscription?: NewSubscription;
+  newSubscription?: any;
   newCredit?: NewCredit;
 }) {
   if (!orderNo || !updateOrder) {
@@ -271,7 +269,7 @@ export async function updateSubscriptionInTransaction({
   newCredit,
 }: {
   subscriptionNo: string; // subscription unique id in table
-  updateSubscription: UpdateSubscription;
+  updateSubscription: any;
   newOrder?: NewOrder;
   newCredit?: NewCredit;
 }) {

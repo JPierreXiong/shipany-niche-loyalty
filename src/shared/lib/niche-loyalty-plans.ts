@@ -187,7 +187,7 @@ export function getPlan(planType: PlanType): Plan {
 }
 
 // 检查功能是否可用
-export function hasFeature(planType: PlanType, feature: keyof PlanFeatures): boolean {
+export function hasFeature(planType: PlanType, feature: keyof PlanFeatures): boolean | string {
   const plan = getPlan(planType);
   return plan.features[feature];
 }

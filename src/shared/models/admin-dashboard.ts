@@ -179,7 +179,7 @@ export async function getAllUsersDetail(
 
   // 为每个用户获取详细统计
   const usersDetail: UserDetail[] = await Promise.all(
-    users.map(async (user) => {
+    users.map(async (user: any) => {
       // 获取店铺数量
       const [storeCount] = await dbInstance
         .select({ count: count() })
@@ -274,7 +274,7 @@ export async function getUserGrowthTrend(): Promise<Array<{ month: string; count
       .where(
         and(
           gte(schema.user.createdAt, monthStart),
-          gte(monthEnd, schema.user.createdAt)
+          sql`${schema.user.createdAt} <= ${monthEnd}`
         )
       );
 
@@ -307,7 +307,7 @@ export async function getRevenueTrend(): Promise<Array<{ month: string; revenue:
         and(
           eq(schema.user.planType, 'base'),
           gte(schema.user.createdAt, monthStart),
-          gte(monthEnd, schema.user.createdAt)
+          sql`${schema.user.createdAt} <= ${monthEnd}`
         )
       );
     
@@ -318,7 +318,7 @@ export async function getRevenueTrend(): Promise<Array<{ month: string; revenue:
         and(
           eq(schema.user.planType, 'pro'),
           gte(schema.user.createdAt, monthStart),
-          gte(monthEnd, schema.user.createdAt)
+          sql`${schema.user.createdAt} <= ${monthEnd}`
         )
       );
 

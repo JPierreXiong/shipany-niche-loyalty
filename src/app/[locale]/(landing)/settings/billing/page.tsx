@@ -9,7 +9,6 @@ import {
   getCurrentSubscription,
   getSubscriptions,
   getSubscriptionsCount,
-  Subscription,
   SubscriptionStatus,
 } from '@/shared/models/subscription';
 import { getUserInfo } from '@/shared/models/user';
@@ -206,10 +205,10 @@ export default async function BillingPage({
         size: 'sm',
       },
     ];
-    if (currentSubscription.paymentUserId) {
+    if (currentSubscription.paymentId) {
       buttons.push({
         title: t('view.buttons.manage'),
-        url: `/settings/billing/retrieve?subscription_no=${currentSubscription.subscriptionNo}`,
+        url: `/settings/billing/retrieve?subscription_id=${currentSubscription.id}`,
         target: '_blank',
         icon: 'Settings',
         size: 'sm',
@@ -237,7 +236,7 @@ export default async function BillingPage({
         className="max-w-md"
       >
         <div className="text-primary text-3xl font-bold">
-          {currentSubscription?.planName || t('view.no_subscription')}
+          {currentSubscription?.planType || t('view.no_subscription')}
         </div>
         {currentSubscription ? (
           <>
@@ -245,7 +244,7 @@ export default async function BillingPage({
             currentSubscription?.status === SubscriptionStatus.TRIALING ? (
               <div className="text-muted-foreground mt-4 text-sm font-normal">
                 {t('view.tip', {
-                  date: moment(currentSubscription?.currentPeriodEnd).format(
+                  date: moment(currentSubscription?.endDate).format(
                     'YYYY-MM-DD'
                   ),
                 })}
@@ -253,7 +252,7 @@ export default async function BillingPage({
             ) : (
               <div className="text-destructive mt-4 text-sm font-normal">
                 {t('view.end_tip', {
-                  date: moment(currentSubscription?.canceledEndAt).format(
+                  date: moment(currentSubscription?.endDate).format(
                     'YYYY-MM-DD'
                   ),
                 })}

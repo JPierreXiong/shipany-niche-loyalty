@@ -105,7 +105,7 @@ export default async function CancelBillingPage({
     }
 
     await updateSubscriptionBySubscriptionNo(subscription.subscriptionNo, {
-      status: SubscriptionStatus.CANCELED,
+      status: SubscriptionStatus.CANCELLED,
     });
 
     return {
