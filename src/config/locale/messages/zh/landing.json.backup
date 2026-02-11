@@ -48,18 +48,18 @@
   },
   "hero": {
     "id": "hero",
-    "title": "让您的品牌焕发光彩",
+    "title": "Give Your Brand the Glow It Deserves",
     "highlight_text": "",
-    "description": "跳过复杂的积分系统。创建一个客户真正想加入的精美数字会员俱乐部。专为手工艺者设计。",
+    "description": "Skip the complex point systems. Create a beautiful digital membership club that your customers will actually want to join. Designed for artisans.",
     "announcement": {
-      "badge": "5分钟设置",
-      "title": "🎨 原生钱包集成",
+      "badge": "5-Minute Setup",
+      "title": "🎨 Native Wallet Integration",
       "url": "/niche-loyalty/demo"
     },
-    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">前50名会员永久免费</span>",
+    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">Free forever for your first 50 members</span>",
     "buttons": [
       {
-        "title": "启动您的俱乐部",
+        "title": "Launch Your Club",
         "icon": "Heart",
         "url": "/sign-up",
         "target": "_self",
@@ -67,7 +67,7 @@
         "className": ""
       },
       {
-        "title": "试用演示",
+        "title": "Try Demo",
         "icon": "Sparkles",
         "url": "/niche-loyalty/demo",
         "target": "_self",
@@ -88,7 +88,7 @@
     }
   },
   "logos": {
-    "title": "Glow 建立在巨人的肩膀上",
+    "title": "Glow is built on the shoulders of giants",
     "items": [
       {
         "title": "Next.js",
@@ -177,13 +177,13 @@
   },
   "benefits": {
     "id": "benefits",
-    "title": "为什么选择 Glow",
-    "label": "核心卖点",
-    "description": "您的忠诚度计划不应该看起来像电子表格。Glow 融入您品牌的灵魂。",
+    "title": "Why Choose Glow",
+    "label": "Core Selling Points",
+    "description": "Your loyalty program shouldn't look like a spreadsheet. Glow blends into your brand's soul.",
     "items": [
       {
-        "title": "美学优先，软件其次",
-        "description": "您的忠诚度计划不应该看起来像电子表格。Glow 通过实时 UI 定制融入您品牌的灵魂，匹配您的十六进制颜色和排版。",
+        "title": "Aesthetic First, Software Second",
+        "description": "Your loyalty program shouldn't look like a spreadsheet. Glow blends into your brand's soul with real-time UI customization to match your hex codes and typography.",
         "icon": "RiPaletteLine",
         "image": {
           "src": "/imgs/features/user-billing.png",
@@ -191,8 +191,8 @@
         }
       },
       {
-        "title": "5分钟设置",
-        "description": "跳过手册。在拉一杯浓缩咖啡的时间内启动您的奖励俱乐部。设置自动奖励触发器并忘记它。",
+        "title": "The 5-Minute Setup",
+        "description": "Skip the manual. Launch your rewards club in the time it takes to pull an espresso shot. Set automated reward triggers and forget it.",
         "icon": "RiTimerFlashLine",
         "image": {
           "src": "/imgs/features/admin-settings.png",
@@ -200,8 +200,8 @@
         }
       },
       {
-        "title": "原生钱包集成",
-        "description": "您的客户无需下载应用程序。只需一张精美的卡片原生存在于他们的 Apple 或 Google 钱包中。无摩擦的愉悦。",
+        "title": "Native Wallet Integration",
+        "description": "No apps for your customers to download. Just a beautiful card living natively in their Apple or Google Wallet. Frictionless delight.",
         "icon": "RiWallet3Line",
         "image": {
           "src": "/imgs/features/landing-page.png",
@@ -257,22 +257,22 @@
   },
   "how-it-works": {
     "id": "how-it-works",
-    "title": "无缝集成，点亮品牌",
-    "description": "Glow 深度嵌入您的 Shopify 店铺，却是为客户的日常生活而生。",
+    "title": "Seamless Integration. Beautiful Results.",
+    "description": "Glow lives inside your Shopify store, but it's built for your customers' lives.",
     "items": [
       {
-        "title": "自动安装",
-        "description": "我们的轻量化脚本与您的主题无缝融合，绝不拖慢加载速度。零拖累代码，尊重您网站的性能表现。",
+        "title": "Auto-Install",
+        "description": "Our lightweight script integrates with your theme without slowing it down. Zero-drag code that respects your site's performance.",
         "icon": "Zap"
       },
       {
-        "title": "每单积分",
-        "description": "无论是手工戒指还是数字画作，积分都会在下单后即时更新。设置自动奖励触发器，一劳永逸。",
+        "title": "Earn on Every Order",
+        "description": "Whether they buy a handmade ring or a digital print, points are added instantly. Set automated reward triggers and forget it.",
         "icon": "ShoppingBag"
       },
       {
-        "title": "钱包体验",
-        "description": "无需登录。客户只需点击订单确认函中的链接，即可将会员卡存入手机钱包。这就是极致简单的忠诚度管理。",
+        "title": "The Wallet Experience",
+        "description": "No login required. Customers tap a link in their order confirmation and save their card. It's loyalty, simplified.",
         "icon": "Wallet"
       }
     ]
@@ -317,37 +317,37 @@
   },
   "features": {
     "id": "features",
-    "title": "功能亮点",
-    "description": "创建一个感觉像社区邀请的忠诚度计划所需的一切。",
+    "title": "Feature Highlights",
+    "description": "Everything you need to create a loyalty program that feels like an invitation to a community.",
     "items": [
       {
-        "title": "动态卡片设计器",
-        "description": "实时 UI 定制以匹配您品牌的十六进制颜色和排版。让它成为您的。",
+        "title": "Dynamic Card Designer",
+        "description": "Real-time UI customization to match your brand's hex codes and typography. Make it yours.",
         "icon": "RiPaletteLine"
       },
       {
-        "title": "自动奖励触发器",
-        "description": "设置后忘记它。Glow 自动为购买、生日和推荐奖励客户。",
+        "title": "Automated Reward Triggers",
+        "description": "Set it and forget it. Glow rewards customers for purchases, birthdays, and referrals automatically.",
         "icon": "RiFlashlightLine"
       },
       {
-        "title": "Shopify 深度同步",
-        "description": "与您的 Shopify 结账和客户细分零延迟集成。无缝。",
+        "title": "Shopify Deep-Sync",
+        "description": "Zero-latency integration with your Shopify checkout and customer segments. Seamless.",
         "icon": "RiShoppingBag3Line"
       },
       {
-        "title": "轻量级脚本",
-        "description": "一个零拖累应用程序，不会减慢您网站的加载速度。对 SEO 和客户体验至关重要。",
+        "title": "Lightweight Script",
+        "description": "A \"zero-drag\" app that won't slow down your site's loading speed. Vital for SEO and customer experience.",
         "icon": "RiRocketLine"
       },
       {
-        "title": "原生钱包集成",
-        "description": "无需下载应用程序。精美的卡片原生存在于 Apple 或 Google 钱包中。",
+        "title": "Native Wallet Integration",
+        "description": "No apps to download. Beautiful cards living natively in Apple or Google Wallet.",
         "icon": "RiWallet3Line"
       },
       {
-        "title": "无摩擦的愉悦",
-        "description": "积分很无聊。Glow会员资格是您的客户想要加入的社区的邀请。",
+        "title": "Frictionless Delight",
+        "description": "Points are boring. A \"Glow\" membership is an invitation to a community your customers want to join.",
         "icon": "RiHeartLine"
       }
     ]
@@ -373,8 +373,8 @@
   },
   "testimonials": {
     "id": "testimonials",
-    "title": "用户对 Glow 的评价",
-    "description": "听听使用 Glow 转变忠诚度计划的手工艺品牌的声音。",
+    "title": "What Users Say About Digital Heirloom",
+    "description": "Hear from content creators and businesses who transformed their video content with Digital Heirloom.",
     "items": [
       {
         "name": "David Chen",
@@ -434,9 +434,9 @@
   },
   "faq": {
     "id": "faq",
-    "title": "常见问题",
-    "description": "还有其他问题？通过电子邮件联系我们。",
-    "tip": "找不到您要找的内容？联系我们的 <a href='mailto:support@glow.app' class='text-primary font-medium hover:underline'>客户支持团队</a>",
+    "title": "Frequently Asked Questions",
+    "description": "Have another question? Contact us by email.",
+    "tip": "Can't find what you're looking for? Contact our <a href='mailto:support@glow.app' class='text-primary font-medium hover:underline'>customer support team</a>",
     "items": [
       {
         "question": "Will the Glow app slow down my Shopify store's loading speed?",
@@ -458,39 +458,39 @@
   },
   "technical-architecture": {
     "id": "technical-architecture",
-    "title": "为什么 Shopify 卖家选择 Niche Loyalty",
-    "description": "用我们精简、高利润的架构替代 Smile.io 等昂贵工具",
+    "title": "Why Shopify Sellers Choose Niche Loyalty",
+    "description": "Replace expensive tools like Smile.io with our lean, high-margin architecture",
     "items": [
       {
-        "title": "降低 80% 的成本",
-        "description": "用我们精简、高利润的架构替代 Smile.io 等昂贵工具。以极低的成本获得企业级忠诚度功能。前 50 名会员永久免费，随着业务增长可负担地扩展。",
+        "title": "80% Cost Reduction",
+        "description": "Replace expensive tools like Smile.io with our lean, high-margin architecture. Get enterprise-level loyalty features at a fraction of the cost. Free for your first 50 members, then scale affordably as you grow.",
         "icon": "DollarSign"
       },
       {
-        "title": "忠诚度与邮件营销一体化",
-        "description": "集成了会员管理与通过 Resend 实现的自动化邮件营销。创建活动、发送个性化折扣码、追踪核销率——全部在一个精美的仪表板中完成。",
+        "title": "All-in-One Loyalty & Email",
+        "description": "Integrated loyalty management and automated email marketing via Resend. Create campaigns, send personalized discount codes, and track redemptions—all from one beautiful dashboard.",
         "icon": "Mail"
       },
       {
-        "title": "零阻力 Shopify 同步",
-        "description": "支持 CSV 批量导入会员，并通过 Shopify Webhook 自动同步订单数据。自动生成折扣码并追踪核销情况。无需手动操作。",
+        "title": "Zero-Friction Shopify Sync",
+        "description": "Seamlessly import members via CSV and sync orders via Shopify Webhooks. Automatic discount code generation and redemption tracking. No manual work required.",
         "icon": "Zap"
       },
       {
-        "title": "以投资回报率为核心的分析",
-        "description": "通过简洁的仪表板追踪折扣核销率和收入增长。精确了解哪些活动带来销售，哪些会员是您最有价值的客户。",
+        "title": "ROI-Focused Analytics",
+        "description": "Track discount redemptions and revenue growth through a clean dashboard. See exactly which campaigns drive sales and which members are your most valuable customers.",
         "icon": "TrendingUp"
       }
     ]
   },
   "cta": {
     "id": "cta",
-    "title": "准备让您的品牌焕发光彩？",
-    "description": "加入数百个手工艺品牌，创建感觉像礼物的忠诚度计划。",
-    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">前50名会员永久免费</span>",
+    "title": "Ready to Make Your Brand Glow?",
+    "description": "Join hundreds of artisan brands creating loyalty programs that feel like gifts.",
+    "tip": "<span style=\"font-size: 0.75rem; font-weight: 300;\">Free forever for your first 50 members</span>",
     "buttons": [
       {
-        "title": "启动您的俱乐部",
+        "title": "Launch Your Club",
         "url": "/sign-up",
         "target": "_self",
         "icon": "Heart",
