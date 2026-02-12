@@ -1,61 +1,58 @@
 {
   "metadata": {
-    "title": "Terms of Service | Glow - Digital Loyalty for Shopify Artisans",
-    "description": "Terms of Service for Glow, the elegant loyalty platform designed for Shopify artisans and makers."
+    "title": "服务条款 | Glow - Shopify 手工艺者数字忠诚度",
+    "description": "Glow 的服务条款，为 Shopify 手工艺者和创作者设计的优雅忠诚度平台。"
   },
-  "title": "Terms of Service",
-  "lastUpdated": "Last Updated",
-  "date": "February 6, 2026",
+  "title": "服务条款",
+  "lastUpdated": "最后更新",
+  "date": "2026年2月6日",
   "introduction": {
-    "content": "Welcome to Glow (the \"Service\"), a digital loyalty platform designed specifically for Shopify artisans. By accessing or using our platform, you agree to be bound by these Terms of Service."
+    "content": "欢迎使用 Glow（本服务），这是一个专为 Shopify 手工艺者设计的数字忠诚度平台。通过访问或使用我们的平台，即表示您同意受本服务条款的约束。"
   },
   "eligibility": {
-    "title": "1. Eligibility and Shopify Integration",
-    "content": "To use Glow, you must maintain an active Shopify store in good standing. Glow operates as a third-party integration; therefore, your use of our service is also subject to Shopify's API Terms and Acceptable Use Policies."
+    "title": "1. 资格与 Shopify 集成",
+    "content": "要使用 Glow，您必须拥有一个信誉良好的活跃 Shopify 店铺。Glow 作为第三方集成运行；因此，您对我们服务的使用也受 Shopify 的 API 条款和可接受使用政策的约束。"
   },
   "license": {
-    "title": "2. The \"Digital Heirloom\" License",
-    "content": "Upon subscribing to a Glow plan, we grant you a non-exclusive, non-transferable license to create and distribute digital membership cards (Digital Heirlooms) to your customers. You retain all intellectual property rights to your brand assets (Logos, Colors, Fonts) uploaded to our platform."
+    "title": "2. 数字传家宝许可",
+    "content": "订阅 Glow 计划后，我们授予您非独占、不可转让的许可，以创建和分发数字会员卡给您的客户。您保留上传到我们平台的所有品牌资产（Logo、颜色、字体）的知识产权。"
   },
   "subscription": {
-    "title": "3. Subscription Tiers and Billing",
+    "title": "3. 订阅层级和计费",
     "seed": {
-      "title": "Seed (Free)",
-      "content": "Limited to 50 members."
+      "title": "种子版（免费）",
+      "content": "限 50 名会员。"
     },
     "base": {
-      "title": "Base ($19.90)",
-      "content": "Limited to 250 members."
+      "title": "基础版（$19.90）",
+      "content": "限 250 名会员。"
     },
     "pro": {
-      "title": "Pro ($59.90)",
-      "content": "Unlimited members and advanced automation."
+      "title": "专业版（$59.90）",
+      "content": "无限会员和高级自动化。"
     },
-    "payment": "All payments are processed securely via Creem. Fees are non-refundable unless otherwise stated by local consumer law."
+    "payment": "所有付款均通过 Creem 安全处理。除非当地消费者法另有规定，否则费用不可退还。"
   },
   "conduct": {
-    "title": "4. Prohibited Conduct",
-    "content": "Users may not use Glow to distribute spam, fraudulent rewards, or content that violates intellectual property rights. We reserve the right to terminate accounts that diminish the \"Glow\" community standard."
+    "title": "4. 禁止行为",
+    "content": "用户不得使用 Glow 分发垃圾邮件、欺诈性奖励或侵犯知识产权的内容。我们保留终止降低 Glow 社区标准的账户的权利。"
   },
   "termination": {
-    "title": "5. Account Termination",
-    "content": "You may cancel your subscription at any time through your account settings. Upon cancellation, you will retain access until the end of your current billing period."
+    "title": "5. 账户终止",
+    "content": "您可以随时通过账户设置取消订阅。取消后，您将保留访问权限直到当前计费周期结束。"
   },
   "liability": {
-    "title": "6. Limitation of Liability",
-    "content": "To the maximum extent permitted by law, Glow shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of the service."
+    "title": "6. 责任限制",
+    "content": "在法律允许的最大范围内，Glow 不对因您使用本服务而产生的任何间接、附带、特殊、后果性或惩罚性损害承担责任。"
   },
   "governing": {
-    "title": "7. Governing Law",
-    "content": "These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which Glow operates, without regard to its conflict of law provisions."
+    "title": "7. 适用法律",
+    "content": "本条款应根据 Glow 运营所在司法管辖区的法律进行管辖和解释，不考虑其法律冲突条款。"
   },
   "contact": {
-    "title": "8. Contact Us",
-    "intro": "If you have any questions about these Terms of Service, please contact us at:",
-    "email": "Email",
-    "website": "Website"
+    "title": "8. 联系我们",
+    "intro": "如果您对本服务条款有任何疑问，请通过以下方式联系我们：",
+    "email": "电子邮件",
+    "website": "网站"
   }
 }
-
-
-

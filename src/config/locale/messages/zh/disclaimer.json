@@ -1,42 +1,39 @@
 {
   "metadata": {
-    "title": "Disclaimer | Glow - Shopify Loyalty Platform for Artisans",
-    "description": "Legal disclaimer for Glow, the minimalist loyalty app for Shopify makers and artisan brands."
+    "title": "免责声明 | Glow - Shopify 手工艺者忠诚度平台",
+    "description": "Glow 的法律免责声明，为 Shopify 创作者和手工艺品牌提供的极简忠诚度应用。"
   },
-  "title": "Disclaimer",
-  "lastUpdated": "Last Updated",
-  "date": "February 6, 2026",
+  "title": "免责声明",
+  "lastUpdated": "最后更新",
+  "date": "2026年2月6日",
   "asis": {
-    "title": "1. Service \"As-Is\"",
-    "content": "Glow is provided on an \"as-is\" and \"as-available\" basis. While we utilize high-performance stacks (Next.js, Neon, Vercel), we do not guarantee that the service will be uninterrupted or error-free."
+    "title": "1. 服务按原样提供",
+    "content": "Glow 按原样和可用基础提供。虽然我们使用高性能技术栈（Next.js、Neon、Vercel），但我们不保证服务将不间断或无错误。"
   },
   "thirdParty": {
-    "title": "2. Third-Party Dependencies",
-    "content": "Glow relies on third-party services including Shopify, Apple Wallet, Google Pay, Resend, and Twilio. We are not responsible for service outages or policy changes initiated by these external providers."
+    "title": "2. 第三方依赖",
+    "content": "Glow 依赖于第三方服务，包括 Shopify、Apple Wallet、Google Pay、Resend 和 Twilio。我们不对这些外部提供商发起的服务中断或政策变更负责。"
   },
   "marketing": {
-    "title": "3. Marketing and Earnings Disclaimer",
-    "content": "Any \"Growth Blueprints\" or marketing suggestions provided by Glow are for educational purposes. We do not guarantee specific financial results, customer retention rates, or Shopify store growth. Your success depends on your individual brand effort and market conditions."
+    "title": "3. 营销和收益免责声明",
+    "content": "Glow 提供的任何增长蓝图或营销建议仅供教育目的。我们不保证具体的财务结果、客户保留率或 Shopify 店铺增长。您的成功取决于您个人的品牌努力和市场条件。"
   },
   "advice": {
-    "title": "4. No Professional Advice",
-    "content": "The information provided on our website is not intended as legal, financial, or tax advice. Please consult with a professional regarding your specific business compliance requirements."
+    "title": "4. 非专业建议",
+    "content": "我们网站上提供的信息不构成法律、财务或税务建议。请就您的具体业务合规要求咨询专业人士。"
   },
   "dataLoss": {
-    "title": "5. Data Backup Responsibility",
-    "content": "While we implement robust backup systems, you are responsible for maintaining your own records of customer data and loyalty program configurations."
+    "title": "5. 数据备份责任",
+    "content": "虽然我们实施了强大的备份系统，但您有责任维护自己的客户数据和忠诚度计划配置记录。"
   },
   "changes": {
-    "title": "6. Changes to This Disclaimer",
-    "content": "We may update this Disclaimer from time to time. We will notify you of any significant changes by posting the new disclaimer on this page and updating the \"Last Updated\" date."
+    "title": "6. 本免责声明的变更",
+    "content": "我们可能会不时更新本免责声明。我们将通过在此页面上发布新的免责声明并更新最后更新日期来通知您任何重大变更。"
   },
   "contact": {
-    "title": "7. Contact Us",
-    "intro": "If you have any questions about this Disclaimer, please contact us at:",
-    "email": "Email",
-    "website": "Website"
+    "title": "7. 联系我们",
+    "intro": "如果您对本免责声明有任何疑问，请通过以下方式联系我们：",
+    "email": "电子邮件",
+    "website": "网站"
   }
 }
-
-
-
