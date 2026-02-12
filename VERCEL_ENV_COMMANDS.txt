@@ -1,0 +1,85 @@
+========================================
+Vercel 环境变量更新命令
+========================================
+
+请在 PowerShell 中逐条执行以下命令：
+
+1. 首先，切换到项目目录：
+----------------------------------------
+cd d:\AIsoftware\niche_loyalty
+
+
+2. 登录 Vercel（会打开浏览器）：
+----------------------------------------
+vercel login
+
+
+3. 链接到项目：
+----------------------------------------
+vercel link
+
+
+4. 删除旧的错误变量（AUTH_URL）：
+----------------------------------------
+vercel env rm AUTH_URL production
+vercel env rm AUTH_URL preview
+vercel env rm AUTH_URL development
+
+
+5. 删除旧的错误变量（BETTER_AUTH_URL）：
+----------------------------------------
+vercel env rm BETTER_AUTH_URL production
+vercel env rm BETTER_AUTH_URL preview
+vercel env rm BETTER_AUTH_URL development
+
+
+6. 删除旧的错误变量（NEXT_PUBLIC_APP_URL）：
+----------------------------------------
+vercel env rm NEXT_PUBLIC_APP_URL production
+vercel env rm NEXT_PUBLIC_APP_URL preview
+vercel env rm NEXT_PUBLIC_APP_URL development
+
+
+7. 添加正确的 AUTH_URL：
+----------------------------------------
+echo https://glownicheloyalty.vercel.app | vercel env add AUTH_URL production
+echo https://glownicheloyalty.vercel.app | vercel env add AUTH_URL preview
+echo https://glownicheloyalty.vercel.app | vercel env add AUTH_URL development
+
+
+8. 添加正确的 BETTER_AUTH_URL：
+----------------------------------------
+echo https://glownicheloyalty.vercel.app | vercel env add BETTER_AUTH_URL production
+echo https://glownicheloyalty.vercel.app | vercel env add BETTER_AUTH_URL preview
+echo https://glownicheloyalty.vercel.app | vercel env add BETTER_AUTH_URL development
+
+
+9. 添加正确的 NEXT_PUBLIC_APP_URL：
+----------------------------------------
+echo https://glownicheloyalty.vercel.app | vercel env add NEXT_PUBLIC_APP_URL production
+echo https://glownicheloyalty.vercel.app | vercel env add NEXT_PUBLIC_APP_URL preview
+echo https://glownicheloyalty.vercel.app | vercel env add NEXT_PUBLIC_APP_URL development
+
+
+10. 验证环境变量（查看所有变量）：
+----------------------------------------
+vercel env ls
+
+
+11. 重新部署到生产环境：
+----------------------------------------
+vercel --prod
+
+
+========================================
+完成！
+========================================
+
+执行完成后，访问以下 URL 测试：
+- https://glownicheloyalty.vercel.app/en/sign-up
+- https://glownicheloyalty.vercel.app/zh/sign-up
+- https://glownicheloyalty.vercel.app/fr/sign-up
+
+应该不再有 CORS 错误！
+
+

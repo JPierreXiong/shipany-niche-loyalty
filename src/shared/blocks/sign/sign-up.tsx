@@ -1,13 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import { Loader2 } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { toast } from 'sonner';
 
 import { signUp } from '@/core/auth/client';
-import { Link } from '@/core/i18n/navigation';
+import { Link, useRouter } from '@/core/i18n/navigation';
 import { defaultLocale } from '@/config/locale';
 import { Button } from '@/shared/components/ui/button';
 import {
@@ -180,7 +179,7 @@ export function SignUp({
                 signInParams.set('callbackUrl', processedCallbackUrl);
               }
               signInParams.set('email', email);
-              const signInUrl = `/${locale}/sign-in?${signInParams.toString()}`;
+              const signInUrl = `/sign-in?${signInParams.toString()}`;
               router.push(signInUrl);
             }, 1500);
             
