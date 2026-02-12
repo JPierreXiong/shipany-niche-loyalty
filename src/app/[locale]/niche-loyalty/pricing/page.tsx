@@ -7,10 +7,50 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Check, Sparkles } from 'lucide-react';
+import { Check, Sparkles, Loader2 } from 'lucide-react';
 import Link from 'next/link';
+import { toast } from 'sonner';
 
 export default function GlowPricingPage() {
+  const [loading, setLoading] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState('');
+
+  const handleCheckout = async (productId: string, planName: string) => {
+    setLoading(true);
+    setSelectedPlan(productId);
+
+    try {
+      const response = await fetch('/api/payment/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          product_id: productId,
+          payment_provider: 'creem',
+          locale: 'en',
+          metadata: {
+            plan_name: planName,
+          },
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.data?.checkoutUrl) {
+        toast.success('Redirecting to payment...');
+        window.location.href = data.data.checkoutUrl;
+      } else {
+        toast.error(data.message || 'Failed to create checkout session');
+        console.error('Checkout error:', data);
+      }
+    } catch (error) {
+      console.error('Checkout error:', error);
+      toast.error('Failed to initiate checkout');
+    } finally {
+      setLoading(false);
+      setSelectedPlan('');
+    }
+  };
+
   return (
     <div className="theme-artisan min-h-screen bg-[#FDFCFB]">
       {/* Header */}
@@ -69,7 +109,9 @@ export default function GlowPricingPage() {
                 ],
                 cta: 'Start Free Forever',
                 ctaLink: '/sign-up',
+                productId: 'glow_seed',
                 highlighted: false,
+                isFree: true,
               },
               {
                 name: 'Studio',
@@ -84,9 +126,10 @@ export default function GlowPricingPage() {
                   'API access',
                   'Apple Wallet integration',
                 ],
-                cta: 'Try Studio Free',
-                ctaLink: 'https://www.creem.io/test/payment/prod_5bo10kkVzObfuZIjUglgI0',
+                cta: 'Subscribe to Studio',
+                productId: 'glow_base',
                 highlighted: true,
+                isFree: false,
               },
               {
                 name: 'Atelier',
@@ -101,9 +144,10 @@ export default function GlowPricingPage() {
                   'SLA guarantee',
                   'Multi-store management',
                 ],
-                cta: 'Contact Sales',
-                ctaLink: 'https://www.creem.io/test/payment/prod_1lQWMwrdWZFzo6AgpVcCc7',
+                cta: 'Subscribe to Atelier',
+                productId: 'glow_pro',
                 highlighted: false,
+                isFree: false,
               },
             ].map((plan, index) => (
               <motion.div
@@ -142,18 +186,37 @@ export default function GlowPricingPage() {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href={plan.ctaLink}
-                  target={plan.ctaLink.startsWith('http') ? '_blank' : '_self'}
-                  rel={plan.ctaLink.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className={
-                    plan.highlighted 
-                      ? 'artisan-button-primary w-full block text-center' 
-                      : 'artisan-button-secondary w-full block text-center'
-                  }
-                >
-                  {plan.cta}
-                </a>
+                {plan.isFree ? (
+                  <a
+                    href={plan.ctaLink}
+                    className={
+                      plan.highlighted 
+                        ? 'artisan-button-primary w-full block text-center' 
+                        : 'artisan-button-secondary w-full block text-center'
+                    }
+                  >
+                    {plan.cta}
+                  </a>
+                ) : (
+                  <button
+                    onClick={() => handleCheckout(plan.productId, plan.name)}
+                    disabled={loading}
+                    className={
+                      plan.highlighted 
+                        ? 'artisan-button-primary w-full' 
+                        : 'artisan-button-secondary w-full'
+                    }
+                  >
+                    {loading && selectedPlan === plan.productId ? (
+                      <>
+                        <Loader2 className="w-4 h-4 mr-2 animate-spin inline" />
+                        Processing...
+                      </>
+                    ) : (
+                      plan.cta
+                    )}
+                  </button>
+                )}
               </motion.div>
             ))}
           </div>

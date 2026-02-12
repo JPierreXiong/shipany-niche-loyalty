@@ -63,26 +63,63 @@ export default function GlowDashboard() {
     setLoading(true);
     
     try {
+      // First, get or create store
+      const storeResponse = await fetch('/api/niche-loyalty/store/get');
+      if (!storeResponse.ok) {
+        toast.error('Failed to load store information');
+        setLoading(false);
+        return;
+      }
+      
+      const storeData = await storeResponse.json();
+      const storeId = storeData.data?.id;
+      
+      if (!storeId) {
+        // Show demo data if no store exists
+        setMembers([
+          {
+            id: '1',
+            name: 'Sarah Johnson',
+            email: 'sarah@example.com',
+            points: 240,
+            joinedAt: '2025-12-01',
+            lastActivity: '2025-02-05',
+            tier: 'gold',
+          },
+          {
+            id: '2',
+            name: 'Michael Chen',
+            email: 'michael@example.com',
+            points: 180,
+            joinedAt: '2026-01-15',
+            lastActivity: '2025-02-06',
+            tier: 'silver',
+          },
+          {
+            id: '3',
+            name: 'Emma Wilson',
+            email: 'emma@example.com',
+            points: 420,
+            joinedAt: '2025-11-20',
+            lastActivity: '2025-02-04',
+            tier: 'gold',
+          },
+        ]);
+        setLoading(false);
+        return;
+      }
+      
       // Load real members from API
-      const response = await fetch('/api/niche-loyalty/members/list');
+      const response = await fetch(`/api/niche-loyalty/members/list?storeId=${storeId}`);
       if (response.ok) {
         const data = await response.json();
-        setMembers(data.members || []);
+        setMembers(data.data?.members || []);
       }
     } catch (error) {
       console.error('Failed to load members:', error);
+      toast.error('Failed to load dashboard data');
     }
     
-    // 模拟数据
-    setStats({
-      totalMembers: 1250,
-      activeMembers: 980,
-      totalPoints: 45600,
-      redemptionRate: 78,
-      memberGrowth: 12,
-      engagementRate: 94,
-    });
-
     setLoading(false);
   };
 
@@ -94,10 +131,30 @@ export default function GlowDashboard() {
 
     setSubmitting(true);
     try {
+      // Get store ID first
+      const storeResponse = await fetch('/api/niche-loyalty/store/get');
+      if (!storeResponse.ok) {
+        toast.error('Please connect your store first');
+        setSubmitting(false);
+        return;
+      }
+      
+      const storeData = await storeResponse.json();
+      const storeId = storeData.data?.id;
+      
+      if (!storeId) {
+        toast.error('Please connect your store first');
+        setSubmitting(false);
+        return;
+      }
+
       const response = await fetch('/api/niche-loyalty/members/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(memberForm),
+        body: JSON.stringify({
+          ...memberForm,
+          storeId,
+        }),
       });
 
       if (response.ok) {
@@ -189,7 +246,10 @@ export default function GlowDashboard() {
               <p className="text-stone-600">Manage your loyalty program</p>
             </div>
             <div className="flex items-center space-x-4">
-              <button className="artisan-button-secondary">
+              <button 
+                className="artisan-button-secondary"
+                onClick={() => setActiveTab('brand')}
+              >
                 <Settings className="w-4 h-4 mr-2" />
                 Settings
               </button>
