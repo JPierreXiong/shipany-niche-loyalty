@@ -129,45 +129,45 @@
   },
   "introduce": {
     "id": "introduce",
-    "title": "What is Digital Heirloom",
-    "label": "Introduce",
-    "description": "Digital Heirloom is a NextJS boilerplate for building AI SaaS startups, including templates, components, and documentation.",
+    "title": "什么是 Niche Loyalty",
+    "label": "介绍",
+    "description": "Niche Loyalty 是专为手工艺 Shopify 店铺设计的精美、无干扰的忠诚度平台。创建客户真正想加入的数字会员俱乐部。",
     "image": {
       "src": "/imgs/features/landing-page.png",
       "alt": "introduce"
     },
     "items": [
       {
-        "title": "Ready-to-use Templates",
-        "description": "Choose from dozens of production-ready AI SaaS templates to quickly start your project.",
-        "icon": "RiNextjsFill",
+        "title": "精美的数字卡片",
+        "description": "创建令人惊艳的会员卡，存储在客户的 Apple 或 Google 钱包中。无需下载应用，纯粹的优雅。",
+        "icon": "RiWallet3Line",
         "image": {
           "src": "/imgs/features/1.png",
           "alt": "introduce"
         }
       },
       {
-        "title": "Infrastructure Setup",
-        "description": "Get instant access to scalable infrastructure with best practices built-in.",
-        "icon": "RiDatabase2Line",
+        "title": "无缝 Shopify 集成",
+        "description": "几分钟内连接您的 Shopify 店铺。自动订单同步、折扣码生成和会员管理。",
+        "icon": "RiShoppingBag3Line",
         "image": {
           "src": "/imgs/features/2.png",
           "alt": "introduce"
         }
       },
       {
-        "title": "Quick Deployment",
-        "description": "Deploy your AI SaaS application to production in hours, not days.",
-        "icon": "RiCloudyFill",
+        "title": "自动化营销活动",
+        "description": "设置自动化邮件活动和个性化折扣码。轻松奖励您最忠诚的客户。",
+        "icon": "RiMailLine",
         "image": {
           "src": "/imgs/features/3.png",
           "alt": "introduce"
         }
       },
       {
-        "title": "AI Integration",
-        "description": "Integrate AI into your project with ease using our built-in AI SDK.",
-        "icon": "RiRobot2Line",
+        "title": "品牌定制",
+        "description": "完美匹配您的品牌，自定义颜色、排版和设计。让它独一无二。",
+        "icon": "RiPaletteLine",
         "image": {
           "src": "/imgs/features/4.png",
           "alt": "introduce"
@@ -212,8 +212,8 @@
   },
   "usage": {
     "id": "usage",
-    "title": "How to Launch with Digital Heirloom",
-    "description": "Get your AI SaaS startup running in three simple steps:",
+    "title": "如何启动您的忠诚度俱乐部",
+    "description": "通过四个简单步骤让您的忠诚度计划运行起来：",
     "image": {
       "src": "/imgs/features/1.png",
       "alt": "usage"
@@ -222,32 +222,32 @@
     "text_align": "center",
     "items": [
       {
-        "title": "Get Digital Heirloom",
-        "description": "Buy Digital Heirloom with a one-time payment. Check your email for the code and documentation.",
+        "title": "注册并连接 Shopify",
+        "description": "创建您的 Glow 账户并在几分钟内连接您的 Shopify 店铺。我们的无缝集成会自动同步您的产品和客户。",
         "image": {
           "src": "/imgs/features/5.png",
           "alt": "usage"
         }
       },
       {
-        "title": "Start Your Project",
-        "description": "Read the documentation and clone the code of Digital Heirloom. Start building your AI SaaS startup.",
+        "title": "设计您的会员卡",
+        "description": "使用您的品牌颜色、Logo 和排版定制您的数字会员卡。让它独一无二。",
         "image": {
           "src": "/imgs/features/6.png",
           "alt": "usage"
         }
       },
       {
-        "title": "Customize Your Project",
-        "description": "Modify the template with your data and contents. Specific AI functionality needs.",
+        "title": "导入您的会员",
+        "description": "通过 CSV 上传您现有的客户列表，或让新会员在首次购买后自动加入。",
         "image": {
           "src": "/imgs/features/7.png",
           "alt": "usage"
         }
       },
       {
-        "title": "Deploy to Production",
-        "description": "Deploy your project to production with a few steps and start serving customers immediately.",
+        "title": "启动并增长",
+        "description": "发送您的第一个营销活动，观看会员将卡片添加到他们的钱包，并实时跟踪兑换情况。就是这么简单。",
         "image": {
           "src": "/imgs/features/8.png",
           "alt": "usage"
@@ -373,61 +373,61 @@
   },
   "testimonials": {
     "id": "testimonials",
-    "title": "用户对 Glow 的评价",
-    "description": "听听使用 Glow 转变忠诚度计划的手工艺品牌的声音。",
+    "title": "手工艺者对 Glow 的评价",
+    "description": "听听使用 Niche Loyalty 转变客户关系的创作者和品牌的声音。",
     "items": [
       {
-        "name": "David Chen",
-        "role": "YouTube Content Creator",
-        "quote": "Digital Heirloom transformed my YouTube channel! I can now reach global audiences with accurate subtitles in 12 languages. My views increased by 300% after adding multilingual subtitles.",
+        "name": "陈艾玛",
+        "role": "陶艺家 & 店主",
+        "quote": "Glow 改变了我与客户的联系方式。数字会员卡非常精美，我的客户实际上会炫耀它们！我的复购率在短短 3 个月内增长了 45%。",
         "image": {
           "src": "/imgs/avatars/1.png",
-          "alt": "david"
+          "alt": "emma"
         }
       },
       {
-        "name": "Rachel Kim",
-        "role": "TikTok Influencer",
-        "quote": "One-click subtitle extraction and translation saved me hours every week. My TikTok videos now connect with viewers worldwide, and my engagement has skyrocketed!",
+        "name": "马库斯·罗德里格斯",
+        "role": "手工珠宝设计师",
+        "quote": "设置只花了 5 分钟。Shopify 集成无缝衔接，我的客户喜欢钱包卡片。不再有笨重的应用或复杂的积分系统。",
         "image": {
           "src": "/imgs/avatars/2.png",
-          "alt": "rachel"
-        }
-      },
-      {
-        "name": "Marcus Thompson",
-        "role": "Video Production Agency Owner",
-        "quote": "As a small agency, Digital Heirloom gives us enterprise-level subtitle capabilities at a fraction of the cost. We process hundreds of videos monthly with perfect accuracy.",
-        "image": {
-          "src": "/imgs/avatars/3.png",
           "alt": "marcus"
         }
       },
       {
-        "name": "Sofia Garcia",
-        "role": "E-Learning Platform Manager",
-        "quote": "Digital Heirloom made our educational content accessible globally. Students from 50+ countries can now learn from our courses with accurate translations. Game-changer!",
+        "name": "索菲·洛朗",
+        "role": "手工蜡烛制造商",
+        "quote": "我从 Smile.io 切换过来，每月节省了 200 美元，同时获得了更优雅的解决方案。自动化营销活动对我的小企业来说是游戏规则改变者。",
+        "image": {
+          "src": "/imgs/avatars/3.png",
+          "alt": "sophie"
+        }
+      },
+      {
+        "name": "大卫·金",
+        "role": "皮革工艺师",
+        "quote": "Glow 感觉就像是为手工艺者量身定制的。设计简洁，设置简单，我的客户实际上在使用它。自从切换以来，我的邮件打开率翻了一番。",
         "image": {
           "src": "/imgs/avatars/4.png",
-          "alt": "sofia"
+          "alt": "david"
         }
       },
       {
-        "name": "James Wilson",
-        "role": "Marketing Director",
-        "quote": "The AI-powered translation is incredibly accurate. We localize our marketing videos for different markets in minutes instead of days. ROI is through the roof!",
+        "name": "伊莎贝拉·马丁内斯",
+        "role": "植物印刷艺术家",
+        "quote": "品牌定制令人难以置信。我的忠诚度卡完美匹配我的美学。这不仅仅是一个工具，它是我品牌的延伸。",
         "image": {
           "src": "/imgs/avatars/5.png",
-          "alt": "james"
+          "alt": "isabella"
         }
       },
       {
-        "name": "Anna Zhang",
-        "role": "Content Strategist",
-        "quote": "Digital Heirloom's one-click solution turned our YouTube and TikTok content into a global powerhouse. Our international audience grew 500% in just 3 months!",
+        "name": "詹姆斯·汤普森",
+        "role": "木工工作室老板",
+        "quote": "前 50 名会员免费非常适合测试。现在我使用 Base 计划，它仍然比我的旧忠诚度应用便宜。而且，它实际上运行得很好。",
         "image": {
           "src": "/imgs/avatars/6.png",
-          "alt": "anna"
+          "alt": "james"
         }
       }
     ]

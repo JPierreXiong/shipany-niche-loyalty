@@ -68,3 +68,4 @@ clearDigitalHeirloomData()
     process.exit(1);
   });
 
+
