@@ -484,6 +484,10 @@ export const loyaltyStore = pgTable(
     shopifyDomain: text('shopify_domain').notNull(), // 例如 myshop.myshopify.com
     shopifyAccessToken: text('shopify_access_token').notNull(), // Admin API access token（仅服务端使用）
     shopifyWebhookSecret: text('shopify_webhook_secret').notNull(), // Webhook 校验用密钥
+    encryptionKey: text('encryption_key'), // Token 加密密钥
+    connectionType: text('connection_type').default('custom_app'), // custom_app / oauth
+    scopes: text('scopes'), // 已授权的权限（逗号分隔）
+    webhookRegistered: boolean('webhook_registered').default(false), // Webhook 是否已注册
     status: text('status').default('active').notNull(), // active / paused / disconnected
     createdAt: timestamp('created_at').defaultNow().notNull(),
     updatedAt: timestamp('updated_at')
@@ -494,6 +498,25 @@ export const loyaltyStore = pgTable(
     // 一个用户可以连接多个店铺，但同一 shopifyDomain 仅允许一条记录
     index('idx_loyalty_store_user').on(table.userId),
     index('idx_loyalty_store_domain').on(table.shopifyDomain),
+  ]
+);
+
+// Webhook 注册表：追踪 Shopify Webhook 注册状态
+export const loyaltyWebhook = pgTable(
+  'loyalty_webhook',
+  {
+    id: text('id').primaryKey(),
+    storeId: text('store_id')
+      .notNull()
+      .references(() => loyaltyStore.id, { onDelete: 'cascade' }),
+    topic: text('topic').notNull(), // orders/paid, customers/create, orders/updated
+    webhookId: text('webhook_id'), // Shopify Webhook ID
+    status: text('status').default('active'), // active / inactive
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+  },
+  (table) => [
+    index('idx_loyalty_webhook_store_id').on(table.storeId),
+    index('idx_loyalty_webhook_topic').on(table.topic),
   ]
 );
 
