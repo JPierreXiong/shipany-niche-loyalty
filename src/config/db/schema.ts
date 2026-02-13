@@ -580,6 +580,166 @@ export const loyaltyDiscountCode = pgTable(
   ]
 );
 
+// 优惠卡配置表：定义可复用的优惠卡模板
+export const loyaltyDiscountCard = pgTable(
+  'loyalty_discount_card',
+  {
+    id: text('id').primaryKey(),
+    storeId: text('store_id')
+      .notNull()
+      .references(() => loyaltyStore.id, { onDelete: 'cascade' }),
+    name: text('name').notNull(),
+    discountType: text('discount_type').default('percentage').notNull(),
+    discountValue: integer('discount_value').notNull(),
+    expireDays: integer('expire_days').default(30).notNull(),
+    status: text('status').default('active').notNull(),
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+    updatedAt: timestamp('updated_at')
+      .$onUpdate(() => /* @__PURE__ */ new Date())
+      .notNull(),
+  },
+  (table) => [
+    index('idx_loyalty_card_store').on(table.storeId),
+    index('idx_loyalty_card_status').on(table.status),
+  ]
+);
+
+// 自动化规则表：定义触发条件和动作
+export const loyaltyAutomation = pgTable(
+  'loyalty_automation',
+  {
+    id: text('id').primaryKey(),
+    cardId: text('card_id')
+      .notNull()
+      .references(() => loyaltyDiscountCard.id, { onDelete: 'cascade' }),
+    storeId: text('store_id')
+      .notNull()
+      .references(() => loyaltyStore.id, { onDelete: 'cascade' }),
+    triggerType: text('trigger_type').notNull(),
+    triggerValue: integer('trigger_value'),
+    isActive: boolean('is_active').default(false).notNull(),
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+    updatedAt: timestamp('updated_at')
+      .$onUpdate(() => /* @__PURE__ */ new Date())
+      .notNull(),
+  },
+  (table) => [
+    index('idx_loyalty_automation_store').on(table.storeId),
+    index('idx_loyalty_automation_active').on(table.isActive),
+    index('idx_loyalty_automation_trigger').on(table.triggerType),
+  ]
+);
+
+// 发送任务队列表：异步邮件发送队列
+export const loyaltySendTask = pgTable(
+  'loyalty_send_task',
+  {
+    id: text('id').primaryKey(),
+    automationId: text('automation_id')
+      .references(() => loyaltyAutomation.id, { onDelete: 'set null' }),
+    customerId: text('customer_id')
+      .notNull()
+      .references(() => loyaltyMember.id, { onDelete: 'cascade' }),
+    storeId: text('store_id')
+      .notNull()
+      .references(() => loyaltyStore.id, { onDelete: 'cascade' }),
+    status: text('status').default('pending').notNull(),
+    scheduledAt: timestamp('scheduled_at').defaultNow().notNull(),
+    sentAt: timestamp('sent_at'),
+    errorMessage: text('error_message'),
+    retryCount: integer('retry_count').default(0).notNull(),
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+    updatedAt: timestamp('updated_at')
+      .$onUpdate(() => /* @__PURE__ */ new Date())
+      .notNull(),
+  },
+  (table) => [
+    index('idx_loyalty_task_status').on(table.status),
+    index('idx_loyalty_task_scheduled').on(table.scheduledAt),
+    index('idx_loyalty_task_customer').on(table.customerId),
+  ]
+);
+
+// 发送日志表：追踪邮件打开、点击等行为
+export const loyaltySendLog = pgTable(
+  'loyalty_send_log',
+  {
+    id: text('id').primaryKey(),
+    taskId: text('task_id')
+      .notNull()
+      .references(() => loyaltySendTask.id, { onDelete: 'cascade' }),
+    customerId: text('customer_id')
+      .notNull()
+      .references(() => loyaltyMember.id, { onDelete: 'cascade' }),
+    emailProvider: text('email_provider').default('resend').notNull(),
+    opened: boolean('opened').default(false).notNull(),
+    openedAt: timestamp('opened_at'),
+    clicked: boolean('clicked').default(false).notNull(),
+    clickedAt: timestamp('clicked_at'),
+    bounced: boolean('bounced').default(false).notNull(),
+    bouncedAt: timestamp('bounced_at'),
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+    updatedAt: timestamp('updated_at')
+      .$onUpdate(() => /* @__PURE__ */ new Date())
+      .notNull(),
+  },
+  (table) => [
+    index('idx_loyalty_log_task').on(table.taskId),
+    index('idx_loyalty_log_customer').on(table.customerId),
+  ]
+);
+
+// 核销日志表：追踪折扣码使用情况（不存储订单详情，保护隐私）
+export const loyaltyRedeemLog = pgTable(
+  'loyalty_redeem_log',
+  {
+    id: text('id').primaryKey(),
+    discountCodeId: text('discount_code_id')
+      .notNull()
+      .references(() => loyaltyDiscountCode.id, { onDelete: 'cascade' }),
+    storeId: text('store_id')
+      .notNull()
+      .references(() => loyaltyStore.id, { onDelete: 'cascade' }),
+    shopifyOrderId: text('shopify_order_id').notNull(),
+    orderAmount: integer('order_amount'),
+    redeemedAt: timestamp('redeemed_at').defaultNow().notNull(),
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+  },
+  (table) => [
+    index('idx_loyalty_redeem_store').on(table.storeId),
+    index('idx_loyalty_redeem_code').on(table.discountCodeId),
+    index('idx_loyalty_redeem_date').on(table.redeemedAt),
+  ]
+);
+
+// 品牌配置表：存储品牌素材和发件人信息（合规必填）
+export const loyaltyBrandConfig = pgTable(
+  'loyalty_brand_config',
+  {
+    id: text('id').primaryKey(),
+    storeId: text('store_id')
+      .notNull()
+      .unique()
+      .references(() => loyaltyStore.id, { onDelete: 'cascade' }),
+    brandName: text('brand_name'),
+    logoUrl: text('logo_url'),
+    primaryColor: text('primary_color').default('#000000').notNull(),
+    senderName: text('sender_name').notNull(),
+    senderEmail: text('sender_email').notNull(),
+    replyToEmail: text('reply_to_email'),
+    unsubscribeUrl: text('unsubscribe_url'),
+    customDomain: text('custom_domain'),
+    domainVerified: boolean('domain_verified').default(false).notNull(),
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+    updatedAt: timestamp('updated_at')
+      .$onUpdate(() => /* @__PURE__ */ new Date())
+      .notNull(),
+  },
+  (table) => [
+    index('idx_loyalty_brand_store').on(table.storeId),
+  ]
+);
+
 // ============================================
 // ⚠️ 已删除 - Digital Heirloom 项目不需要
 // 以下表定义已删除：
