@@ -1139,3 +1139,186 @@ export const systemAlerts = pgTable(
     index('idx_alert_category').on(table.category),
   ]
 );
+
+ * 记录死信开关的所有事件
+ */
+export const deadManSwitchEvents = pgTable(
+  'dead_man_switch_events',
+  {
+    id: text('id').primaryKey(),
+    vaultId: text('vault_id')
+      .notNull()
+      .references(() => digitalVaults.id, { onDelete: 'cascade' }),
+    // 事件类型：warning_sent, grace_period_started, assets_released
+    eventType: text('event_type').notNull(),
+    // 事件详情（JSON格式）
+    eventData: text('event_data'),
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+  },
+  (table) => [
+    // 查询保险箱的事件日志
+    index('idx_dms_event_vault').on(table.vaultId),
+    // 按事件类型查询
+    index('idx_dms_event_type').on(table.eventType),
+  ]
+);
+
+/**
+ * 物理资产物流表
+ * 记录 Pro 版用户的物理资产交付流程
+ */
+export const shippingLogs = pgTable(
+  'shipping_logs',
+  {
+    id: text('id').primaryKey(),
+    vaultId: text('vault_id')
+      .notNull()
+      .references(() => digitalVaults.id, { onDelete: 'cascade' }),
+    beneficiaryId: text('beneficiary_id')
+      .notNull()
+      .references(() => beneficiaries.id, { onDelete: 'cascade' }),
+    // 物流信息
+    receiverName: text('receiver_name').notNull(),
+    receiverPhone: text('receiver_phone'),
+    addressLine1: text('address_line1').notNull(),
+    city: text('city').notNull(),
+    zipCode: text('zip_code'),
+    countryCode: text('country_code').default('HKG'),
+    // 运费相关
+    shippingFeeStatus: text('shipping_fee_status').default('not_required'), // not_required, pending_payment, paid, waived
+    estimatedAmount: integer('estimated_amount'), // 预估运费（单位：分）
+    finalAmount: integer('final_amount'), // 最终运费（单位：分）
+    creemPaymentLink: text('creem_payment_link'), // Creem 支付链接
+    creemCheckoutId: text('creem_checkout_id'), // Creem Checkout Session ID
+    // 物流状态
+    status: text('status').default('pending_review'), // pending_review, waiting_payment, ready_to_ship, shipped, delivered, cancelled
+    trackingNumber: text('tracking_number'), // 物流单号
+    carrier: text('carrier'), // 承运商 (SF, FedEx, DHL等)
+    // 时间戳
+    requestedAt: timestamp('requested_at').defaultNow(), // 请求时间（死信开关触发时）
+    reviewedAt: timestamp('reviewed_at'), // 管理员审核时间
+    paymentRequestedAt: timestamp('payment_requested_at'), // 发送支付链接时间
+    paidAt: timestamp('paid_at'), // 支付完成时间
+    shippedAt: timestamp('shipped_at'), // 发货时间
+    deliveredAt: timestamp('delivered_at'), // 送达时间
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+    updatedAt: timestamp('updated_at')
+      .defaultNow()
+      .$onUpdate(() => new Date())
+      .notNull(),
+  },
+  (table) => [
+    // 查询保险箱的物流记录
+    index('idx_shipping_vault').on(table.vaultId),
+    // 查询受益人的物流记录
+    index('idx_shipping_beneficiary').on(table.beneficiaryId),
+    // 按状态查询
+    index('idx_shipping_status').on(table.status),
+    // 按运费状态查询
+    index('idx_shipping_fee_status').on(table.shippingFeeStatus),
+    // 按 Creem Checkout ID 查询
+    index('idx_shipping_creem_checkout').on(table.creemCheckoutId),
+  ]
+);
+
+/**
+ * 邮件通知日志表
+ * 记录所有发送给用户和受益人的邮件
+ */
+export const emailNotifications = pgTable(
+  'email_notifications',
+  {
+    id: text('id').primaryKey(),
+    vaultId: text('vault_id')
+      .notNull()
+      .references(() => digitalVaults.id, { onDelete: 'cascade' }),
+    recipientEmail: text('recipient_email').notNull(),
+    recipientType: text('recipient_type').notNull(), // 'user' | 'beneficiary'
+    emailType: text('email_type').notNull(), // 'heartbeat_warning' | 'heartbeat_reminder' | 'inheritance_notice'
+    subject: text('subject').notNull(),
+    sentAt: timestamp('sent_at').defaultNow().notNull(),
+    openedAt: timestamp('opened_at'), // 邮件打开时间（通过 Resend 追踪）
+    clickedAt: timestamp('clicked_at'), // 链接点击时间
+    status: text('status').default('pending').notNull(), // 'pending' | 'sent' | 'delivered' | 'opened' | 'clicked' | 'failed'
+    errorMessage: text('error_message'),
+    resendMessageId: text('resend_message_id'), // Resend API 返回的 message_id
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+  },
+  (table) => [
+    // 查询保险箱的邮件记录
+    index('idx_email_vault').on(table.vaultId),
+    // 按邮件类型查询
+    index('idx_email_type').on(table.emailType),
+    // 按状态查询
+    index('idx_email_status').on(table.status),
+    // 按收件人查询
+    index('idx_email_recipient').on(table.recipientEmail),
+  ]
+);
+
+/**
+ * 管理员审计日志表
+ * 记录所有管理员操作，确保可追溯性和安全性
+ */
+export const adminAuditLogs = pgTable(
+  'admin_audit_logs',
+  {
+    id: text('id').primaryKey().default('gen_random_uuid()'),
+    adminId: text('admin_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    actionType: text('action_type').notNull(), // 'EXTEND_SUBSCRIPTION', 'RESET_DECRYPTION_COUNT', 'ADD_DECRYPTION_COUNT', 'ADD_BONUS_DECRYPTION_COUNT', 'PAUSE', 'RESET_HEARTBEAT', 'TRIGGER_NOW'
+    vaultId: text('vault_id').references(() => digitalVaults.id, { onDelete: 'set null' }),
+    beneficiaryId: text('beneficiary_id').references(() => beneficiaries.id, { onDelete: 'set null' }),
+    actionData: jsonb('action_data').default({}), // 操作详情（补偿天数、次数等）
+    reason: text('reason'), // 操作原因（必填）
+    beforeState: jsonb('before_state').default({}), // 操作前状态快照
+    afterState: jsonb('after_state').default({}), // 操作后状态快照
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+  },
+  (table) => [
+    // 查询管理员的操作记录
+    index('idx_admin_audit_admin').on(table.adminId),
+    // 查询保险箱的操作记录
+    index('idx_admin_audit_vault').on(table.vaultId),
+    // 按时间排序
+    index('idx_admin_audit_created').on(table.createdAt),
+    // 按操作类型查询
+    index('idx_admin_audit_action').on(table.actionType),
+    // 查询受益人的操作记录
+    index('idx_admin_audit_beneficiary').on(table.beneficiaryId),
+  ]
+);
+
+/**
+ * 系统报警历史记录表
+ * 记录所有系统报警事件
+ */
+export const systemAlerts = pgTable(
+  'system_alerts',
+  {
+    id: text('id').primaryKey().default('gen_random_uuid()'),
+    level: text('level').notNull(), // 'info' | 'warning' | 'critical'
+    type: text('type').notNull(), // 'business' | 'resource' | 'cost'
+    category: text('category').notNull(), // 'triggered_spike', 'email_limit', 'email_failure_rate', 'storage_limit', 'shipping_limit'
+    message: text('message').notNull(),
+    alertData: jsonb('alert_data').default({}), // 报警数据详情
+    resolved: boolean('resolved').default(false), // 是否已解决
+    resolvedAt: timestamp('resolved_at'), // 解决时间
+    resolvedBy: text('resolved_by').references(() => user.id, { onDelete: 'set null' }), // 解决人
+    resolvedNote: text('resolved_note'), // 解决备注
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+  },
+  (table) => [
+    // 查询未解决的报警
+    index('idx_alert_resolved').on(table.resolved),
+    // 按时间排序
+    index('idx_alert_created').on(table.createdAt),
+    // 按级别查询
+    index('idx_alert_level').on(table.level),
+    // 按类型查询
+    index('idx_alert_type').on(table.type),
+    // 按类别查询
+    index('idx_alert_category').on(table.category),
+  ]
+);
