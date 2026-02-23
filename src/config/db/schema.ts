@@ -482,6 +482,8 @@ export const loyaltyStore = pgTable(
       .references(() => user.id, { onDelete: 'cascade' }), // ShipAny user id
     name: text('name'), // 自定义店铺名称（可选）
     shopifyDomain: text('shopify_domain').notNull(), // 例如 myshop.myshopify.com
+    shopifyClientId: text('shopify_client_id'), // Shopify App Client ID
+    shopifyClientSecret: text('shopify_client_secret'), // Shopify App Client Secret（加密存储）
     shopifyAccessToken: text('shopify_access_token').notNull(), // Admin API access token（仅服务端使用）
     shopifyWebhookSecret: text('shopify_webhook_secret').notNull(), // Webhook 校验用密钥
     encryptionKey: text('encryption_key'), // Token 加密密钥
@@ -791,4 +793,4 @@ export const dailyCheckins = pgTable(
   ]
 );
 
-// ============================================
+// ============================================

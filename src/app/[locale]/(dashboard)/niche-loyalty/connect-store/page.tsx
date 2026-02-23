@@ -23,7 +23,10 @@ import { toast } from 'sonner';
 export default function ConnectShopifyPage() {
   const [formData, setFormData] = useState({
     shopDomain: '',
+    clientId: '',
+    clientSecret: '',
     accessToken: '',
+    webhookSecret: '',
   });
   const [verifying, setVerifying] = useState(false);
   const [permissions, setPermissions] = useState<string[]>([]);
@@ -40,8 +43,9 @@ export default function ConnectShopifyPage() {
   }
 
   async function handleVerify() {
-    if (!formData.shopDomain || !formData.accessToken) {
-      toast.error('Please fill in all fields');
+    // 验证必填字段
+    if (!formData.clientId || !formData.clientSecret || !formData.accessToken || !formData.webhookSecret) {
+      toast.error('Please fill in all required fields: Client ID, Client Secret, Access Token, and Webhook Secret');
       return;
     }
 
@@ -257,17 +261,57 @@ export default function ConnectShopifyPage() {
                 <div className="mt-6 space-y-4">
                   <div>
                     <Label htmlFor="shopDomain">
-                      Shopify Domain <span className="text-red-500">*</span>
+                      Shopify Domain <span className="text-gray-400 text-xs">(Optional)</span>
                     </Label>
                     <Input
                       id="shopDomain"
-                      placeholder="your-store.myshopify.com"
+                      placeholder="your-store.myshopify.com (optional)"
                       value={formData.shopDomain}
                       onChange={(e) =>
                         setFormData({ ...formData, shopDomain: e.target.value })
                       }
                       className="mt-2"
                     />
+                    <p className="mt-1 text-xs text-gray-500">
+                      Optional: Your Shopify store domain for reference
+                    </p>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="clientId">
+                      Client ID <span className="text-red-500">*</span>
+                    </Label>
+                    <Input
+                      id="clientId"
+                      placeholder="Enter your Shopify App Client ID"
+                      value={formData.clientId}
+                      onChange={(e) =>
+                        setFormData({ ...formData, clientId: e.target.value })
+                      }
+                      className="mt-2"
+                    />
+                    <p className="mt-1 text-xs text-gray-500">
+                      Found in your Shopify App settings under &quot;Client credentials&quot;
+                    </p>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="clientSecret">
+                      Client Secret <span className="text-red-500">*</span>
+                    </Label>
+                    <Input
+                      id="clientSecret"
+                      type="password"
+                      placeholder="Enter your Shopify App Client Secret"
+                      value={formData.clientSecret}
+                      onChange={(e) =>
+                        setFormData({ ...formData, clientSecret: e.target.value })
+                      }
+                      className="mt-2"
+                    />
+                    <p className="mt-1 text-xs text-gray-500">
+                      Found in your Shopify App settings under &quot;Client credentials&quot;
+                    </p>
                   </div>
 
                   <div>
@@ -284,11 +328,33 @@ export default function ConnectShopifyPage() {
                       }
                       className="mt-2"
                     />
+                    <p className="mt-1 text-xs text-gray-500">
+                      Click &quot;Reveal token once&quot; in the API credentials tab
+                    </p>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="webhookSecret">
+                      Webhooks Secret <span className="text-red-500">*</span>
+                    </Label>
+                    <Input
+                      id="webhookSecret"
+                      type="password"
+                      placeholder="Enter your Shopify Webhooks Secret"
+                      value={formData.webhookSecret}
+                      onChange={(e) =>
+                        setFormData({ ...formData, webhookSecret: e.target.value })
+                      }
+                      className="mt-2"
+                    />
+                    <p className="mt-1 text-xs text-gray-500">
+                      Used to verify webhook authenticity from Shopify
+                    </p>
                   </div>
 
                   <Button
                     onClick={handleVerify}
-                    disabled={verifying || !formData.shopDomain || !formData.accessToken}
+                    disabled={verifying || !formData.clientId || !formData.clientSecret || !formData.accessToken || !formData.webhookSecret}
                     className="w-full"
                     size="lg"
                   >

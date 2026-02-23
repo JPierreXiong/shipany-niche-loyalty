@@ -13,3 +13,5 @@ fs.writeFileSync(filePath, cleanedContent, 'utf8');
 console.log('✅ Schema.ts cleaned! Removed Digital Heirloom tables.');
 console.log(`Original lines: ${lines.length}, New lines: ${cleanedLines.length}`);
 
+
+

@@ -17,7 +17,19 @@ export async function POST(req: NextRequest) {
     const user = authResult.user;
 
     const body = await req.json();
-    const { shopDomain, accessToken }: { shopDomain?: string; accessToken?: string } = body || {};
+    const { 
+      shopDomain, 
+      clientId, 
+      clientSecret, 
+      accessToken, 
+      webhookSecret 
+    }: { 
+      shopDomain?: string; 
+      clientId?: string; 
+      clientSecret?: string; 
+      accessToken?: string; 
+      webhookSecret?: string; 
+    } = body || {};
 
     if (!shopDomain || !accessToken) {
       return respErr('Missing shop domain or access token', 400);

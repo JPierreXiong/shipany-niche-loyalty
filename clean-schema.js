@@ -25,3 +25,5 @@ console.log('✅ Schema.ts cleaned successfully!');
 console.log(`Original lines: ${lines.length}`);
 console.log(`Cleaned lines: ${finalLines.length}`);
 
+
+

@@ -18,53 +18,89 @@ export async function POST(req: NextRequest) {
     const user = authResult.user;
 
     const body = await req.json();
-    const { shopDomain, accessToken }: { shopDomain?: string; accessToken?: string } = body || {};
+    const { 
+      shopDomain, 
+      clientId, 
+      clientSecret, 
+      accessToken, 
+      webhookSecret 
+    }: { 
+      shopDomain?: string; 
+      clientId?: string; 
+      clientSecret?: string; 
+      accessToken?: string; 
+      webhookSecret?: string; 
+    } = body || {};
 
-    if (!shopDomain || !accessToken) {
-      return respErr('Missing shop domain or access token', 400);
+    // 验证必填字段：clientId, clientSecret, accessToken, webhookSecret
+    if (!clientId || !clientSecret || !accessToken || !webhookSecret) {
+      return respErr('Missing required fields: clientId, clientSecret, accessToken, webhookSecret', 400);
     }
 
-    // Clean domain
-    const cleanDomain = shopDomain.replace('https://', '').replace('http://', '');
-    const fullDomain = cleanDomain.includes('.myshopify.com') 
-      ? cleanDomain 
-      : `${cleanDomain}.myshopify.com`;
+    // shopDomain 是可选的，但强烈建议提供以便验证
+    let fullDomain = '';
+    let shop: any = null;
 
-    // Verify token by calling Shopify API
-    const shopResponse = await fetch(`https://${fullDomain}/admin/api/2024-01/shop.json`, {
-      headers: {
-        'X-Shopify-Access-Token': accessToken,
-        'Content-Type': 'application/json',
-      },
-    });
+    if (shopDomain && shopDomain.trim()) {
+      // Clean domain
+      const cleanDomain = shopDomain.replace('https://', '').replace('http://', '').trim();
+      fullDomain = cleanDomain.includes('.myshopify.com') 
+        ? cleanDomain 
+        : `${cleanDomain}.myshopify.com`;
 
-    if (!shopResponse.ok) {
-      return respErr('Invalid credentials. Please check your access token.', 401);
+      // Verify token by calling Shopify API
+      try {
+        const shopResponse = await fetch(`https://${fullDomain}/admin/api/2024-01/shop.json`, {
+          headers: {
+            'X-Shopify-Access-Token': accessToken,
+            'Content-Type': 'application/json',
+          },
+        });
+
+        if (!shopResponse.ok) {
+          return respErr('Invalid credentials or shop domain. Please check your access token and domain.', 401);
+        }
+
+        const shopData = await shopResponse.json();
+        shop = shopData.shop;
+        
+        // 使用从 API 返回的真实域名
+        fullDomain = shop.myshopify_domain || shop.domain || fullDomain;
+      } catch (error) {
+        return respErr('Failed to connect to Shopify. Please check your shop domain and access token.', 500);
+      }
+    } else {
+      // 如果没有提供 domain，使用一个默认值或生成一个临时标识
+      // 注意：没有 domain 的情况下，某些 Shopify API 调用会失败
+      fullDomain = `store-${user.id}.myshopify.com`; // 临时域名
+      shop = {
+        name: 'Shopify Store',
+        myshopify_domain: fullDomain,
+      };
     }
 
-    const shopData = await shopResponse.json();
-    const shop = shopData.shop;
-
-    // Get access scopes
-    const scopesResponse = await fetch(`https://${fullDomain}/admin/oauth/access_scopes.json`, {
-      headers: {
-        'X-Shopify-Access-Token': accessToken,
-        'Content-Type': 'application/json',
-      },
-    });
-
+    // Get access scopes (只在有真实 domain 时调用)
     let scopes: string[] = [];
-    if (scopesResponse.ok) {
-      const scopesData = await scopesResponse.json();
-      scopes = scopesData.access_scopes?.map((s: any) => s.handle) || [];
-    }
+    if (shopDomain && shopDomain.trim()) {
+      const scopesResponse = await fetch(`https://${fullDomain}/admin/oauth/access_scopes.json`, {
+        headers: {
+          'X-Shopify-Access-Token': accessToken,
+          'Content-Type': 'application/json',
+        },
+      });
 
-    // Check required scopes
-    const requiredScopes = ['read_customers', 'read_orders', 'write_price_rules'];
-    const missingScopes = requiredScopes.filter(scope => !scopes.includes(scope));
+      if (scopesResponse.ok) {
+        const scopesData = await scopesResponse.json();
+        scopes = scopesData.access_scopes?.map((s: any) => s.handle) || [];
+      }
 
-    if (missingScopes.length > 0) {
-      return respErr(`Missing required permissions: ${missingScopes.join(', ')}`, 403);
+      // Check required scopes
+      const requiredScopes = ['read_customers', 'read_orders', 'write_price_rules'];
+      const missingScopes = requiredScopes.filter(scope => !scopes.includes(scope));
+
+      if (missingScopes.length > 0) {
+        return respErr(`Missing required permissions: ${missingScopes.join(', ')}`, 403);
+      }
     }
 
     // Encrypt access token
@@ -73,8 +109,10 @@ export async function POST(req: NextRequest) {
     let encryptedToken = cipher.update(accessToken, 'utf8', 'hex');
     encryptedToken += cipher.final('hex');
 
-    // Generate webhook secret
-    const webhookSecret = crypto.randomBytes(32).toString('hex');
+    // Encrypt client secret
+    const clientSecretCipher = crypto.createCipher('aes-256-cbc', encryptionKey);
+    let encryptedClientSecret = clientSecretCipher.update(clientSecret, 'utf8', 'hex');
+    encryptedClientSecret += clientSecretCipher.final('hex');
 
     const now = new Date();
 
@@ -94,8 +132,11 @@ export async function POST(req: NextRequest) {
         .update(schema.loyaltyStore)
         .set({
           userId: user.id,
+          shopifyClientId: clientId,
+          shopifyClientSecret: encryptedClientSecret,
           shopifyAccessToken: encryptedToken,
           shopifyWebhookSecret: webhookSecret,
+          encryptionKey: encryptionKey,
           status: 'active',
           updatedAt: now,
         })
@@ -108,8 +149,11 @@ export async function POST(req: NextRequest) {
         userId: user.id,
         name: shop.name || fullDomain.replace('.myshopify.com', ''),
         shopifyDomain: fullDomain,
+        shopifyClientId: clientId,
+        shopifyClientSecret: encryptedClientSecret,
         shopifyAccessToken: encryptedToken,
         shopifyWebhookSecret: webhookSecret,
+        encryptionKey: encryptionKey,
         status: 'active',
         createdAt: now,
         updatedAt: now,
