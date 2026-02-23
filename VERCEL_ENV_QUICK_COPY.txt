@@ -6,7 +6,7 @@
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-✅ 必需配置（9个环境变量）⭐ 新增 2 个 Webhook 变量
+✅ 必需配置（10个环境变量）⭐ 新增 APP_URL（修复 400 错误）
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -52,7 +52,12 @@ https://glownicheloyalty.vercel.app/api/webhooks/creem
 
 9️⃣ CREEM_WEBHOOK_SECRET ⭐ 新增
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-whsec_4O40a7be2FZFAdJCZCSKHQ
+whsec_6eSG4BSnIuqMtGV0yEqlF4
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔟 APP_URL ⚠️ 关键变量（修复 400 错误）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+https://glownicheloyalty.vercel.app
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -67,7 +72,8 @@ CREEM_ENABLED=true
 DEFAULT_PAYMENT_PROVIDER=creem
 CREEM_PRODUCT_IDS={"glow_base":"prod_5bo10kkVzObfuZIjUglgI0","glow_pro":"prod_1lQWMwrdWZFzo6AgpVcCc7"}
 CREEM_WEBHOOK_URL=https://glownicheloyalty.vercel.app/api/webhooks/creem
-CREEM_WEBHOOK_SECRET=whsec_4O40a7be2FZFAdJCZCSKHQ
+CREEM_WEBHOOK_SECRET=whsec_6eSG4BSnIuqMtGV0yEqlF4
+APP_URL=https://glownicheloyalty.vercel.app
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   重要提示
@@ -79,6 +85,13 @@ CREEM_WEBHOOK_SECRET=whsec_4O40a7be2FZFAdJCZCSKHQ
     ✅ Development
 
 ⚠️  配置完成后必须重新部署项目才能生效！
+
+⚠️  APP_URL 变量说明（关键）：
+    - 这是修复 Creem 400 错误的关键变量
+    - 用于生成 success_url 和 cancel_url
+    - 必须是完整的 URL，不能有尾部斜杠
+    - 格式：https://your-domain.com（正确）
+    - 错误：https://your-domain.com/（错误，会导致 URL 格式不正确）
 
 ⚠️  Webhook 变量说明：
     - CREEM_WEBHOOK_URL: Creem 发送支付通知的回调地址
@@ -116,6 +129,8 @@ https://www.creem.io/test/payment/prod_1lQWMwrdWZFzo6AgpVcCc7
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 更新时间: 2024-02-23
-更新内容: 添加 Webhook 配置（CREEM_WEBHOOK_URL, CREEM_WEBHOOK_SECRET）
+更新内容: 
+  - 更新 Webhook Secret: whsec_6eSG4BSnIuqMtGV0yEqlF4
+  - 添加 APP_URL 变量（修复 400 错误的关键）
 
 
