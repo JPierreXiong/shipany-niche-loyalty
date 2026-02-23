@@ -10,58 +10,72 @@
 ⚠️  问题原因：Vercel 环境变量未配置或未生效
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  🚀 立即行动：在 VERCEL 配置这些环境变量
+  🚀 立即行动：在 VERCEL 配置这些环境变量（共 9 个）
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 📍 访问：https://vercel.com/your-account/glownicheloyalty/settings/environment-variables
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-变量 1/7: CREEM_API_KEY
+变量 1/9: CREEM_API_KEY
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 creem_test_1i7654OnZ1pk67vqY87wS6
 
 环境: ✅ Production  ✅ Preview  ✅ Development
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-变量 2/7: CREEM_ENVIRONMENT
+变量 2/9: CREEM_ENVIRONMENT
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 sandbox
 
 环境: ✅ Production  ✅ Preview  ✅ Development
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-变量 3/7: CREEM_PRODUCT_ID_BASE
+变量 3/9: CREEM_PRODUCT_ID_BASE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 prod_5bo10kkVzObfuZIjUglgI0
 
 环境: ✅ Production  ✅ Preview  ✅ Development
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-变量 4/7: CREEM_PRODUCT_ID_PRO
+变量 4/9: CREEM_PRODUCT_ID_PRO
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 prod_1lQWMwrdWZFzo6AgpVcCc7
 
 环境: ✅ Production  ✅ Preview  ✅ Development
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-变量 5/7: CREEM_ENABLED
+变量 5/9: CREEM_ENABLED
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 true
 
 环境: ✅ Production  ✅ Preview  ✅ Development
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-变量 6/7: DEFAULT_PAYMENT_PROVIDER
+变量 6/9: DEFAULT_PAYMENT_PROVIDER
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 creem
 
 环境: ✅ Production  ✅ Preview  ✅ Development
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-变量 7/7: CREEM_PRODUCT_IDS
+变量 7/9: CREEM_PRODUCT_IDS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {"glow_base":"prod_5bo10kkVzObfuZIjUglgI0","glow_pro":"prod_1lQWMwrdWZFzo6AgpVcCc7"}
+
+环境: ✅ Production  ✅ Preview  ✅ Development
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+变量 8/9: CREEM_WEBHOOK_URL ⭐ 新增
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+https://glownicheloyalty.vercel.app/api/webhooks/creem
+
+环境: ✅ Production  ✅ Preview  ✅ Development
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+变量 9/9: CREEM_WEBHOOK_SECRET ⭐ 新增
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+whsec_4O40a7be2FZFAdJCZCSKHQ
 
 环境: ✅ Production  ✅ Preview  ✅ Development
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -85,21 +99,41 @@ creem
 4. 清除浏览器缓存后测试
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  📋 Webhook 配置说明
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⭐ CREEM_WEBHOOK_URL
+   用途：Creem 发送支付通知的回调地址
+   格式：https://your-domain.com/api/webhooks/creem
+   
+⭐ CREEM_WEBHOOK_SECRET
+   用途：验证 Webhook 请求的签名密钥
+   格式：whsec_xxxxx
+   获取：从 Creem Dashboard > Settings > Webhooks
+
+注意：这两个变量用于接收支付成功/失败的通知，必须配置才能自动更新订单状态！
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   ✅ 验证步骤
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 配置完成后，按以下步骤验证：
 
-1️⃣ 访问 Pricing 页面
+1️⃣ 访问诊断页面（新增）
+   https://glownicheloyalty.vercel.app/debug/check-env
+   
+   这个页面会自动检查所有环境变量是否正确配置
+
+2️⃣ 访问 Pricing 页面
    https://glownicheloyalty.vercel.app/pricing
 
-2️⃣ 打开浏览器开发者工具（F12）
+3️⃣ 打开浏览器开发者工具（F12）
 
-3️⃣ 切换到 Network 标签
+4️⃣ 切换到 Network 标签
 
-4️⃣ 点击 "Subscribe to Studio" 按钮
+5️⃣ 点击 "Subscribe to Studio" 按钮
 
-5️⃣ 查看 /api/payment/checkout 请求
+6️⃣ 查看 /api/payment/checkout 请求
 
 预期结果：
 ✅ Status: 200 OK
@@ -107,6 +141,7 @@ creem
 ✅ 自动跳转到 Creem checkout 页面
 
 如果仍然是 400 错误：
+❌ 访问 /debug/check-env 查看哪些变量未配置
 ❌ 检查 Vercel 环境变量是否正确保存
 ❌ 确认已重新部署
 ❌ 查看 Vercel Logs 中的详细错误
@@ -134,11 +169,12 @@ creem
 
 如果配置后仍有问题，请提供：
 1. Vercel 环境变量页面截图
-2. Vercel Logs 中的错误信息
-3. 浏览器 Network 标签的请求/响应截图
+2. /debug/check-env 页面截图
+3. Vercel Logs 中的错误信息
+4. 浏览器 Network 标签的请求/响应截图
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 生成时间: 2024-02-23
 状态: ✅ 配置已验证，等待 Vercel 部署
-
+更新: 添加 Webhook 配置
