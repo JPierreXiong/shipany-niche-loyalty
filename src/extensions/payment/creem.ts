@@ -284,14 +284,55 @@ export class CreemProvider implements PaymentProvider {
       config.body = JSON.stringify(data);
     }
 
+    // Debug: Log request details
+    console.log('=== Creem API Request ===');
+    console.log('URL:', url);
+    console.log('Method:', method);
+    console.log('Headers:', { ...headers, 'x-api-key': headers['x-api-key'].substring(0, 15) + '...' });
+    console.log('Payload:', JSON.stringify(data, null, 2));
+
     const response = await fetch(url, config);
+    
     if (!response.ok) {
-      throw new Error(
-        `request creem api failed with status: ${response.status}`
-      );
+      // Capture detailed error response
+      let errorDetail = '';
+      try {
+        const errorBody = await response.text();
+        errorDetail = errorBody;
+        console.error('=== Creem API Error ===');
+        console.error('Status:', response.status);
+        console.error('Status Text:', response.statusText);
+        console.error('Error Body:', errorBody);
+        
+        // Try to parse as JSON for better error message
+        try {
+          const errorJson = JSON.parse(errorBody);
+          console.error('Error JSON:', JSON.stringify(errorJson, null, 2));
+          
+          // Extract meaningful error message
+          const errorMessage = errorJson.error?.message || errorJson.message || errorBody;
+          throw new Error(
+            `Creem API Error (${response.status}): ${errorMessage}`
+          );
+        } catch (parseError) {
+          // If not JSON, throw the raw error
+          throw new Error(
+            `Creem API Error (${response.status}): ${errorBody || response.statusText}`
+          );
+        }
+      } catch (textError) {
+        console.error('Failed to read error body:', textError);
+        throw new Error(
+          `request creem api failed with status: ${response.status}`
+        );
+      }
     }
 
-    return await response.json();
+    const result = await response.json();
+    console.log('=== Creem API Response ===');
+    console.log('Success:', JSON.stringify(result, null, 2));
+    
+    return result;
   }
 
   private mapCreemEventType(eventType: string): PaymentEventType {
