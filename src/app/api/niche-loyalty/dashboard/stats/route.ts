@@ -3,7 +3,7 @@ import { db } from '@/core/db';
 import * as schema from '@/config/db/schema';
 import { requireAuth } from '@/shared/lib/api-auth';
 import { respData, respErr } from '@/shared/lib/resp';
-import { eq, and, count } from 'drizzle-orm';
+import { eq, and } from 'drizzle-orm';
 
 // GET /api/niche-loyalty/dashboard/stats
 // Get dashboard statistics
@@ -33,9 +33,9 @@ export async function GET(req: NextRequest) {
 
     const storeId = stores[0].id;
 
-    // Get total members
-    const memberCount = await db()
-      .select({ count: count() })
+    // Get total members - use array length instead of SQL COUNT
+    const members = await db()
+      .select()
       .from(schema.loyaltyMember)
       .where(
         and(
@@ -45,8 +45,8 @@ export async function GET(req: NextRequest) {
       );
 
     // Get active cards
-    const cardCount = await db()
-      .select({ count: count() })
+    const cards = await db()
+      .select()
       .from(schema.loyaltyDiscountCard)
       .where(
         and(
@@ -56,8 +56,8 @@ export async function GET(req: NextRequest) {
       );
 
     // Get redemption stats
-    const totalCodes = await db()
-      .select({ count: count() })
+    const allCodes = await db()
+      .select()
       .from(schema.loyaltyDiscountCode)
       .innerJoin(
         schema.loyaltyCampaign,
@@ -65,8 +65,8 @@ export async function GET(req: NextRequest) {
       )
       .where(eq(schema.loyaltyCampaign.storeId, storeId));
 
-    const redeemedCodes = await db()
-      .select({ count: count() })
+    const redeemedCodesData = await db()
+      .select()
       .from(schema.loyaltyDiscountCode)
       .innerJoin(
         schema.loyaltyCampaign,
@@ -79,27 +79,26 @@ export async function GET(req: NextRequest) {
         )
       );
 
-    const totalCodesCount = Number(totalCodes[0]?.count) || 0;
-    const redeemedCodesCount = Number(redeemedCodes[0]?.count) || 0;
+    const totalCodesCount = allCodes.length;
+    const redeemedCodesCount = redeemedCodesData.length;
     const redemptionRate =
       totalCodesCount > 0
         ? Math.round((redeemedCodesCount / totalCodesCount) * 100)
         : 0;
 
-    // Get total revenue from redeemed orders (sum may be null if no records)
-    const revenueResult = await db()
-      .select({ 
-        total: count(schema.loyaltyRedeemLog.orderAmount)
-      })
+    // Get total revenue from redeemed orders
+    const revenueData = await db()
+      .select()
       .from(schema.loyaltyRedeemLog)
       .where(eq(schema.loyaltyRedeemLog.storeId, storeId));
 
-    // For now, set revenue to 0 since we need proper sum aggregation
-    const totalRevenue = 0;
+    const totalRevenue = Math.round(
+      revenueData.reduce((sum: number, log: any) => sum + (log.orderAmount || 0), 0) / 100
+    );
 
     return respData({
-      totalMembers: Number(memberCount[0]?.count) || 0,
-      activeCards: Number(cardCount[0]?.count) || 0,
+      totalMembers: members.length,
+      activeCards: cards.length,
       redemptionRate,
       totalRevenue,
     });
