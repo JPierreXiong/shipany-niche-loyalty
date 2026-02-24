@@ -59,6 +59,7 @@ export async function GET(req: NextRequest) {
         id: store.id,
         name: store.name,
         shopifyDomain: store.shopifyDomain,
+        shopifyClientId: store.shopifyClientId, // Include Client ID (safe to expose)
         status: store.status,
         memberCount,
         campaignCount,

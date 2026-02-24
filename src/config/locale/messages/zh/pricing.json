@@ -54,14 +54,14 @@
         "label": "最受欢迎",
         "features_title": "种子版的所有功能，外加",
         "features": [
-          "50 至 250 位会员",
+          "最多 50 位会员",
           "✨ 完整品牌定制",
           "自定义颜色和移除 Logo",
           "自动数字化交付",
-          "通过 Resend 发送邮件/短信",
+          "通过 Resend 发送邮件",
           "优先支持（24小时响应）",
           "基础分析仪表板",
-          "追踪钱包添加率"
+          "Apple Wallet 集成"
         ],
         "interval": "month",
         "amount": 1990,
@@ -78,7 +78,7 @@
         },
         "product_id": "glow-base-monthly",
         "product_name": "Glow 基础版",
-        "payment_product_id": "prod_1lQWMwrdWZFzo6AgpVcCc7",
+        "payment_product_id": "prod_5bo10kkVzObfuZIjUglgI0",
         "group": "monthly",
         "plan_name": "基础版"
       },
@@ -88,11 +88,11 @@
         "label": "规模化",
         "features_title": "基础版的所有功能，外加",
         "features": [
-          "250+ 会员（无限制）",
-          "✨ 无限 Glow 广播",
+          "最多 250 位会员",
+          "✨ 无限活动",
           "高级会员细分",
-          "自定义域名（club.yourbrand.com）",
-          "白标 CSS 定制",
+          "高级定位功能",
+          "白标选项",
           "抢先体验新功能",
           "VIP 礼宾设置",
           "1对1 专属成功经理",
@@ -113,7 +113,7 @@
         },
         "product_id": "glow-pro-monthly",
         "product_name": "Glow 专业版",
-        "payment_product_id": "prod_5bo10kkVzObfuZIjUglgI0",
+        "payment_product_id": "prod_1lQWMwrdWZFzo6AgpVcCc7",
         "group": "monthly",
         "plan_name": "专业版"
       }
@@ -126,26 +126,20 @@
       {
         "name": "会员容量",
         "seed": "最多 50",
-        "base": "50 – 250",
-        "pro": "250+（无限制）"
+        "base": "最多 50",
+        "pro": "最多 250"
       },
       {
         "name": "品牌定制",
         "seed": "Glow 品牌",
         "base": "白标（您的品牌）",
-        "pro": "自定义域名和 CSS"
+        "pro": "完全定制"
       },
       {
         "name": "自动化",
         "seed": "手动",
         "base": "自动触发",
         "pro": "高级逻辑和流程"
-      },
-      {
-        "name": "SEO 影响",
-        "seed": "低",
-        "base": "中（品牌搜索）",
-        "pro": "高（域名权威）"
       },
       {
         "name": "支持",

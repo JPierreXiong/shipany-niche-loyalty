@@ -42,26 +42,26 @@ export async function POST(req: NextRequest) {
     let shop: any = null;
 
     if (shopDomain && shopDomain.trim()) {
-      // Clean domain
+    // Clean domain
       const cleanDomain = shopDomain.replace('https://', '').replace('http://', '').trim();
       fullDomain = cleanDomain.includes('.myshopify.com') 
-        ? cleanDomain 
-        : `${cleanDomain}.myshopify.com`;
+      ? cleanDomain 
+      : `${cleanDomain}.myshopify.com`;
 
-      // Verify token by calling Shopify API
+    // Verify token by calling Shopify API
       try {
-        const shopResponse = await fetch(`https://${fullDomain}/admin/api/2024-01/shop.json`, {
-          headers: {
-            'X-Shopify-Access-Token': accessToken,
-            'Content-Type': 'application/json',
-          },
-        });
+    const shopResponse = await fetch(`https://${fullDomain}/admin/api/2024-01/shop.json`, {
+      headers: {
+        'X-Shopify-Access-Token': accessToken,
+        'Content-Type': 'application/json',
+      },
+    });
 
-        if (!shopResponse.ok) {
+    if (!shopResponse.ok) {
           return respErr('Invalid credentials or shop domain. Please check your access token and domain.', 401);
-        }
+    }
 
-        const shopData = await shopResponse.json();
+    const shopData = await shopResponse.json();
         shop = shopData.shop;
         
         // 使用从 API 返回的真实域名
@@ -82,24 +82,24 @@ export async function POST(req: NextRequest) {
     // Get access scopes (只在有真实 domain 时调用)
     let scopes: string[] = [];
     if (shopDomain && shopDomain.trim()) {
-      const scopesResponse = await fetch(`https://${fullDomain}/admin/oauth/access_scopes.json`, {
-        headers: {
-          'X-Shopify-Access-Token': accessToken,
-          'Content-Type': 'application/json',
-        },
-      });
+    const scopesResponse = await fetch(`https://${fullDomain}/admin/oauth/access_scopes.json`, {
+      headers: {
+        'X-Shopify-Access-Token': accessToken,
+        'Content-Type': 'application/json',
+      },
+    });
 
-      if (scopesResponse.ok) {
-        const scopesData = await scopesResponse.json();
-        scopes = scopesData.access_scopes?.map((s: any) => s.handle) || [];
-      }
+    if (scopesResponse.ok) {
+      const scopesData = await scopesResponse.json();
+      scopes = scopesData.access_scopes?.map((s: any) => s.handle) || [];
+    }
 
-      // Check required scopes
-      const requiredScopes = ['read_customers', 'read_orders', 'write_price_rules'];
-      const missingScopes = requiredScopes.filter(scope => !scopes.includes(scope));
+    // Check required scopes
+    const requiredScopes = ['read_customers', 'read_orders', 'write_price_rules'];
+    const missingScopes = requiredScopes.filter(scope => !scopes.includes(scope));
 
-      if (missingScopes.length > 0) {
-        return respErr(`Missing required permissions: ${missingScopes.join(', ')}`, 403);
+    if (missingScopes.length > 0) {
+      return respErr(`Missing required permissions: ${missingScopes.join(', ')}`, 403);
       }
     }
 

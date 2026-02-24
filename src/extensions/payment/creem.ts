@@ -322,16 +322,16 @@ export class CreemProvider implements PaymentProvider {
         }
       } catch (textError) {
         console.error('Failed to read error body:', textError);
-        throw new Error(
-          `request creem api failed with status: ${response.status}`
-        );
-      }
+      throw new Error(
+        `request creem api failed with status: ${response.status}`
+      );
+    }
     }
 
     const result = await response.json();
     console.log('=== Creem API Response ===');
     console.log('Success:', JSON.stringify(result, null, 2));
-    
+
     return result;
   }
 

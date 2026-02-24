@@ -532,6 +532,8 @@ export const loyaltyMember = pgTable(
       .references(() => loyaltyStore.id, { onDelete: 'cascade' }),
     email: text('email').notNull(),
     name: text('name'),
+    discountCode: text('discount_code'), // 唯一折扣码（用于 Apple Wallet）
+    passUrl: text('pass_url'), // Apple Wallet .pkpass 文件 URL（存储在 Vercel Blob）
     // 会员来源：import / shopify_sync / qr
     source: text('source').default('import').notNull(),
     status: text('status').default('active').notNull(), // active / blocked
@@ -546,6 +548,7 @@ export const loyaltyMember = pgTable(
     // 保证同一店铺下 Email 唯一
     index('idx_loyalty_member_store').on(table.storeId),
     index('idx_loyalty_member_store_email').on(table.storeId, table.email),
+    index('idx_loyalty_member_discount_code').on(table.discountCode),
   ]
 );
 

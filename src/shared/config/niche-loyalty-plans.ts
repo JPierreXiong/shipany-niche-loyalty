@@ -36,6 +36,7 @@ export const NICHE_LOYALTY_PLANS = {
       emailSupport: true,
       analytics: true,
       advancedTargeting: false,
+      appleWallet: true,
     },
     limits: {
       memberLimit: 50,
@@ -56,6 +57,8 @@ export const NICHE_LOYALTY_PLANS = {
       emailSupport: true,
       analytics: true,
       advancedTargeting: true,
+      appleWallet: true,
+      whiteLabel: true,
     },
     limits: {
       memberLimit: 250,
@@ -97,6 +100,12 @@ export function canAccessFeature(
 ): boolean {
   return getPlanLevel(currentPlan) >= getPlanLevel(requiredPlan);
 }
+
+
+
+
+
+
 
 
 

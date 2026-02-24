@@ -54,14 +54,14 @@
         "label": "Most Popular",
         "features_title": "Everything in Seed, plus",
         "features": [
-          "50 to 250 members",
+          "Up to 50 members",
           "✨ Full Brand Customization",
           "Custom hex codes & logo removal",
           "Automated Digital Delivery",
-          "Email/SMS triggers via Resend",
+          "Email triggers via Resend",
           "Priority Support (24h response)",
           "Basic Analytics Dashboard",
-          "Track wallet add rates"
+          "Apple Wallet Integration"
         ],
         "interval": "month",
         "amount": 1990,
@@ -78,7 +78,7 @@
         },
         "product_id": "glow-base-monthly",
         "product_name": "Glow Base",
-        "payment_product_id": "prod_1lQWMwrdWZFzo6AgpVcCc7",
+        "payment_product_id": "prod_5bo10kkVzObfuZIjUglgI0",
         "group": "monthly",
         "plan_name": "Base"
       },
@@ -88,11 +88,11 @@
         "label": "Scale",
         "features_title": "Everything in Base, plus",
         "features": [
-          "250+ members (Unlimited)",
-          "✨ Unlimited Glow Broadcasts",
+          "Up to 250 members",
+          "✨ Unlimited Campaigns",
           "Advanced Member Segmentation",
-          "Custom Domain (club.yourbrand.com)",
-          "White-label CSS customization",
+          "Advanced Targeting",
+          "White-label Option",
           "Early Access to new features",
           "VIP Concierge Setup",
           "1-on-1 dedicated success manager",
@@ -113,7 +113,7 @@
         },
         "product_id": "glow-pro-monthly",
         "product_name": "Glow Pro",
-        "payment_product_id": "prod_5bo10kkVzObfuZIjUglgI0",
+        "payment_product_id": "prod_1lQWMwrdWZFzo6AgpVcCc7",
         "group": "monthly",
         "plan_name": "Pro"
       }
@@ -126,26 +126,20 @@
       {
         "name": "Member Capacity",
         "seed": "Up to 50",
-        "base": "50 – 250",
-        "pro": "250+ (Unlimited)"
+        "base": "Up to 50",
+        "pro": "Up to 250"
       },
       {
         "name": "Branding",
         "seed": "Glow Branded",
         "base": "White-label (Your Brand)",
-        "pro": "Custom Domain & CSS"
+        "pro": "Full Customization"
       },
       {
         "name": "Automation",
         "seed": "Manual",
         "base": "Automated Triggers",
         "pro": "Advanced Logic & Flows"
-      },
-      {
-        "name": "SEO Impact",
-        "seed": "Low",
-        "base": "Medium (Brand Search)",
-        "pro": "High (Domain Authority)"
       },
       {
         "name": "Support",
