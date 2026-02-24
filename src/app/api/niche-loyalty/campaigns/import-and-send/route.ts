@@ -1,8 +1,3 @@
-/**
- * Batch Import Members and Send Passes API
- * POST /api/niche-loyalty/campaigns/import-and-send
- */
-
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/core/db';
 import { loyaltyStore, loyaltyMember, loyaltyCampaign } from '@/config/db/schema';
@@ -12,8 +7,8 @@ import {
   generateDiscountCode, 
   generateAndUploadPass 
 } from '@/shared/services/pass-service';
-import { getPlanConfig } from '@/shared/config/niche-loyalty-plans';
 import { requireAuth } from '@/shared/lib/api-auth';
+import { checkMemberLimit } from '@/shared/lib/niche-loyalty-plan-limits';
 
 interface ImportMemberData {
   email: string;
@@ -80,27 +75,19 @@ export async function POST(request: NextRequest) {
 
     const campaign = campaigns[0];
 
-    // Check plan limits
-    const userPlan = (user as any).planType || 'free';
-    const planConfig = getPlanConfig(userPlan);
+    // Check plan limits using the new limit check function
+    const limitCheck = await checkMemberLimit(userId, store.id, members.length);
     
-    // Get current member count
-    const existingMembers = await db()
-      .select()
-      .from(loyaltyMember)
-      .where(eq(loyaltyMember.storeId, store.id));
-
-    const newMemberCount = existingMembers.length + members.length;
-    
-    if (newMemberCount > planConfig.limits.memberLimit) {
+    if (!limitCheck.allowed) {
       return NextResponse.json(
         { 
           success: false, 
-          message: `Plan limit exceeded. Your ${planConfig.name} plan allows up to ${planConfig.limits.memberLimit} members. Please upgrade.`,
+          message: `Plan limit exceeded. Your plan allows up to ${limitCheck.limit} members. Current: ${limitCheck.current}, Attempting to add: ${members.length}. Please upgrade.`,
           data: {
-            currentCount: existingMembers.length,
+            currentCount: limitCheck.current,
             attemptedCount: members.length,
-            limit: planConfig.limits.memberLimit,
+            limit: limitCheck.limit,
+            remaining: limitCheck.remaining,
           }
         },
         { status: 403 }

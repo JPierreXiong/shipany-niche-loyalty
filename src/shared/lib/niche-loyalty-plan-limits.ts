@@ -11,6 +11,7 @@ import {
   PlanType,
   PlanConfig,
 } from '@/shared/config/niche-loyalty-plans';
+import { getUserActivePlan } from '@/shared/models/subscription';
 
 /**
  * 限制检查结果
@@ -25,20 +26,10 @@ export interface LimitCheckResult {
 
 /**
  * 获取用户的计划类型
+ * 从订阅表获取实时状态，而不是依赖 user.planType
  */
 export async function getUserPlanType(userId: string): Promise<PlanType> {
-  const users = await db()
-    .select()
-    .from(schema.user)
-    .where(eq(schema.user.id, userId))
-    .limit(1);
-
-  if (!users.length) {
-    return 'free';
-  }
-
-  const planType = users[0].planType as PlanType | null;
-  return planType || 'free';
+  return await getUserActivePlan(userId);
 }
 
 /**

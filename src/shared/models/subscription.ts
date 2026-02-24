@@ -193,3 +193,32 @@ export async function getSubscriptionsCount({
 
   return result?.count || 0;
 }
+
+/**
+ * Get user's active plan type based on subscription status
+ * Returns 'free' if no active subscription found
+ */
+export async function getUserActivePlan(userId: string): Promise<'free' | 'base' | 'pro'> {
+  const activeSubscription = await getCurrentSubscription(userId);
+  
+  if (!activeSubscription) {
+    return 'free';
+  }
+  
+  // Check if subscription is expired
+  const now = new Date();
+  if (activeSubscription.currentPeriodEnd && activeSubscription.currentPeriodEnd < now) {
+    return 'free';
+  }
+  
+  // Extract plan type from plan name
+  const planName = activeSubscription.planName?.toLowerCase() || '';
+  if (planName.includes('pro')) {
+    return 'pro';
+  }
+  if (planName.includes('base')) {
+    return 'base';
+  }
+  
+  return 'free';
+}

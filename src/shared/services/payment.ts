@@ -35,6 +35,7 @@ import {
   UpdateSubscription,
   updateSubscriptionBySubscriptionNo,
 } from '../models/subscription';
+import { updateUser } from '../models/user';
 
 /**
  * get payment service with configs
@@ -111,6 +112,19 @@ export async function getPaymentService(): Promise<PaymentManager> {
     paymentService = getPaymentServiceWithConfigs(configs);
   }
   return paymentService;
+}
+
+/**
+ * Get plan type from subscription plan name
+ */
+function getPlanTypeFromPlanName(planName: string | null | undefined): string {
+  if (!planName) return 'free';
+  
+  const lowerPlanName = planName.toLowerCase();
+  if (lowerPlanName.includes('pro')) return 'pro';
+  if (lowerPlanName.includes('base')) return 'base';
+  
+  return 'free';
 }
 
 /**
@@ -242,6 +256,12 @@ export async function handleCheckoutSuccess({
       newSubscription,
       newCredit,
     });
+
+    // Update user planType after successful subscription payment
+    if (newSubscription) {
+      const planType = getPlanTypeFromPlanName(newSubscription.planName);
+      await updateUser(order.userId, { planType });
+    }
   } else if (
     session.paymentStatus === PaymentStatus.FAILED ||
     session.paymentStatus === PaymentStatus.CANCELED
@@ -379,6 +399,12 @@ export async function handlePaymentSuccess({
       newSubscription,
       newCredit,
     });
+
+    // Update user planType after successful subscription payment
+    if (newSubscription) {
+      const planType = getPlanTypeFromPlanName(newSubscription.planName);
+      await updateUser(order.userId, { planType });
+    }
   } else {
     throw new Error('unknown payment status');
   }
@@ -566,6 +592,9 @@ export async function handleSubscriptionCanceled({
     canceledReason: subscriptionInfo.canceledReason,
     canceledReasonType: subscriptionInfo.canceledReasonType,
   });
+
+  // Downgrade user to free plan when subscription is canceled
+  await updateUser(subscription.userId, { planType: 'free' });
 
   // console.log('handle subscription canceled', subscriptionInfo);
 }
