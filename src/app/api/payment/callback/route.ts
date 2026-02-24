@@ -64,7 +64,7 @@ export async function GET(req: Request) {
     redirectUrl =
       order.callbackUrl ||
       (order.paymentType === PaymentType.SUBSCRIPTION
-        ? `${envConfigs.app_url}/settings/billing`
+        ? `${envConfigs.app_url}/payment/success`
         : `${envConfigs.app_url}/settings/payments`);
   } catch (e: any) {
     console.log('checkout callback failed:', e);

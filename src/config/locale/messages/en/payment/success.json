@@ -1,0 +1,19 @@
+{
+  "title": "Payment Successful!",
+  "description": "Thank you for subscribing. Your payment has been processed successfully.",
+  "subscription_details": "Subscription Details",
+  "plan": "Plan",
+  "amount": "Amount",
+  "next_billing": "Next Billing Date",
+  "whats_next": {
+    "title": "What's Next?",
+    "step1": "Your account has been upgraded with full access to premium features",
+    "step2": "You can now add more members and create unlimited campaigns",
+    "step3": "Check your email for the payment receipt and subscription details"
+  },
+  "go_to_dashboard": "Go to Dashboard",
+  "view_billing": "View Billing",
+  "need_help": "Need help?",
+  "contact_support": "Contact Support"
+}
+

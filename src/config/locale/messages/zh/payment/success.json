@@ -1,0 +1,19 @@
+{
+  "title": "支付成功！",
+  "description": "感谢您的订阅。您的付款已成功处理。",
+  "subscription_details": "订阅详情",
+  "plan": "套餐",
+  "amount": "金额",
+  "next_billing": "下次扣费日期",
+  "whats_next": {
+    "title": "接下来做什么？",
+    "step1": "您的账户已升级，可以完全访问高级功能",
+    "step2": "您现在可以添加更多会员并创建无限活动",
+    "step3": "请查看您的邮箱，获取付款收据和订阅详情"
+  },
+  "go_to_dashboard": "前往控制台",
+  "view_billing": "查看账单",
+  "need_help": "需要帮助？",
+  "contact_support": "联系客服"
+}
+

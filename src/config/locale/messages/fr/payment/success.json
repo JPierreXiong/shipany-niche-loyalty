@@ -1,0 +1,19 @@
+{
+  "title": "Paiement réussi !",
+  "description": "Merci pour votre abonnement. Votre paiement a été traité avec succès.",
+  "subscription_details": "Détails de l'abonnement",
+  "plan": "Forfait",
+  "amount": "Montant",
+  "next_billing": "Prochaine date de facturation",
+  "whats_next": {
+    "title": "Et maintenant ?",
+    "step1": "Votre compte a été mis à niveau avec un accès complet aux fonctionnalités premium",
+    "step2": "Vous pouvez maintenant ajouter plus de membres et créer des campagnes illimitées",
+    "step3": "Consultez votre email pour le reçu de paiement et les détails de l'abonnement"
+  },
+  "go_to_dashboard": "Aller au tableau de bord",
+  "view_billing": "Voir la facturation",
+  "need_help": "Besoin d'aide ?",
+  "contact_support": "Contacter le support"
+}
+

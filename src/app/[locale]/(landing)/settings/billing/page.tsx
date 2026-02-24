@@ -236,15 +236,33 @@ export default async function BillingPage({
         className="max-w-md"
       >
         <div className="text-primary text-3xl font-bold">
-          {currentSubscription?.planType || t('view.no_subscription')}
+          {currentSubscription?.planName || t('view.no_subscription')}
         </div>
         {currentSubscription ? (
           <>
+            <div className="mt-4 space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-muted-foreground text-sm">
+                  {t('view.amount')}
+                </span>
+                <span className="text-lg font-semibold">
+                  ${(currentSubscription.amount || 0) / 100} / {currentSubscription.interval}
+                </span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-muted-foreground text-sm">
+                  {t('view.status')}
+                </span>
+                <span className="text-sm font-medium capitalize">
+                  {currentSubscription.status}
+                </span>
+              </div>
+            </div>
             {currentSubscription?.status === SubscriptionStatus.ACTIVE ||
             currentSubscription?.status === SubscriptionStatus.TRIALING ? (
               <div className="text-muted-foreground mt-4 text-sm font-normal">
                 {t('view.tip', {
-                  date: moment(currentSubscription?.endDate).format(
+                  date: moment(currentSubscription?.currentPeriodEnd).format(
                     'YYYY-MM-DD'
                   ),
                 })}
@@ -252,7 +270,7 @@ export default async function BillingPage({
             ) : (
               <div className="text-destructive mt-4 text-sm font-normal">
                 {t('view.end_tip', {
-                  date: moment(currentSubscription?.endDate).format(
+                  date: moment(currentSubscription?.currentPeriodEnd).format(
                     'YYYY-MM-DD'
                   ),
                 })}

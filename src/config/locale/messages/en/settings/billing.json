@@ -16,6 +16,8 @@
     "tip": "Your subscription will auto renew on {date}",
     "end_tip": "Your subscription will be auto canceled on {date}",
     "no_subscription": "No plan",
+    "amount": "Amount",
+    "status": "Status",
     "buttons": {
       "adjust": "Adjust Plan",
       "subscribe": "Subscribe",
