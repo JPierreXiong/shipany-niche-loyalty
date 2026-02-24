@@ -11,6 +11,7 @@ import { Input } from '@/shared/components/ui/input';
 import { Label } from '@/shared/components/ui/label';
 import { CheckCircle, XCircle, RefreshCw, Eye, EyeOff, Save } from 'lucide-react';
 import { toast } from 'sonner';
+import { ShopifyConnectionGuide } from './ShopifyConnectionGuide';
 
 interface Store {
   connected: boolean;
@@ -280,6 +281,12 @@ export function ShopifySettings() {
           )}
         </div>
       </div>
+
+      {/* Webhook Configuration Guide */}
+      <ShopifyConnectionGuide
+        webhookUrl={`${typeof window !== 'undefined' ? window.location.origin : ''}/api/webhooks/shopify/orders-paid`}
+        storeId={store?.store?.shopifyDomain || 'your-store'}
+      />
     </div>
   );
 }

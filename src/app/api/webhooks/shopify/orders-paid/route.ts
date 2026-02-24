@@ -8,6 +8,7 @@ import crypto from 'crypto';
 
 // POST /api/webhooks/shopify/orders-paid
 // Handle order payment completion from Shopify
+// This is the core "Loop" - tracking discount code redemptions
 export async function POST(req: NextRequest) {
   try {
     // Verify webhook signature
@@ -36,7 +37,7 @@ export async function POST(req: NextRequest) {
 
     // Verify HMAC
     const hash = crypto
-      .createHmac('sha256', store.shopifyWebhookSecret)
+      .createHmac('sha256', store.shopifyWebhookSecret || '')
       .update(body, 'utf8')
       .digest('base64');
 
@@ -44,81 +45,103 @@ export async function POST(req: NextRequest) {
       return respErr('Invalid webhook signature', 401);
     }
 
-    const customerEmail = order.email || order.customer?.email;
-    if (!customerEmail) {
-      return respData({ message: 'No customer email in order' });
-    }
-
-    // Get or create customer
-    let members = await db()
-      .select()
-      .from(schema.loyaltyMember)
-      .where(
-        and(
-          eq(schema.loyaltyMember.storeId, store.id),
-          eq(schema.loyaltyMember.email, customerEmail.toLowerCase())
-        )
-      )
-      .limit(1);
-
-    let memberId: string;
+    // THE CORE LOOP: Track discount code redemptions
+    const discountCodes = order.discount_codes || order.discount_applications || [];
     const now = new Date();
+    const orderAmount = Math.round(parseFloat(order.total_price || 0) * 100); // Convert to cents
 
-    if (members.length === 0) {
-      // Create new member
-      memberId = getUuid();
-      await db().insert(schema.loyaltyMember).values({
-        id: memberId,
-        storeId: store.id,
-        email: customerEmail.toLowerCase(),
-        name: order.customer
-          ? `${order.customer.first_name || ''} ${order.customer.last_name || ''}`.trim() || null
-          : null,
-        source: 'shopify_sync',
-        status: 'active',
-        joinedAt: now,
-        createdAt: now,
-        updatedAt: now,
-      });
-    } else {
-      memberId = members[0].id;
+    if (discountCodes.length === 0) {
+      return respData({ message: 'No discount codes in order' });
     }
 
-    // Check for automations triggered by order payment
-    const orderAmount = parseFloat(order.total_price) * 100; // Convert to cents
+    // Process each discount code used in the order
+    for (const discountItem of discountCodes) {
+      const codeUsed = discountItem.code || discountItem.title;
+      
+      if (!codeUsed) continue;
 
-    const automations = await db()
-      .select()
-      .from(schema.loyaltyAutomation)
-      .where(
-        and(
-          eq(schema.loyaltyAutomation.storeId, store.id),
-          eq(schema.loyaltyAutomation.triggerType, 'order_paid'),
-          eq(schema.loyaltyAutomation.isActive, true)
+      // Find member by discount code
+      const members = await db()
+        .select()
+        .from(schema.loyaltyMember)
+        .where(
+          and(
+            eq(schema.loyaltyMember.storeId, store.id),
+            eq(schema.loyaltyMember.discountCode, codeUsed)
+          )
         )
-      );
+        .limit(1);
 
-    // Create send tasks for matching automations
-    for (const automation of automations) {
-      // Check minimum order amount if specified
-      if (automation.triggerValue && orderAmount < automation.triggerValue) {
+      if (members.length === 0) {
+        console.log(`Discount code ${codeUsed} not found in loyalty members`);
         continue;
       }
 
-      const taskId = getUuid();
-      await db().insert(schema.loyaltySendTask).values({
-        id: taskId,
-        automationId: automation.id,
-        customerId: memberId,
-        storeId: store.id,
-        status: 'pending',
-        scheduledAt: now,
-        createdAt: now,
-        updatedAt: now,
+      const member = members[0];
+
+      // Check if already redeemed
+      const existingLog = await db()
+        .select()
+        .from(schema.loyaltyRedeemLog)
+        .where(
+          and(
+            eq(schema.loyaltyRedeemLog.storeId, store.id),
+            eq(schema.loyaltyRedeemLog.shopifyOrderId, order.id.toString())
+          )
+        )
+        .limit(1);
+
+      if (existingLog.length > 0) {
+        console.log(`Order ${order.id} already processed`);
+        continue;
+      }
+
+      // Find the discount code record
+      const discountCodeRecords = await db()
+        .select()
+        .from(schema.loyaltyDiscountCode)
+        .where(
+          and(
+            eq(schema.loyaltyDiscountCode.memberId, member.id),
+            eq(schema.loyaltyDiscountCode.code, codeUsed)
+          )
+        )
+        .limit(1);
+
+      // Record redemption in transaction
+      await db().transaction(async (tx: any) => {
+        // Update discount code as redeemed
+        if (discountCodeRecords.length > 0) {
+          await tx
+            .update(schema.loyaltyDiscountCode)
+            .set({
+              isRedeemed: true,
+              redeemedAt: now,
+              updatedAt: now,
+            })
+            .where(eq(schema.loyaltyDiscountCode.id, discountCodeRecords[0].id));
+        }
+
+        // Create redemption log
+        await tx.insert(schema.loyaltyRedeemLog).values({
+          id: getUuid(),
+          storeId: store.id,
+          discountCodeId: discountCodeRecords.length > 0 ? discountCodeRecords[0].id : null,
+          shopifyOrderId: order.id.toString(),
+          orderAmount: orderAmount,
+          redeemedAt: now,
+          createdAt: now,
+          updatedAt: now,
+        });
       });
+
+      console.log(`Successfully recorded redemption for code ${codeUsed}`);
     }
 
-    return respData({ message: 'Order processed for loyalty program' });
+    return respData({ 
+      message: 'Discount codes processed', 
+      codesProcessed: discountCodes.length 
+    });
   } catch (e) {
     console.error('orders-paid webhook error', e);
     return respErr('Failed to process webhook');
