@@ -11,6 +11,12 @@
     "status": "状态",
     "action": "操作"
   },
+  "summary": {
+    "total_revenue": "总收入",
+    "subscriptions": "订阅数量",
+    "one_time": "一次性支付",
+    "customers": "独立客户"
+  },
   "list": {
     "title": "支付",
     "crumbs": {

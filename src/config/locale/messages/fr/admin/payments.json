@@ -1,41 +1,47 @@
 {
   "fields": {
-    "order_no": "Order No",
-    "user": "User",
-    "amount": "Amount",
-    "product": "Product",
+    "order_no": "Numéro de commande",
+    "user": "Utilisateur",
+    "amount": "Montant",
+    "product": "Produit",
     "description": "Description",
     "type": "Type",
-    "provider": "Provider",
-    "created_at": "Created At",
-    "status": "Status",
+    "provider": "Fournisseur",
+    "created_at": "Créé le",
+    "status": "Statut",
     "action": "Action"
   },
+  "summary": {
+    "total_revenue": "Revenu total",
+    "subscriptions": "Abonnements",
+    "one_time": "Paiements uniques",
+    "customers": "Clients uniques"
+  },
   "list": {
-    "title": "Payments",
+    "title": "Paiements",
     "crumbs": {
       "admin": "Admin",
-      "payments": "Payments"
+      "payments": "Paiements"
     },
     "tabs": {
-      "all": "All",
-      "subscription": "Subscription",
-      "one-time": "One-Time"
+      "all": "Tous",
+      "subscription": "Abonnement",
+      "one-time": "Unique"
     },
     "filters": {
       "status": {
-        "title": "Status",
+        "title": "Statut",
         "options": {
-          "all": "All",
-          "paid": "Paid",
-          "created": "Created",
-          "failed": "Failed"
+          "all": "Tous",
+          "paid": "Payé",
+          "created": "Créé",
+          "failed": "Échoué"
         }
       },
       "provider": {
-        "title": "Provider",
+        "title": "Fournisseur",
         "options": {
-          "all": "All",
+          "all": "Tous",
           "stripe": "Stripe",
           "creem": "Creem",
           "lemonsqueezy": "Lemonsqueezy",
@@ -45,8 +51,8 @@
     },
     "search": {
       "order_no": {
-        "title": "Order No",
-        "placeholder": "Order No"
+        "title": "Numéro de commande",
+        "placeholder": "Numéro de commande"
       }
     }
   }

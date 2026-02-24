@@ -7,6 +7,7 @@ import { TableCard } from '@/shared/blocks/table';
 import { getOrders, getOrdersCount, OrderStatus } from '@/shared/models/order';
 import { Crumb, Filter, Search, Tab } from '@/shared/types/blocks/common';
 import { type Table } from '@/shared/types/blocks/table';
+import { DollarSign, CreditCard, TrendingUp, Users } from 'lucide-react';
 
 export default async function PaymentsPage({
   params,
@@ -144,6 +145,19 @@ export default async function PaymentsPage({
     limit,
   });
 
+  // Calculate summary statistics
+  const allPaidOrders = await getOrders({
+    status: OrderStatus.PAID,
+    getUser: false,
+    page: 1,
+    limit: 10000, // Get all paid orders for statistics
+  });
+
+  const totalRevenue = allPaidOrders.reduce((sum, order) => sum + (order.paymentAmount || order.amount || 0), 0);
+  const subscriptionOrders = allPaidOrders.filter(o => o.paymentType === PaymentType.SUBSCRIPTION);
+  const oneTimeOrders = allPaidOrders.filter(o => o.paymentType !== PaymentType.SUBSCRIPTION);
+  const uniqueCustomers = new Set(allPaidOrders.map(o => o.userId)).size;
+
   const table: Table = {
     columns: [
       { name: 'orderNo', title: t('fields.order_no'), type: 'copy' },
@@ -198,6 +212,78 @@ export default async function PaymentsPage({
           filters={filters}
           search={search}
         />
+        
+        {/* Payment Summary Statistics */}
+        <div className="mb-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Total Revenue */}
+          <div className="rounded-lg bg-white p-6 shadow">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm font-medium text-gray-600">
+                  {t('summary.total_revenue')}
+                </p>
+                <p className="mt-2 text-3xl font-bold text-gray-900">
+                  ${(totalRevenue / 100).toFixed(2)}
+                </p>
+              </div>
+              <div className="rounded-full bg-green-100 p-3">
+                <DollarSign className="h-6 w-6 text-green-600" />
+              </div>
+            </div>
+          </div>
+
+          {/* Subscription Orders */}
+          <div className="rounded-lg bg-white p-6 shadow">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm font-medium text-gray-600">
+                  {t('summary.subscriptions')}
+                </p>
+                <p className="mt-2 text-3xl font-bold text-gray-900">
+                  {subscriptionOrders.length}
+                </p>
+              </div>
+              <div className="rounded-full bg-blue-100 p-3">
+                <CreditCard className="h-6 w-6 text-blue-600" />
+              </div>
+            </div>
+          </div>
+
+          {/* One-time Orders */}
+          <div className="rounded-lg bg-white p-6 shadow">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm font-medium text-gray-600">
+                  {t('summary.one_time')}
+                </p>
+                <p className="mt-2 text-3xl font-bold text-gray-900">
+                  {oneTimeOrders.length}
+                </p>
+              </div>
+              <div className="rounded-full bg-purple-100 p-3">
+                <TrendingUp className="h-6 w-6 text-purple-600" />
+              </div>
+            </div>
+          </div>
+
+          {/* Unique Customers */}
+          <div className="rounded-lg bg-white p-6 shadow">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm font-medium text-gray-600">
+                  {t('summary.customers')}
+                </p>
+                <p className="mt-2 text-3xl font-bold text-gray-900">
+                  {uniqueCustomers}
+                </p>
+              </div>
+              <div className="rounded-full bg-orange-100 p-3">
+                <Users className="h-6 w-6 text-orange-600" />
+              </div>
+            </div>
+          </div>
+        </div>
+
         <TableCard table={table} />
       </Main>
     </>

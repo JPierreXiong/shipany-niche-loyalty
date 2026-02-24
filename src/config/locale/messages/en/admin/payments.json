@@ -11,6 +11,12 @@
     "status": "Status",
     "action": "Action"
   },
+  "summary": {
+    "total_revenue": "Total Revenue",
+    "subscriptions": "Subscriptions",
+    "one_time": "One-Time Payments",
+    "customers": "Unique Customers"
+  },
   "list": {
     "title": "Payments",
     "crumbs": {
