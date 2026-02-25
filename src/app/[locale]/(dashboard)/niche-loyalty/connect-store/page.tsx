@@ -22,7 +22,6 @@ import { toast } from 'sonner';
 
 export default function ConnectShopifyPage() {
   const [formData, setFormData] = useState({
-    shopDomain: '',
     clientId: '',
     clientSecret: '',
     accessToken: '',
@@ -113,7 +112,7 @@ export default function ConnectShopifyPage() {
             Connect Your Shopify Store
           </h1>
           <p className="mt-4 text-lg text-gray-600">
-            The 2-Minute Setup. No App Store review required.
+            The 2-Minute Setup. No domain required - we auto-detect it!
           </p>
           <div className="mt-6 flex items-center justify-center gap-6 text-sm text-gray-500">
             <div className="flex items-center gap-2">
@@ -259,23 +258,7 @@ export default function ConnectShopifyPage() {
                 </p>
 
                 <div className="mt-6 space-y-4">
-                  <div>
-                    <Label htmlFor="shopDomain">
-                      Shopify Domain <span className="text-gray-400 text-xs">(Optional)</span>
-                    </Label>
-                    <Input
-                      id="shopDomain"
-                      placeholder="your-store.myshopify.com (optional)"
-                      value={formData.shopDomain}
-                      onChange={(e) =>
-                        setFormData({ ...formData, shopDomain: e.target.value })
-                      }
-                      className="mt-2"
-                    />
-                    <p className="mt-1 text-xs text-gray-500">
-                      Optional: Your Shopify store domain for reference
-                    </p>
-                  </div>
+                  {/* 移除 shopDomain 输入框 - 将通过 Webhook 自动发现 */}
 
                   <div>
                     <Label htmlFor="clientId">

@@ -22,12 +22,46 @@ export async function POST(req: NextRequest) {
     const body = await req.text();
     const order = JSON.parse(body);
 
-    // Get store from database
-    const stores = await db()
+    // 🔑 核心改进：先尝试通过域名查找，如果找不到则通过 webhook secret 查找
+    let stores = await db()
       .select()
       .from(schema.loyaltyStore)
       .where(eq(schema.loyaltyStore.shopifyDomain, shop))
       .limit(1);
+
+    // 如果通过域名找不到，尝试通过 webhook secret 匹配（用于首次自动发现）
+    if (!stores.length) {
+      // 获取所有没有域名的店铺，通过 HMAC 验证找到正确的那个
+      const storesWithoutDomain = await db()
+        .select()
+        .from(schema.loyaltyStore)
+        .where(eq(schema.loyaltyStore.shopifyDomain, ''))
+        .limit(10); // 限制查询数量
+
+      for (const potentialStore of storesWithoutDomain) {
+        const testHash = crypto
+          .createHmac('sha256', potentialStore.shopifyWebhookSecret || '')
+          .update(body, 'utf8')
+          .digest('base64');
+
+        if (testHash === hmac) {
+          // 找到匹配的店铺，自动补全域名
+          await db()
+            .update(schema.loyaltyStore)
+            .set({ 
+              shopifyDomain: shop,
+              status: 'active',
+              webhookRegistered: true,
+              updatedAt: new Date()
+            })
+            .where(eq(schema.loyaltyStore.id, potentialStore.id));
+
+          stores = [{ ...potentialStore, shopifyDomain: shop }];
+          console.log(`✅ Auto-discovered shop domain: ${shop} for store ${potentialStore.id}`);
+          break;
+        }
+      }
+    }
 
     if (!stores.length) {
       return respErr('Store not found', 404);

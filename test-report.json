@@ -1,0 +1,110 @@
+{
+  "timestamp": "2026-02-24T14:23:53.344Z",
+  "tests": [
+    {
+      "name": "Authentication System",
+      "status": "passed",
+      "details": {
+        "signUpPage": {
+          "status": 200,
+          "accessible": true
+        },
+        "signInPage": {
+          "status": 200,
+          "accessible": true
+        },
+        "authAPI": {
+          "status": 404,
+          "working": false
+        }
+      }
+    },
+    {
+      "name": "Payment System",
+      "status": "passed",
+      "details": {
+        "pricingPage": {
+          "status": 200,
+          "accessible": true
+        },
+        "checkoutAPI": {
+          "status": 200,
+          "working": true
+        },
+        "callbackAPI": {
+          "status": 200,
+          "working": true
+        },
+        "debugEndpoint": {
+          "status": 401,
+          "working": true
+        }
+      }
+    },
+    {
+      "name": "Shopify Integration",
+      "status": "passed",
+      "details": {
+        "connectPage": {
+          "status": 200,
+          "accessible": true
+        },
+        "verifyAPI": {
+          "status": 401,
+          "working": true,
+          "requiresAuth": true
+        },
+        "statusAPI": {
+          "status": 401,
+          "working": true
+        },
+        "webhookAPI": {
+          "status": 401,
+          "working": true
+        }
+      }
+    },
+    {
+      "name": "Dashboard & Features",
+      "status": "passed",
+      "details": {
+        "dashboardPage": {
+          "status": 200,
+          "accessible": true
+        },
+        "customersPage": {
+          "status": 200,
+          "accessible": true
+        },
+        "settingsPage": {
+          "status": 200,
+          "accessible": true
+        },
+        "membersAPI": {
+          "status": 401,
+          "working": true
+        }
+      }
+    },
+    {
+      "name": "Database Schema",
+      "status": "passed",
+      "details": {
+        "configAPI": {
+          "status": 401,
+          "working": true
+        },
+        "storeAPI": {
+          "status": 401,
+          "working": true
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "warnings": 0
+  }
+}
