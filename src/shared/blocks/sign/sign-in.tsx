@@ -96,12 +96,7 @@ export function SignIn({
         onSuccess: (ctx) => {
           // better-auth 的 callbackURL 可能不会立即生效
           // 使用 window.location.href 确保完整页面跳转（避免需要点击两次）
-          if (processedCallbackUrl && processedCallbackUrl !== '/') {
-            window.location.href = processedCallbackUrl;
-          } else {
-            // 默认跳转到 dashboard
-            window.location.href = '/digital-heirloom/dashboard';
-          }
+          window.location.href = processedCallbackUrl;
         },
         onError: (e: any) => {
           toast.error(e?.error?.message || 'sign in failed');

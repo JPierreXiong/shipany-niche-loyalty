@@ -34,6 +34,5 @@ export default async function SignInPage({
 
   const configs = await getConfigs();
 
-  // Default redirect to Niche Loyalty Dashboard after sign in
-  return <SignIn configs={configs} callbackUrl={callbackUrl || '/niche-loyalty/dashboard'} />;
+  return <SignIn configs={configs} callbackUrl={callbackUrl || '/'} />;
 }

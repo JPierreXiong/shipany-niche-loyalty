@@ -3,7 +3,6 @@
 import {
   ComponentPropsWithoutRef,
   useEffect,
-  useId,
   useRef,
   useState,
 } from "react";
@@ -37,10 +36,15 @@ export function AnimatedGridPattern({
   repeatDelay = 0.5,
   ...props
 }: AnimatedGridPatternProps) {
-  const id = useId();
+  const [id, setId] = useState<string>('');
   const containerRef = useRef(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   const [squares, setSquares] = useState(() => generateSquares(numSquares));
+
+  // Generate ID only on client side to avoid hydration mismatch
+  useEffect(() => {
+    setId(`animated-grid-${Math.random().toString(36).substr(2, 9)}`);
+  }, []);
 
   function getPos() {
     return [
@@ -110,23 +114,27 @@ export function AnimatedGridPattern({
       )}
       {...props}
     >
-      <defs>
-        <pattern
-          id={id}
-          width={width}
-          height={height}
-          patternUnits="userSpaceOnUse"
-          x={x}
-          y={y}
-        >
-          <path
-            d={`M.5 ${height}V.5H${width}`}
-            fill="none"
-            strokeDasharray={strokeDasharray}
-          />
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" fill={`url(#${id})`} />
+      {id && (
+        <>
+          <defs>
+            <pattern
+              id={id}
+              width={width}
+              height={height}
+              patternUnits="userSpaceOnUse"
+              x={x}
+              y={y}
+            >
+              <path
+                d={`M.5 ${height}V.5H${width}`}
+                fill="none"
+                strokeDasharray={strokeDasharray}
+              />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill={`url(#${id})`} />
+        </>
+      )}
       <svg x={x} y={y} className="overflow-visible">
         {squares.map(({ pos: [x, y], id }, index) => (
           <motion.rect

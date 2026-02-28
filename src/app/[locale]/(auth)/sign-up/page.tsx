@@ -34,6 +34,5 @@ export default async function SignUpPage({
 
   const configs = await getConfigs();
 
-  // Default redirect to Niche Loyalty Dashboard after sign up
-  return <SignUp configs={configs} callbackUrl={callbackUrl || '/niche-loyalty/dashboard'} />;
+  return <SignUp configs={configs} callbackUrl={callbackUrl || '/'} />;
 }
