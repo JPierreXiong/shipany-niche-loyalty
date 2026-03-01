@@ -104,15 +104,19 @@ export async function POST(req: NextRequest) {
     }
 
     // Encrypt access token
-    const encryptionKey = crypto.randomBytes(32).toString('hex');
-    const cipher = crypto.createCipher('aes-256-cbc', encryptionKey);
+    const encryptionKey = crypto.randomBytes(32);
+    const iv = crypto.randomBytes(16);
+    const cipher = crypto.createCipheriv('aes-256-cbc', encryptionKey, iv);
     let encryptedToken = cipher.update(accessToken, 'utf8', 'hex');
     encryptedToken += cipher.final('hex');
+    const encryptedTokenWithIv = iv.toString('hex') + ':' + encryptedToken;
 
     // Encrypt client secret
-    const clientSecretCipher = crypto.createCipher('aes-256-cbc', encryptionKey);
+    const clientSecretIv = crypto.randomBytes(16);
+    const clientSecretCipher = crypto.createCipheriv('aes-256-cbc', encryptionKey, clientSecretIv);
     let encryptedClientSecret = clientSecretCipher.update(clientSecret, 'utf8', 'hex');
     encryptedClientSecret += clientSecretCipher.final('hex');
+    const encryptedClientSecretWithIv = clientSecretIv.toString('hex') + ':' + encryptedClientSecret;
 
     const now = new Date();
 
@@ -133,10 +137,10 @@ export async function POST(req: NextRequest) {
         .set({
           userId: user.id,
           shopifyClientId: clientId,
-          shopifyClientSecret: encryptedClientSecret,
-          shopifyAccessToken: encryptedToken,
+          shopifyClientSecret: encryptedClientSecretWithIv,
+          shopifyAccessToken: encryptedTokenWithIv,
           shopifyWebhookSecret: webhookSecret,
-          encryptionKey: encryptionKey,
+          encryptionKey: encryptionKey.toString('hex'),
           status: 'active',
           updatedAt: now,
         })
@@ -150,10 +154,10 @@ export async function POST(req: NextRequest) {
         name: shop.name || fullDomain.replace('.myshopify.com', ''),
         shopifyDomain: fullDomain,
         shopifyClientId: clientId,
-        shopifyClientSecret: encryptedClientSecret,
-        shopifyAccessToken: encryptedToken,
+        shopifyClientSecret: encryptedClientSecretWithIv,
+        shopifyAccessToken: encryptedTokenWithIv,
         shopifyWebhookSecret: webhookSecret,
-        encryptionKey: encryptionKey,
+        encryptionKey: encryptionKey.toString('hex'),
         status: 'active',
         createdAt: now,
         updatedAt: now,
@@ -165,7 +169,7 @@ export async function POST(req: NextRequest) {
       shopName: shop.name,
       shopDomain: fullDomain,
       scopes,
-      encryptionKey,
+      encryptionKey: encryptionKey.toString('hex'),
     });
   } catch (e) {
     console.error('shopify verify error', e);
